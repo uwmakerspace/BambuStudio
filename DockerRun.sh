@@ -23,5 +23,5 @@ docker run \
   `# Remove container when it is finished` \
   --rm \
   `# Pass all parameters from this script to the bambu ENTRYPOINT binary` \
-  bambustudio $* 
+  mkos-bambuslicer-cli $* 
   

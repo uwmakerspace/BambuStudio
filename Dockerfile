@@ -14,6 +14,7 @@ RUN apt-get update && apt-get install  -y \
     build-essential \
     cmake \
     curl \
+    bc \
     eglexternalplatform-dev \
     extra-cmake-modules \
     file \
