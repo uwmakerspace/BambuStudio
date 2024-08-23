@@ -1,5 +1,4 @@
 FROM docker.io/ubuntu:22.04
-LABEL maintainer "DeftDawg <DeftDawg@gmail.com>"
 
 # Disable interactive package configuration
 RUN apt-get update && \
@@ -48,6 +47,7 @@ RUN apt-get update && apt-get install  -y \
     pkgconf \
     sudo \
     wayland-protocols \
+    bash \
     wget 
 
 # Change your locale here if you want.  See the output
