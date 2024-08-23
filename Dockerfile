@@ -97,7 +97,10 @@ RUN if [ "$UID" != "0" ]; then \
       useradd -u $UID -g $GID $USER; \
     fi
 
+RUN chmod +x /entrypoint.sh
+
 # Using an entrypoint instead of CMD because the binary
 # accepts several command line arguments.
-ENTRYPOINT ["Xvfb", ":99", "-screen", "0", "1024x768x16", "-ac", "-nolisten", "tcp", "&&", "/BambuStudio/build/package/bin/bambu-studio"]
+#ENTRYPOINT ["Xvfb", ":99", "-screen", "0", "1024x768x16", "-ac", "-nolisten", "tcp", "&&", "/BambuStudio/build/package/bin/bambu-studio"]
 #ENTRYPOINT ["/BambuStudio/build/package/bin/bambu-studio"]
+ENTRYPOINT ["/entrypoint.sh"]
