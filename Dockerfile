@@ -82,13 +82,19 @@ RUN ./BuildLinux.sh -i
 # your home directory into the container, it's handy
 # to keep permissions the same.  Just in case, defaults
 # are root.
+# Use bash as the shell
 SHELL ["/bin/bash", "-l", "-c"]
+
+# Set ARG values
 ARG USER=root
 ARG UID=0
 ARG GID=0
-RUN [[ "$UID" != "0" ]] \
-  && groupadd -f -g $GID $USER \
-  && useradd -u $UID -g $GID $USER
+
+# Run the commands with proper bash syntax
+RUN if [ "$UID" != "0" ]; then \
+      groupadd -f -g $GID $USER && \
+      useradd -u $UID -g $GID $USER; \
+    fi
 
 # Using an entrypoint instead of CMD because the binary
 # accepts several command line arguments.
