@@ -14,6 +14,7 @@ RUN apt-get update && apt-get install  -y \
     cmake \
     curl \
     bc \
+    xvfb \
     eglexternalplatform-dev \
     extra-cmake-modules \
     file \
@@ -98,4 +99,5 @@ RUN if [ "$UID" != "0" ]; then \
 
 # Using an entrypoint instead of CMD because the binary
 # accepts several command line arguments.
-ENTRYPOINT ["/BambuStudio/build/package/bin/bambu-studio"]
+ENTRYPOINT ["Xvfb", ":99", "-screen", "0", "1024x768x16", "-ac", "-nolisten", "tcp", "&&", "/BambuStudio/build/package/bin/bambu-studio"]
+#ENTRYPOINT ["/BambuStudio/build/package/bin/bambu-studio"]
