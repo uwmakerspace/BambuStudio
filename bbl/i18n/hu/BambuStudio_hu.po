@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Bambu Studio\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-05-31 17:44+0800\n"
+"POT-Creation-Date: 2024-10-15 16:47+0800\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -19,8 +19,8 @@ msgstr "Támaszok festése"
 msgid "Please select single object."
 msgstr "Please select single object."
 
-msgid "Alt + Mouse wheel"
-msgstr "Alt + Egérgörgő"
+msgid "Mouse wheel"
+msgstr "Egérgörgő"
 
 msgid "Section view"
 msgstr "Keresztmetszet nézet"
@@ -104,6 +104,11 @@ msgstr "Nincs automatikus támasz"
 msgid "Support Generated"
 msgstr "Támasz legenerálva"
 
+msgid ""
+"Warning: All triangle areas are too small,The current function is not "
+"working."
+msgstr ""
+
 msgid "Lay on face"
 msgstr "Felületre fektetés"
 
@@ -151,14 +156,23 @@ msgstr "Vödör kitöltés"
 msgid "Height range"
 msgstr "Magasságtartomány"
 
-msgid "Alt + Shift + Enter"
-msgstr "Alt + Shift + Enter"
+msgid "Shift + Enter"
+msgstr ""
 
 msgid "Toggle Wireframe"
 msgstr "Drótváz-megjelenítés váltása"
 
+msgid "Shift + L"
+msgstr ""
+
+msgid "Toggle non-manifold edges"
+msgstr ""
+
 msgid "Rotate horizontally"
 msgstr "Elforgatás vízszintesen"
+
+msgid "hit face"
+msgstr ""
 
 msgid "Shortcut Key "
 msgstr "Gyorsgomb "
@@ -168,6 +182,9 @@ msgstr "Háromszög"
 
 msgid "Height Range"
 msgstr "Magasságtartomány"
+
+msgid "Place input box of bottom near mouse"
+msgstr ""
 
 msgid "Vertical"
 msgstr "Függőleges"
@@ -227,20 +244,26 @@ msgstr "in"
 msgid "mm"
 msgstr "mm"
 
+msgid "Part selection"
+msgstr ""
+
+msgid "Fixed step drag"
+msgstr ""
+
+msgid "Single sided scaling"
+msgstr ""
+
 msgid "Position"
 msgstr "Pozíció"
 
-msgid "Rotation"
-msgstr "Forgatás"
+msgid "Rotate (relative)"
+msgstr "Rotate (relative)"
 
 msgid "Scale ratios"
 msgstr "Méretarányok"
 
 msgid "Object Operations"
 msgstr "Objektumműveletek"
-
-msgid "Rotate (relative)"
-msgstr "Rotate (relative)"
 
 msgid "Volume Operations"
 msgstr "Térfogatműveletek"
@@ -250,9 +273,6 @@ msgstr "Fordítás"
 
 msgid "Group Operations"
 msgstr "Csoportműveletek"
-
-msgid "Set Position"
-msgstr "Pozíció beállítása"
 
 msgid "Set Orientation"
 msgstr "Orientáció beállítása"
@@ -266,17 +286,30 @@ msgstr "Pozíció visszaállítása"
 msgid "Reset Rotation"
 msgstr "Forgatás visszaállítása"
 
+msgid "Object coordinates"
+msgstr ""
+
 msgid "World coordinates"
 msgstr "Világkoordináták"
+
+msgid "Reset current rotation to real zeros."
+msgstr ""
 
 msgid "°"
 msgstr "°"
 
-msgid "Size"
-msgstr "Méret"
+msgid "Reset current rotation to the value when open the rotation tool."
+msgstr ""
+
+msgid "Part coordinates"
+msgstr ""
 
 msgid "%"
 msgstr "%"
+
+#. TRN - Input label. Be short as possible
+msgid "Size"
+msgstr "Méret"
 
 msgid "uniform scale"
 msgstr "egységes méretarány"
@@ -348,6 +381,9 @@ msgstr "Modell javítása"
 msgid "Connector"
 msgstr "Összekötő"
 
+msgid "Flip cut plane"
+msgstr ""
+
 msgid "Planar"
 msgstr "Sík"
 
@@ -362,6 +398,10 @@ msgstr "Mozgatás:"
 
 msgid "Groove Angle"
 msgstr "Horonyszög"
+
+#. TRN - Input label. Be short as possible
+msgid "Rotation"
+msgstr "Forgatás"
 
 msgid "Movement"
 msgstr "Mozgás"
@@ -378,6 +418,7 @@ msgstr "Összekötő hozzáadása"
 msgid "Groove"
 msgstr "Horony"
 
+#. TRN - Input label. Be short as possible
 msgid "Depth"
 msgstr "Mélység"
 
@@ -789,11 +830,276 @@ msgstr ""
 "Embedded\n"
 "depth"
 
+msgid "Warning:Input cannot be empty!"
+msgstr ""
+
+msgid "Warning:create text fail."
+msgstr ""
+
 msgid "Surface"
 msgstr "Felszín"
 
 msgid "Horizontal text"
 msgstr "Vízszintes szöveg"
+
+msgid "Head diameter"
+msgstr ""
+
+msgid "Max angle"
+msgstr ""
+
+msgid "Detection radius"
+msgstr ""
+
+msgid "Remove selected points"
+msgstr ""
+
+msgid "Remove all points"
+msgstr ""
+
+msgid "Auto-generate points"
+msgstr ""
+
+msgid "Add a brim ear"
+msgstr ""
+
+msgid "Delete a brim ear"
+msgstr ""
+
+msgid "Ctrl+Mouse wheel"
+msgstr "Ctrl+Egérgörgő"
+
+msgid "Adjust section view"
+msgstr ""
+
+msgid ""
+"Warning: The brim type is not set to \"painted\",the brim ears will not take "
+"effect !"
+msgstr ""
+
+msgid "(Set the brim type to \"painted\")"
+msgstr ""
+
+msgid " invalid brim ears"
+msgstr ""
+
+msgid "Brim Ears"
+msgstr ""
+
+msgid "Choose SVG file for emboss:"
+msgstr ""
+
+#, boost-format
+msgid "File does NOT exist (%1%)."
+msgstr ""
+
+#, boost-format
+msgid "Filename has to end with \".svg\" but you selected %1%"
+msgstr ""
+
+#, boost-format
+msgid "Nano SVG parser can't load from file (%1%)."
+msgstr ""
+
+#, boost-format
+msgid "SVG file does NOT contain a single path to be embossed (%1%)."
+msgstr ""
+
+#. TRN - Input label. Be short as possible
+msgid "Use surface"
+msgstr ""
+
+#. TRN - Input label. Be short as possible
+msgid "From surface"
+msgstr ""
+
+#. TRN - Input label. Be short as possible
+msgid "Mirror"
+msgstr "Tükrözés"
+
+#, boost-format
+msgid "Opacity (%1%)"
+msgstr ""
+
+#, boost-format
+msgid "Color gradient (%1%)"
+msgstr ""
+
+msgid "Undefined fill type"
+msgstr ""
+
+msgid "Linear gradient"
+msgstr ""
+
+msgid "Radial gradient"
+msgstr ""
+
+msgid "Open filled path"
+msgstr ""
+
+msgid "Undefined stroke type"
+msgstr ""
+
+msgid "Path can't be healed from selfintersection and multiple points."
+msgstr ""
+
+msgid ""
+"Final shape constains selfintersection or multiple points with same "
+"coordinate."
+msgstr ""
+
+#, boost-format
+msgid "Shape is marked as invisible (%1%)."
+msgstr ""
+
+#. TRN: The first placeholder is shape identifier, the second one is text describing the problem.
+#, boost-format
+msgid "Fill of shape (%1%) contains unsupported: %2%."
+msgstr ""
+
+#, boost-format
+msgid "Stroke of shape (%1%) is too thin (minimal width is %2% mm)."
+msgstr ""
+
+#, boost-format
+msgid "Stroke of shape (%1%) contains unsupported: %2%."
+msgstr ""
+
+msgid "Not valid state please report reproduction steps on github"
+msgstr ""
+
+msgid "No embossed file"
+msgstr ""
+
+msgid "Missing svg file in embossed shape"
+msgstr ""
+
+msgid "Missing data of svg file"
+msgstr ""
+
+msgid ""
+"Tip:If you want to place svg file on another part surface,\n"
+"you should select part first, and then drag svg file to the part surface."
+msgstr ""
+
+#. TRN - Preview of filename after clear local filepath.
+msgid "Unknown filename"
+msgstr ""
+
+#, boost-format
+msgid "SVG file path is \"%1%\""
+msgstr ""
+
+msgid "Reload SVG file from disk."
+msgstr ""
+
+msgid "Change file"
+msgstr ""
+
+msgid "Change to another .svg file"
+msgstr ""
+
+#. TRN: An menu option to convert the SVG into an unmodifiable model part.
+msgid "Bake to model"
+msgstr ""
+
+#. TRN: Tooltip for the menu item.
+msgid "Bake into model as uneditable part"
+msgstr ""
+
+msgid "Save as"
+msgstr ""
+
+msgid "Save SVG file"
+msgstr ""
+
+msgid "Save as '.svg' file"
+msgstr ""
+
+msgid "Size in emboss direction."
+msgstr ""
+
+#. TRN: The placeholder contains a number.
+#, boost-format
+msgid "Scale also changes amount of curve samples (%1%)"
+msgstr ""
+
+msgid "width:"
+msgstr ""
+
+msgid "height:"
+msgstr ""
+
+msgid "set width and height keep ratio with width"
+msgstr ""
+
+msgid "Width of SVG."
+msgstr ""
+
+msgid "Height of SVG."
+msgstr ""
+
+msgid "Lock/unlock the aspect ratio of the SVG."
+msgstr ""
+
+msgid "Reset scale"
+msgstr ""
+
+msgid "Distance of the center of the SVG to the model surface."
+msgstr ""
+
+msgid "Reset distance"
+msgstr ""
+
+msgid "Rotate text Clock-wise."
+msgstr ""
+
+msgid "Reset rotation"
+msgstr ""
+
+msgid "Lock/unlock rotation angle when dragging above the surface."
+msgstr ""
+
+msgid "Mirror vertically"
+msgstr ""
+
+msgid "Mirror horizontally"
+msgstr ""
+
+msgid "Set Mirror"
+msgstr ""
+
+msgid "Face the camera"
+msgstr ""
+
+msgid "Operation"
+msgstr ""
+
+msgid "Join"
+msgstr ""
+
+msgid "Click to change text into object part."
+msgstr ""
+
+msgid "You can't change a type of the last solid part of the object."
+msgstr ""
+
+msgctxt "EmbossOperation"
+msgid "Cut"
+msgstr ""
+
+msgid "Click to change part type into negative volume."
+msgstr ""
+
+msgid "Modifier"
+msgstr "Módosító"
+
+msgid "Click to change part type into modifier."
+msgstr ""
+
+#. TRN: This is the name of the action that shows in undo/redo stack (changing part type from SVG to something else).
+msgid "Change SVG Type"
+msgstr ""
 
 msgid "Ctrl+"
 msgstr "Ctrl+"
@@ -958,6 +1264,15 @@ msgstr ""
 msgid "User logged out"
 msgstr "Felhasználó kijelentkezett"
 
+msgid "Install network plug-in"
+msgstr ""
+
+msgid "Please Install network plug-in before log in."
+msgstr ""
+
+msgid "Install Network Plug-in"
+msgstr ""
+
 msgid "new or open project file is not allowed during the slicing process!"
 msgstr ""
 "a projektfájlokkal kapcsolatos műveletek nem engedélyezettek szeletelés "
@@ -1095,6 +1410,24 @@ msgstr "Támaszblokkoló hozzáadása"
 msgid "Add support enforcer"
 msgstr "Támaszkényszerítő hozzáadása"
 
+msgid "Add text"
+msgstr ""
+
+msgid "Add negative text"
+msgstr ""
+
+msgid "Add text modifier"
+msgstr ""
+
+msgid "Add SVG part"
+msgstr ""
+
+msgid "Add negative SVG"
+msgstr ""
+
+msgid "Add SVG modifier"
+msgstr ""
+
 msgid "Select settings"
 msgstr "Beállítások kiválasztása"
 
@@ -1110,8 +1443,17 @@ msgstr "Del"
 msgid "Delete the selected object"
 msgstr "Kiválasztott objektum törlése"
 
+msgid "Delete all cutter"
+msgstr ""
+
 msgid "Edit Text"
 msgstr "Szöveg szerkesztése"
+
+msgid "Edit SVG"
+msgstr ""
+
+msgid "Change SVG source file, projection, size, ..."
+msgstr ""
 
 msgid "Load..."
 msgstr "Betöltés..."
@@ -1124,6 +1466,9 @@ msgstr "Henger"
 
 msgid "Cone"
 msgstr "Kúp"
+
+msgid "Double Tear Romboid Cylinder"
+msgstr ""
 
 msgid "Disc"
 msgstr "Lemez"
@@ -1145,6 +1490,9 @@ msgstr "3DBenchy"
 
 msgid "ksr FDMTest"
 msgstr "ksr FDMTest"
+
+msgid "SVG"
+msgstr ""
 
 msgid "Height range Modifier"
 msgstr "Magasságtartomány-módosító"
@@ -1269,9 +1617,6 @@ msgstr "Z-tengely mentén"
 
 msgid "Mirror along the Z axis"
 msgstr "Tükrözés a Z-tengely mentén"
-
-msgid "Mirror"
-msgstr "Tükrözés"
 
 msgid "Mirror object"
 msgstr "Objektum tükrözése"
@@ -1556,9 +1901,6 @@ msgstr "Az utolsó tömör objektum típusa nem módosítható."
 
 msgid "Negative Part"
 msgstr "Negatív tárgy"
-
-msgid "Modifier"
-msgstr "Módosító"
 
 msgid "Support Blocker"
 msgstr "Támasz blokkoló"
@@ -1969,6 +2311,23 @@ msgstr "Asztal feltöltése megszakítva."
 msgid "Bed filling done."
 msgstr "Asztal feltöltve."
 
+#. TRN: This is the title of the action appearing in undo/redo stack.
+#. It is same for Text and SVG.
+msgid "Emboss attribute change"
+msgstr ""
+
+msgid "Add Emboss text object"
+msgstr ""
+
+msgid "Add Emboss text Volume"
+msgstr ""
+
+msgid "Font doesn't have any shape for given text."
+msgstr ""
+
+msgid "There is no valid surface for text projection."
+msgstr ""
+
 msgid "Error! Unable to create thread!"
 msgstr "Hiba! Nem sikerült létrehozni a szálat!"
 
@@ -2256,9 +2615,6 @@ msgstr ""
 msgid "SN"
 msgstr "SN"
 
-msgid "Setting AMS slot information while printing is not supported"
-msgstr "Nyomtatás közben nem változtathatóak meg a AMS férőhelyek adatai"
-
 msgid "Factors of Flow Dynamics Calibration"
 msgstr "Anyagáramlás kalibrálásának faktorai"
 
@@ -2270,6 +2626,9 @@ msgstr "K-tényező"
 
 msgid "Factor N"
 msgstr "N-tényező"
+
+msgid "Setting AMS slot information while printing is not supported"
+msgstr "Nyomtatás közben nem változtathatóak meg a AMS férőhelyek adatai"
 
 msgid "Setting Virtual slot information while printing is not supported"
 msgstr "Nem módosíthatod a virtuális férőhelyek beállításait nyomtatás közben."
@@ -2387,8 +2746,8 @@ msgstr "AMS kikapcsolása"
 msgid "Print with the filament mounted on the back of chassis"
 msgstr "Nyomtatás külső tartón lévő filamenttel"
 
-msgid "Current Cabin humidity"
-msgstr "Current Cabin humidity"
+msgid "Current AMS humidity"
+msgstr ""
 
 msgid ""
 "Please change the desiccant when it is too wet. The indicator may not "
@@ -2781,20 +3140,6 @@ msgid ""
 msgstr ""
 "Túl nagy rétegmagasság.\n"
 "Visszaállítva 0,2-re"
-
-msgid ""
-"Too small scarf start height.\n"
-"Reset to 50%"
-msgstr ""
-"Too small scarf start height.\n"
-"Reset to 50%"
-
-msgid ""
-"Too big scarf start height.\n"
-"Reset to 50%"
-msgstr ""
-"Too big scarf start height.\n"
-"Reset to 50%"
 
 msgid ""
 "Too small ironing spacing.\n"
@@ -3221,14 +3566,11 @@ msgstr "Torony"
 msgid "Total"
 msgstr "Összesen"
 
-msgid "Total Estimation"
-msgstr "Összesített becslés"
-
-msgid "Total time"
-msgstr "Teljes idő"
-
 msgid "Total cost"
 msgstr "Total cost"
+
+msgid "Time Estimation"
+msgstr "Időbecslés"
 
 msgid "up to"
 msgstr "legfeljebb"
@@ -3317,8 +3659,8 @@ msgstr "Nyomtató"
 msgid "Print settings"
 msgstr "Nyomtatási beállítások"
 
-msgid "Time Estimation"
-msgstr "Időbecslés"
+msgid "Total Estimation"
+msgstr "Összesített becslés"
 
 msgid "Normal mode"
 msgstr "Normál mód"
@@ -3334,6 +3676,9 @@ msgstr "Előkészítési idő"
 
 msgid "Model printing time"
 msgstr "Modell nyomtatási ideje"
+
+msgid "Total time"
+msgstr "Teljes idő"
 
 msgid "Switch to silent mode"
 msgstr "Váltás csendes módra"
@@ -3504,6 +3849,9 @@ msgstr "Keresztmetszet nézet"
 msgid "Assemble Control"
 msgstr "Összeszerelés vezérlői"
 
+msgid "Selection Mode"
+msgstr ""
+
 msgid "Total Volume:"
 msgstr "Teljes térfogat:"
 
@@ -3658,9 +4006,6 @@ msgstr "Nem"
 msgid "will be closed before creating a new model. Do you want to continue?"
 msgstr "bezáródik az új modell létrehozása előtt. Folytatod?"
 
-msgid "Upload"
-msgstr "Feltöltés"
-
 msgid "Slice plate"
 msgstr "Tálca szeletelése"
 
@@ -3711,6 +4056,9 @@ msgstr "Probléma bejelentése"
 
 msgid "Check for Update"
 msgstr "Frissítés keresése"
+
+msgid "Check for Presets Update"
+msgstr ""
 
 msgid "Open Network Test"
 msgstr "Hálózati teszt megnyitása"
@@ -3844,6 +4192,9 @@ msgstr "Aktuális konfiguráció exportálása fájlokba"
 msgid "Export"
 msgstr "Exportálás"
 
+msgid "Publish to MakerWorld"
+msgstr ""
+
 msgid "Quit"
 msgstr "Kilépés"
 
@@ -3904,9 +4255,6 @@ msgstr "Perspektivikus nézet használata"
 msgid "Use Orthogonal View"
 msgstr "Ortogonális nézet használata"
 
-msgid "Show &Labels"
-msgstr "Címkék megjelenítése"
-
 msgid "Show object labels in 3D scene"
 msgstr "Objektumcímkék megjelenítése a 3D-térben"
 
@@ -3915,6 +4263,12 @@ msgstr "Túlnyúlás megjelenítése"
 
 msgid "Show object overhang highlight in 3D scene"
 msgstr "Objektum túlnyúlásainak kiemelése 3D-ben"
+
+msgid "Set 3DConnexion"
+msgstr ""
+
+msgid "Set 3DConnexion mouse"
+msgstr ""
 
 msgid "Services"
 msgstr "Szolgáltatások"
@@ -4124,6 +4478,12 @@ msgstr ""
 "A lejátszó nem töltődött be; kérjük, kattints a „lejátszás” gombra az újra "
 "próbálkozáshoz."
 
+msgid "Temporarily closed because there is no operating for a long time."
+msgstr ""
+
+msgid "Temporarily closed because there is no printing for a while."
+msgstr ""
+
 msgid "Please confirm if the printer is connected."
 msgstr "Kérjük, ellenőrizd, hogy a nyomtató csatlakoztatva van."
 
@@ -4167,8 +4527,8 @@ msgstr ""
 msgid "The printer has been logged out and cannot connect."
 msgstr "A nyomtató ki van jelentkezve, és nem tud csatlakozni."
 
-msgid "Stopped."
-msgstr "Megállítva."
+msgid "Video Stopped."
+msgstr ""
 
 msgid "LAN Connection Failed (Failed to start liveview)"
 msgstr "Sikertelen LAN csatlakozás (Nem sikerült elindítani az élő videót)"
@@ -4405,6 +4765,14 @@ msgstr "Állj"
 msgid "Layer: N/A"
 msgstr "Réteg: N/A"
 
+msgid "Finish Time: N/A"
+msgstr ""
+
+msgid ""
+"The estimated printing time for \n"
+"multi-color models may be inaccurate."
+msgstr ""
+
 msgid "Clear"
 msgstr "Törlés"
 
@@ -4425,6 +4793,12 @@ msgstr "(Már értékelted ezt a modellt. Az új értékelésed felülírja az e
 
 msgid "Rate"
 msgstr "Értékelés"
+
+msgid "Finished"
+msgstr "Kész"
+
+msgid "Finish Time: "
+msgstr ""
 
 msgid "Camera"
 msgstr "Kamera"
@@ -4491,6 +4865,15 @@ msgstr "Réteg: %s"
 #, c-format, boost-format
 msgid "Layer: %d/%d"
 msgstr "Réteg: %d/%d"
+
+msgid "Auto homing"
+msgstr ""
+
+msgid "Are you sure you want to trigger auto homing?"
+msgstr ""
+
+msgid "Homing"
+msgstr ""
 
 msgid ""
 "Please heat the nozzle to above 170 degree before loading or unloading "
@@ -4637,6 +5020,30 @@ msgstr ""
 "At least one successful print record of this print profile is required \n"
 "to give a positive rating (4 or 5 stars)."
 
+msgid "Step file import parameters"
+msgstr ""
+
+msgid "Linear Deflection"
+msgstr ""
+
+msgid "Please input a valid value (0.001 < linear deflection < 0.1)"
+msgstr ""
+
+msgid "Angle Deflection"
+msgstr ""
+
+msgid "Please input a valid value (0.01 < angle deflection < 1.0)"
+msgstr ""
+
+msgid "Number of triangular facets"
+msgstr ""
+
+msgid "0"
+msgstr "0"
+
+msgid "Calculating, please wait..."
+msgstr ""
+
 msgid "Status"
 msgstr "Állapot"
 
@@ -4705,6 +5112,25 @@ msgstr "Legújabb verzió: "
 
 msgid "Not for now"
 msgstr "Not for now"
+
+msgid "Server Exception"
+msgstr ""
+
+msgid ""
+"The server is unable to respond. Please click the link below to check the "
+"server status."
+msgstr ""
+
+msgid ""
+"If the server is in a fault state, you can temporarily use offline printing "
+"or local network printing."
+msgstr ""
+
+msgid "How to use LAN only mode"
+msgstr ""
+
+msgid "Don't show this dialog again"
+msgstr ""
 
 msgid "3D Mouse disconnected."
 msgstr "3D Mouse csatlakoztatva."
@@ -4801,9 +5227,6 @@ msgstr "Modellfájl letöltve."
 
 msgid "Serious warning:"
 msgstr "Súlyos figyelmeztetés:"
-
-msgid " (Repair)"
-msgstr " (Javítás)"
 
 msgid " Click here to install it."
 msgstr " Kattints ide a telepítéshez."
@@ -5091,10 +5514,10 @@ msgstr "3mf betöltése"
 msgid "The Config can not be loaded."
 msgstr "A konfiguráció nem tölthető be."
 
-msgid "The 3mf is generated by old Bambu Studio, load geometry data only."
+msgid ""
+"Due to the lower version of Bambu Studio, this 3mf file cannot be fully "
+"loaded. Please update Bambu Studio to the latest version"
 msgstr ""
-"A 3mf a Bambu Studio egy régebbi verziójával lett létrehozva, csak a "
-"geometriai adatok kerülnek betöltésre."
 
 msgid "Found following keys unrecognized:\n"
 msgstr "A következő ismeretlen kulcsokat találtuk:\n"
@@ -5366,6 +5789,9 @@ msgstr "Megnyitás projektként"
 msgid "Import geometry only"
 msgstr "Csak a geometria importálása"
 
+msgid "Please import multiple files with the same suffix."
+msgstr ""
+
 msgid "Only one G-code file can be opened at the same time."
 msgstr "Egyszerre csak egy G-kód fájl nyitható meg."
 
@@ -5451,6 +5877,15 @@ msgstr ""
 "logikai műveletet a hálón?"
 
 msgid ""
+"Are you sure you want to store original SVGs with their local paths into the "
+"3MF file?\n"
+"If you hit 'NO', all SVGs in the project will not be editable any more."
+msgstr ""
+
+msgid "Private protection"
+msgstr ""
+
+msgid ""
 "Print By Object: \n"
 "Suggest to use auto-arrange to avoid collisions when printing."
 msgstr ""
@@ -5473,6 +5908,17 @@ msgstr "Érvénytelen szám"
 
 msgid "Plate Settings"
 msgstr "Tálcabeállítások"
+
+msgid "Prime Tower:"
+msgstr ""
+
+msgid ""
+"A cube printed during a filament change to purge old color and ensure smooth "
+"color transition."
+msgstr ""
+
+msgid "View Wiki for more information"
+msgstr ""
 
 #, boost-format
 msgid "Number of currently selected parts: %1%\n"
@@ -5510,15 +5956,16 @@ msgstr "Térfogat: %1% mm³\n"
 msgid "Triangles: %1%\n"
 msgstr "Háromszögek: %1%\n"
 
+msgid " (Repair)"
+msgstr " (Javítás)"
+
 msgid "Tips:"
 msgstr "Tippek:"
 
 msgid ""
-"\"Fix Model\" feature is currently only on Windows. Please repair the model "
-"on Bambu Studio(windows) or CAD softwares."
+"\"Fix Model\" feature is currently only on Windows. Please use a third-party "
+"tool to repair the model before importing it into Bambu Studio, such as "
 msgstr ""
-"A „Modelljavítás” funkció jelenleg csak Windows rendszeren érhető el. "
-"Javítsd meg a modellt a Bambu Studióban (Windows) vagy más CAD szoftverben."
 
 #, c-format, boost-format
 msgid ""
@@ -5558,6 +6005,15 @@ msgstr "Régió kiválasztása"
 msgid "Second"
 msgstr "Másodperc"
 
+msgid ""
+"Please note that the model show will undergo certain changes at small pixels "
+"case.\n"
+"Enabled LOD requires application restart."
+msgstr ""
+
+msgid "Enable LOD"
+msgstr ""
+
 msgid "Browse"
 msgstr "Tallózás"
 
@@ -5570,8 +6026,8 @@ msgstr "Általános beállítások"
 msgid "Asia-Pacific"
 msgstr "Ázsia-Csendes-óceáni térség"
 
-msgid "China"
-msgstr "Kína"
+msgid "Chinese Mainland"
+msgstr "Kínai szárazföld"
 
 msgid "Europe"
 msgstr "Európa"
@@ -5616,14 +6072,6 @@ msgstr ""
 "same Bambu Studio is already running, that instance will be reactivated "
 "instead."
 
-msgid "Zoom to mouse position"
-msgstr "Nagyítás az egér pozíciójára"
-
-msgid ""
-"Zoom in towards the mouse pointer's position in the 3D view, rather than the "
-"2D window center."
-msgstr "Az egérmutatóra nagyít a 3D-nézetben, a 2D-ablak középpontja helyett."
-
 msgid "Auto plate type"
 msgstr "Auto plate type"
 
@@ -5660,6 +6108,48 @@ msgstr ""
 "With this option enabled, you can send a task to multiple devices at the "
 "same time and manage multiple devices."
 
+msgid "Support beta version update."
+msgstr ""
+
+msgid "With this option enabled, you can receive beta version updates."
+msgstr ""
+
+msgid "3D Settings"
+msgstr ""
+
+msgid "Zoom to mouse position"
+msgstr "Nagyítás az egér pozíciójára"
+
+msgid ""
+"Zoom in towards the mouse pointer's position in the 3D view, rather than the "
+"2D window center."
+msgstr "Az egérmutatóra nagyít a 3D-nézetben, a 2D-ablak középpontja helyett."
+
+msgid "Always show shells in preview"
+msgstr ""
+
+msgid ""
+"Always show shells or not in preview view tab.If change value,you should "
+"reslice."
+msgstr ""
+
+msgid "Improve rendering performance by lod"
+msgstr ""
+
+msgid ""
+"Improved rendering performance under the scene of multiple plates and many "
+"models."
+msgstr ""
+
+msgid "Grabber scale"
+msgstr ""
+
+msgid "Set grabber size for move,rotate,scale tool."
+msgstr ""
+
+msgid "Value range"
+msgstr ""
+
 msgid "Presets"
 msgstr "Beállítások"
 
@@ -5668,14 +6158,18 @@ msgstr ""
 "Felhasználói beállítások automatikus szinkronizálása (Nyomtató/Filament/"
 "Folyamat)"
 
-msgid "User Sync"
-msgstr "Felhasználó szinkronizálás"
+msgid ""
+"If enabled, auto sync user presets with cloud after Bambu Studio startup or "
+"presets modified."
+msgstr ""
 
-msgid "Update built-in Presets automatically."
-msgstr "Automatikusan frissíti a gyári alapbeállításokat."
+msgid "Auto check for system presets updates"
+msgstr ""
 
-msgid "System Sync"
-msgstr "Rendszerszinkronizálás"
+msgid ""
+"If enabled, auto check whether there are system presets updates after Bambu "
+"Studio startup."
+msgstr ""
 
 msgid "Clear my choice on the unsaved presets."
 msgstr "Töröld a változásokat a nem mentett beállításokon."
@@ -5739,8 +6233,16 @@ msgstr "minden"
 msgid "The peroid of backup in seconds."
 msgstr "A biztonsági mentés időköze másodpercben."
 
-msgid "Downloads"
-msgstr "Letöltések"
+msgid "Media"
+msgstr "Média"
+
+msgid "Keep liveview when printing."
+msgstr ""
+
+msgid ""
+"By default, Liveview will pause after 15 minutes of inactivity on the "
+"computer. Check this box to disable this feature during printing."
+msgstr ""
 
 msgid "Dark Mode"
 msgstr "Sötét mód"
@@ -6093,6 +6595,9 @@ msgstr "Offline"
 msgid "Busy"
 msgstr "Elfoglalt"
 
+msgid "Bambu Cool Plate SuperTack"
+msgstr ""
+
 msgid "Bambu Cool Plate"
 msgstr "Bambu Cool Plate"
 
@@ -6336,6 +6841,18 @@ msgstr "Eszköz nevének módosítása"
 msgid "Bind with Pin Code"
 msgstr "Bind with Pin Code"
 
+msgid "Bind with Access Code"
+msgstr ""
+
+msgid ""
+"Please log in before binding your device with a PIN code.\n"
+"Alternatively, you can use LAN mode to bind your device. Learn about LAN "
+"mode."
+msgstr ""
+
+msgid "Go to Login"
+msgstr ""
+
 msgid "Send to Printer SD card"
 msgstr "Küldés a nyomtatóban lévő MicroSD kártyára"
 
@@ -6535,14 +7052,15 @@ msgid "Still print by object?"
 msgstr "Továbbra is tárgyanként szeretnél nyomtatni?"
 
 msgid ""
-"We have added an experimental style \"Tree Slim\" that features smaller "
-"support volume but weaker strength.\n"
-"We recommend using it with: 0 interface layers, 0 top distance, 2 walls."
+"When using support material for the support interface, We recommend the "
+"following settings:\n"
+"0 top z distance, 0 interface spacing, interlaced rectilinear pattern and "
+"disable independent support layer height"
 msgstr ""
-"Kísérleti jelleggel hozzáadtunk egy „Tree Slim“ nevű támaszt, amely kevesebb "
-"anyagot igényel, de emiatt gyengébb szilárdságú.\n"
-"Használatát a következőkkel javasoljuk: 0 érintkezőréteg, 0 felső távolság, "
-"2 fal."
+"When using support material for the support interface, We recommend the "
+"following settings:\n"
+"0 top z distance, 0 interface spacing, interlaced rectilinear pattern and "
+"disable independent support layer height"
 
 msgid ""
 "Change these settings automatically? \n"
@@ -6554,24 +7072,9 @@ msgstr ""
 "Nem  - Ne változtassa meg a beállításokat"
 
 msgid ""
-"For \"Tree Strong\" and \"Tree Hybrid\" styles, we recommend the following "
-"settings: at least 2 interface layers, at least 0.1mm top z distance or "
-"using support materials on interface."
+"Layer height is too small.\n"
+"It will set to min_layer_height\n"
 msgstr ""
-"Az „Erős fa” és a „Hibrid fa” támaszok esetében a következő beállításokat "
-"javasoljuk: legalább 2 érintkezőréteg, legalább 0,1 mm felső Z-távolság vagy "
-"támaszanyag használata."
-
-msgid ""
-"When using support material for the support interface, We recommend the "
-"following settings:\n"
-"0 top z distance, 0 interface spacing, interlaced rectilinear pattern and "
-"disable independent support layer height"
-msgstr ""
-"When using support material for the support interface, We recommend the "
-"following settings:\n"
-"0 top z distance, 0 interface spacing, interlaced rectilinear pattern and "
-"disable independent support layer height"
 
 msgid ""
 "Layer height exceeds the limit in Printer Settings -> Extruder -> Layer "
@@ -6623,6 +7126,11 @@ msgstr ""
 "helyezz el a tálcán egy „Timelapse törlőtornyot“. Ehhez kattints jobb "
 "gombbal a tálca egy üres részére, majd válaszd a „Primitív hozzáadása“ -> "
 "„Timelapse törlőtorony“ lehetőséget."
+
+msgid ""
+"The notes are too large, and may not be synchronized to the cloud. Please "
+"keep it within 40k."
+msgstr ""
 
 msgid "Line width"
 msgstr "Nyomtatott vonal szélessége"
@@ -6678,6 +7186,9 @@ msgstr "Tutaj"
 msgid "Support filament"
 msgstr "Filament a támaszhoz"
 
+msgid "Tree Support"
+msgstr ""
+
 msgid "Prime tower"
 msgstr "Törlőtorony"
 
@@ -6717,6 +7228,11 @@ msgstr[1] ""
 msgid "Reserved keywords found"
 msgstr "Foglalt kulcsszavakat találtunk"
 
+msgid ""
+"Custom G-code files are too large, and may not be synchronized to the cloud. "
+"Please keep it within 40k."
+msgstr ""
+
 msgid "Setting Overrides"
 msgstr "Beállítások felülbírálása"
 
@@ -6742,6 +7258,11 @@ msgstr "Fúvóka"
 
 msgid "Nozzle temperature when printing"
 msgstr "Fúvóka hőmérséklete nyomtatáskor"
+
+msgid ""
+"Bed temperature when cool plate is installed. Value 0 means the filament "
+"does not support to print on the Bambu Cool Plate SuperTack"
+msgstr ""
 
 msgid "Cool Plate / PLA Plate"
 msgstr "Cool Plate / PLA Plate"
@@ -6788,6 +7309,9 @@ msgstr ""
 
 msgid "Volumetric speed limitation"
 msgstr "Volumetrikus sebességhatár"
+
+msgid "Filament scarf seam settings"
+msgstr ""
 
 msgid "Cooling"
 msgstr "Hűtés"
@@ -7338,9 +7862,6 @@ msgstr "Nézet elforgatása"
 msgid "Pan View"
 msgstr "Pásztázó nézet"
 
-msgid "Mouse wheel"
-msgstr "Egérgörgő"
-
 msgid "Zoom View"
 msgstr "Nagyítás nézet"
 
@@ -7464,26 +7985,11 @@ msgstr "Gizmo FDM paint-on seam"
 msgid "Plater"
 msgstr "Plater"
 
-msgid "Move: press to snap by 1mm"
-msgstr "Mozgatás: nyomd meg, hogy 1 mm-t mozduljon"
-
-msgid "⌘+Mouse wheel"
-msgstr "⌘+Egérgörgő"
-
 msgid "Support/Color Painting: adjust pen radius"
 msgstr "Támasz/Színfestés: toll méretének beállítása"
 
-msgid "⌥+Mouse wheel"
-msgstr "⌥+Egérgörgő"
-
 msgid "Support/Color Painting: adjust section position"
 msgstr "Támasz/Színfestés: metszet pozíciójának beállítása"
-
-msgid "Ctrl+Mouse wheel"
-msgstr "Ctrl+Egérgörgő"
-
-msgid "Alt+Mouse wheel"
-msgstr "Alt+Egérgörgő"
 
 msgid "Gizmo"
 msgstr "Gizmo"
@@ -7602,8 +8108,8 @@ msgstr "View Liveview"
 msgid "Confirm and Update Nozzle"
 msgstr "Fúvóka lecserélésének megerősítése"
 
-msgid "LAN Connection Failed (Sending print file)"
-msgstr "LAN kapcsolódás sikertelen (nyomtatási fájl küldése)"
+msgid "Connect the printer using IP and access code"
+msgstr ""
 
 msgid ""
 "Step 1, please confirm Bambu Studio and your printer are in the same LAN."
@@ -7629,11 +8135,29 @@ msgstr ""
 "3. lépés: Pingeld meg az IP-címet a csomagveszteség és késleltetés "
 "ellenőrzéséhez."
 
-msgid "Test"
-msgstr "Teszt"
+msgid "Connect"
+msgstr ""
 
-msgid "IP and Access Code Verified! You may close the window"
-msgstr "IP és hozzáférési kód leellenőrizve! Bezárhatod az ablakot"
+msgid "connecting..."
+msgstr ""
+
+msgid "Failed to connect to printer."
+msgstr ""
+
+msgid "Failed to publish login request."
+msgstr ""
+
+msgid "The device does not support using IP and Access Code for connection."
+msgstr ""
+
+msgid "The printer has already been bound."
+msgstr ""
+
+msgid "The printer mode is incorrect, please switch to LAN Only."
+msgstr ""
+
+msgid "Connecting to printer... The dialog will close later"
+msgstr ""
 
 msgid "Connection failed, please double check IP and Access Code"
 msgstr ""
@@ -8319,10 +8843,8 @@ msgstr "Kezdőréteg asztalhőmérséklete"
 
 msgid ""
 "Bed temperature of the initial layer. Value 0 means the filament does not "
-"support to print on the Cool Plate"
+"support to print on the Bambu Cool Plate SuperTack"
 msgstr ""
-"A kezdőréteg asztalhőmérséklete. A 0 érték azt jelenti, hogy a filament nem "
-"támogatja a Cool Plate-re történő nyomtatást"
 
 msgid ""
 "Bed temperature of the initial layer. Value 0 means the filament does not "
@@ -8430,6 +8952,17 @@ msgstr ""
 "rétegek alátámasztása nélkül. A 0%%-os érték bekapcsolja a hűtést a külső "
 "fal teljes szélességén, függetlenül a túlnyúlás mértékétől."
 
+msgid "Overhang threshold for participating cooling"
+msgstr ""
+
+#, c-format
+msgid ""
+"Decide which overhang part join the cooling function to slow down the speed."
+"Expressed as percentage which indicides how much width of the line without "
+"support from lower layer. 100% means forcing cooling for all outer wall no "
+"matter how much overhang degree"
+msgstr ""
+
 msgid "Bridge direction"
 msgstr "Áthidalás iránya"
 
@@ -8516,6 +9049,15 @@ msgstr ""
 msgid "mm/s"
 msgstr "mm/s"
 
+msgid "over 100% wall (not bridge)"
+msgstr ""
+
+#, c-format, boost-format
+msgid ""
+"Speed for line of wall which has degree of overhang over 100% line width, "
+"but the wall is not a bridge wall."
+msgstr ""
+
 msgid "Speed of bridge and completely overhang wall"
 msgstr "Az áthidalások és a teljesen túlnyúló falak nyomtatási sebessége"
 
@@ -8535,6 +9077,9 @@ msgstr ""
 "Ez szabályozza a perem generálását a modellek külső és/vagy belső oldalán. "
 "Az Auto azt jelenti, hogy a perem szélessége automatikusan kerül "
 "kiszámításra."
+
+msgid "Painted"
+msgstr ""
 
 msgid "Brim-object gap"
 msgstr "Perem-tárgy közötti rés"
@@ -9044,6 +9589,49 @@ msgstr ""
 "Az oldható anyagot általában a támaszok és érintkezőfelületek nyomtatására "
 "használják"
 
+msgid "Scarf seam type"
+msgstr ""
+
+msgid ""
+"Set scarf seam type for this filament. This setting could minimize seam "
+"visibiliy."
+msgstr ""
+
+msgid "Contour"
+msgstr "Kontúr"
+
+msgid "Contour and hole"
+msgstr "Kontúr és furat"
+
+msgid "Scarf start height"
+msgstr "Scarf start height"
+
+msgid ""
+"This amount can be specified in millimeters or as a percentage of the "
+"current layer height."
+msgstr ""
+
+msgid "mm/%"
+msgstr ""
+
+msgid "Scarf slope gap"
+msgstr ""
+
+msgid ""
+"In order to reduce the visiblity of the seam in closed loop, the inner wall "
+"and outer wall are shortened by a specified amount."
+msgstr ""
+
+msgid "Scarf length"
+msgstr "Scarf length"
+
+msgid ""
+"Length of the scarf. Setting this parameter to zero effectively disables the "
+"scarf."
+msgstr ""
+"Length of the scarf. Setting this parameter to zero effectively disables the "
+"scarf."
+
 msgid "Support material"
 msgstr "Támaszanyag"
 
@@ -9248,12 +9836,6 @@ msgid ""
 msgstr ""
 "A nyomtatófej véletlenszerű mozgást végez a fal nyomtatása közben, így a "
 "felület durva megjelenésű lesz"
-
-msgid "Contour"
-msgstr "Kontúr"
-
-msgid "Contour and hole"
-msgstr "Kontúr és furat"
 
 msgid "All walls"
 msgstr "Összes fal"
@@ -9559,6 +10141,13 @@ msgstr "Vasalási vonalak közötti távolság"
 msgid "The distance between the lines of ironing"
 msgstr "A vasaláshoz használt vonalak közötti távolság"
 
+msgid "Ironing inset"
+msgstr ""
+
+msgid ""
+"The distance to keep the from the edges of ironing line. 0 means not apply."
+msgstr ""
+
 msgid "Ironing speed"
 msgstr "Vasalás sebessége"
 
@@ -9807,6 +10396,18 @@ msgstr ""
 "sebességet használ. 100 százalékos túlnyúlás esetén az áthidaláshoz "
 "beállított sebességet használja."
 
+msgid "Smooth speed discontinuity area"
+msgstr ""
+
+msgid "Add the speed transition between discontinuity area."
+msgstr ""
+
+msgid "Smooth coefficient"
+msgstr ""
+
+msgid "The smaller the number, the longer the speed transition path."
+msgstr ""
+
 msgid "Line width of inner wall"
 msgstr "A belső falak vonalszélessége"
 
@@ -9864,10 +10465,8 @@ msgstr "Tutaj rétegek"
 
 msgid ""
 "Object will be raised by this number of support layers. Use this function to "
-"avoid wrapping when print ABS"
+"avoid warping when print ABS"
 msgstr ""
-"A tárgy ennyi támaszréteggel kerül megemelésre. Ezzel a funkcióval "
-"elkerülheted a vetemedést ABS nyomtatásakor"
 
 msgid ""
 "G-code path is generated after simplifying the contour of model to avoid too "
@@ -10036,13 +10635,6 @@ msgstr ""
 "Ezt a mennyiséget az extruder aktuális átmérőjének százalékában fejezzük ki. "
 "Ennek a paraméternek az alapértelmezett értéke 15"
 
-msgid "Scarf joint seam (experimental)"
-msgstr "Scarf joint seam (experimental)"
-
-msgid "Use scarf joint to minimize seam visibility and increase seam strength."
-msgstr ""
-"Use scarf joint to minimize seam visibility and increase seam strength."
-
 msgid "Conditional scarf joint"
 msgstr "Conditional scarf joint"
 
@@ -10069,33 +10661,11 @@ msgstr ""
 "the absence of sharp corners), a scarf joint seam will be used. The default "
 "value is 155°."
 
-msgid "Scarf start height"
-msgstr "Scarf start height"
-
-msgid ""
-"Start height of the scarf.\n"
-"This amount can be specified in millimeters or as a percentage of the "
-"current layer height. The default value for this parameter is 0."
-msgstr ""
-"Start height of the scarf.\n"
-"This amount can be specified in millimeters or as a percentage of the "
-"current layer height. The default value for this parameter is 0."
-
 msgid "Scarf around entire wall"
 msgstr "Scarf around entire wall"
 
 msgid "The scarf extends to the entire length of the wall."
 msgstr "The scarf extends to the entire length of the wall."
-
-msgid "Scarf length"
-msgstr "Scarf length"
-
-msgid ""
-"Length of the scarf. Setting this parameter to zero effectively disables the "
-"scarf."
-msgstr ""
-"Length of the scarf. Setting this parameter to zero effectively disables the "
-"scarf."
 
 msgid "Scarf steps"
 msgstr "Scarf steps"
@@ -10122,6 +10692,15 @@ msgstr ""
 "százalékban van megadva (pl. 80%), akkor azt a rendszer a mozgási "
 "sebességbeállítás alapján számítja ki. Ennek a paraméternek az "
 "alapértelmezett értéke 80%"
+
+msgid "Role base wipe speed"
+msgstr ""
+
+msgid ""
+"The wipe speed is determined by speed of current extrusion role. e.g if a "
+"wip action is executed immediately following an outer wall extrusion, the "
+"speed of the outer wall extrusion will be utilized for the wipe action."
+msgstr ""
 
 msgid "Skirt distance"
 msgstr "Szoknya távolsága"
@@ -10549,15 +11128,10 @@ msgstr "Ez a beállítás határozza meg a támasz csomópontok kezdeti átmér�
 msgid "Support wall loops"
 msgstr "Támaszfalak száma"
 
-msgid "This setting specifies the count of walls around support"
-msgstr "Ez a beállítás határozza meg a falak számát a támasz körül"
-
-msgid "Tree support brim width"
-msgstr "Fa támasz peremének szélessége"
-
-msgid "The brim width around tree support. 0 means auto."
+msgid ""
+"This setting specifies the count of support walls in the range of [0,2]. 0 "
+"means auto."
 msgstr ""
-"Perem szélessége a fa támaszok körül. A 0 az automatikus módot jelenti."
 
 msgid "Chamber temperature"
 msgstr "Kamra hőmérséklete"
@@ -11344,11 +11918,9 @@ msgstr ""
 "újrapróbálod. A sikertelen teszt eredményét töröljük."
 
 msgid ""
-"*We recommend you to add brand, materia, type, and even humidity level in "
+"*We recommend you to add brand, material, type, and even humidity level in "
 "the Name"
 msgstr ""
-"* Javasoljuk, hogy a névhez add hozzá a márkát, az anyagot, a típust, "
-"illetve a páratartalmat is"
 
 msgid "Failed"
 msgstr "Sikertelen"
@@ -11664,9 +12236,6 @@ msgstr "OctoPrint verzió"
 msgid "Searching for devices"
 msgstr "Eszközök keresése"
 
-msgid "Finished"
-msgstr "Kész"
-
 msgid "Send to print"
 msgstr "Nyomtatásra küldés"
 
@@ -11679,6 +12248,9 @@ msgstr "Ha szükséges, használj perjeleket ( / ) könyvtárelválasztóként."
 #, c-format, boost-format
 msgid "Upload filename doesn't end with \"%s\". Do you wish to continue?"
 msgstr "A feltöltendő fájlnév nem végződik „%s”-ra. Folytatod?"
+
+msgid "Upload"
+msgstr "Feltöltés"
 
 msgid "Simulate"
 msgstr "Szimuláció"
@@ -11733,15 +12305,15 @@ msgstr ""
 msgid "Mesh Boolean"
 msgstr "Mesh Boolean"
 
-msgid "Please right click to assembly these objects."
-msgstr "Please right click to assemble these objects."
-
 msgid ""
 "Please add at least one more object and select them together,\n"
 "then right click to assembly these objects."
 msgstr ""
 "Please add at least one more object and select them together,\n"
 "then right click to assemble these objects."
+
+msgid "Please right click to assembly these objects."
+msgstr "Please right click to assemble these objects."
 
 msgid "Union"
 msgstr "Egyesítés"
@@ -12372,6 +12944,9 @@ msgstr "Fizikai nyomtató"
 msgid "Print Host upload"
 msgstr "Feltöltés a nyomtatóra"
 
+msgid "Test"
+msgstr "Teszt"
+
 msgid "Could not get a valid Printer Host reference"
 msgstr "Nem sikerült érvényes nyomtató hivatkozást lekérni"
 
@@ -12783,6 +13358,80 @@ msgstr ""
 "varies a lot from brand to brand, so it's highly recommended to ask the "
 "vendor for a suitable profile before printing and adjust some parameters "
 "according to its performance."
+
+msgid ""
+"When printing this filament, there's a risk of warping and low layer "
+"adhesion strength. To get better results, please refer to this wiki: "
+"Printing Tips for High Temp / Engineering materials."
+msgstr ""
+
+msgid ""
+"When printing this filament, there's a risk of nozzle clogging, oozing, "
+"warping and low layer adhesion strength. To get better results, please refer "
+"to this wiki: Printing Tips for High Temp / Engineering materials."
+msgstr ""
+
+msgid ""
+"To get better transparent or translucent results with the corresponding "
+"filament, please refer to this wiki: Printing tips for transparent PETG."
+msgstr ""
+
+msgid ""
+"To make the prints get higher gloss, please dry the filament before use, and "
+"set the outer wall speed to be 40 to 60 mm/s when slicing."
+msgstr ""
+
+msgid ""
+"This filament is only used to print models with a low density usually, and "
+"some special parameters are required. To get better printing quality, please "
+"refer to this wiki: Instructions for printing RC model with foaming PLA (PLA "
+"Aero)."
+msgstr ""
+
+msgid ""
+"This filament is only used to print models with a low density usually, and "
+"some special parameters are required. To get better printing quality, please "
+"refer to this wiki: ASA Aero Printing Guide."
+msgstr ""
+
+msgid ""
+"This filament is too soft and not compatible with the AMS. Printing it is of "
+"many requirements, and to get better printing quality, please refer to this "
+"wiki: TPU printing guide."
+msgstr ""
+
+msgid ""
+"This filament has high enough hardness (about 67D)  and is compatible with "
+"the AMS. Printing it is of many requirements, and to get better printing "
+"quality, please refer to this wiki: TPU printing guide."
+msgstr ""
+
+msgid ""
+"If you are to print a kind of soft TPU, please don't slice with this "
+"profile, and it is only for TPU that has high enough hardness (not less than "
+"55D) and is compatible with the AMS. To get better printing quality, please "
+"refer to this wiki: TPU printing guide."
+msgstr ""
+
+msgid ""
+"This is a water-soluble support filament, and usually it is only for the "
+"support structure and not for the model body. Printing this filament is of "
+"many requirements, and to get better printing quality, please refer to this "
+"wiki: PVA Printing Guide."
+msgstr ""
+
+msgid ""
+"This is a non-water-soluble support filament, and usually it is only for the "
+"support structure and not for the model body. To get better printing "
+"quality, please refer to this wiki: Printing Tips for Support Filament and "
+"Support Function."
+msgstr ""
+
+msgid ""
+"The generic presets are conservatively tuned for compatibility with a wider "
+"range of filaments. For higher printing quality and speeds, please use Bambu "
+"filaments with Bambu presets."
+msgstr ""
 
 msgid "No AMS"
 msgstr "No AMS"
@@ -13211,6 +13860,154 @@ msgstr ""
 "Tudtad, hogy a vetemedésre hajlamos anyagok (például ABS) nyomtatásakor a "
 "tárgyasztal hőmérsékletének növelése csökkentheti a vetemedés valószínűségét?"
 
+#~ msgid "Manual"
+#~ msgstr "Manuális"
+
+#~ msgid ""
+#~ "Object will be raised by this number of support layers. Use this function "
+#~ "to avoid wrapping when print ABS"
+#~ msgstr ""
+#~ "A tárgy ennyi támaszréteggel kerül megemelésre. Ezzel a funkcióval "
+#~ "elkerülheted a vetemedést ABS nyomtatásakor"
+
+#~ msgid "User Sync"
+#~ msgstr "Felhasználó szinkronizálás"
+
+#~ msgid "Update built-in Presets automatically."
+#~ msgstr "Automatikusan frissíti a gyári alapbeállításokat."
+
+#~ msgid "System Sync"
+#~ msgstr "Rendszerszinkronizálás"
+
+#~ msgid ""
+#~ "Too small scarf start height.\n"
+#~ "Reset to 50%"
+#~ msgstr ""
+#~ "Too small scarf start height.\n"
+#~ "Reset to 50%"
+
+#~ msgid ""
+#~ "Too big scarf start height.\n"
+#~ "Reset to 50%"
+#~ msgstr ""
+#~ "Too big scarf start height.\n"
+#~ "Reset to 50%"
+
+#~ msgid "Scarf joint seam (experimental)"
+#~ msgstr "Scarf joint seam (experimental)"
+
+#~ msgid ""
+#~ "Use scarf joint to minimize seam visibility and increase seam strength."
+#~ msgstr ""
+#~ "Use scarf joint to minimize seam visibility and increase seam strength."
+
+#~ msgid ""
+#~ "Start height of the scarf.\n"
+#~ "This amount can be specified in millimeters or as a percentage of the "
+#~ "current layer height. The default value for this parameter is 0."
+#~ msgstr ""
+#~ "Start height of the scarf.\n"
+#~ "This amount can be specified in millimeters or as a percentage of the "
+#~ "current layer height. The default value for this parameter is 0."
+
+#~ msgid "Set Position"
+#~ msgstr "Pozíció beállítása"
+
+#~ msgid "Stopped."
+#~ msgstr "Megállítva."
+
+#~ msgid ""
+#~ "\"Fix Model\" feature is currently only on Windows. Please repair the "
+#~ "model on Bambu Studio(windows) or CAD softwares."
+#~ msgstr ""
+#~ "A „Modelljavítás” funkció jelenleg csak Windows rendszeren érhető el. "
+#~ "Javítsd meg a modellt a Bambu Studióban (Windows) vagy más CAD "
+#~ "szoftverben."
+
+#~ msgid "Downloads"
+#~ msgstr "Letöltések"
+
+#~ msgid ""
+#~ "We have added an experimental style \"Tree Slim\" that features smaller "
+#~ "support volume but weaker strength.\n"
+#~ "We recommend using it with: 0 interface layers, 0 top distance, 2 walls."
+#~ msgstr ""
+#~ "Kísérleti jelleggel hozzáadtunk egy „Tree Slim“ nevű támaszt, amely "
+#~ "kevesebb anyagot igényel, de emiatt gyengébb szilárdságú.\n"
+#~ "Használatát a következőkkel javasoljuk: 0 érintkezőréteg, 0 felső "
+#~ "távolság, 2 fal."
+
+#~ msgid ""
+#~ "For \"Tree Strong\" and \"Tree Hybrid\" styles, we recommend the "
+#~ "following settings: at least 2 interface layers, at least 0.1mm top z "
+#~ "distance or using support materials on interface."
+#~ msgstr ""
+#~ "Az „Erős fa” és a „Hibrid fa” támaszok esetében a következő beállításokat "
+#~ "javasoljuk: legalább 2 érintkezőréteg, legalább 0,1 mm felső Z-távolság "
+#~ "vagy támaszanyag használata."
+
+#~ msgid "LAN Connection Failed (Sending print file)"
+#~ msgstr "LAN kapcsolódás sikertelen (nyomtatási fájl küldése)"
+
+#~ msgid "IP and Access Code Verified! You may close the window"
+#~ msgstr "IP és hozzáférési kód leellenőrizve! Bezárhatod az ablakot"
+
+#~ msgid ""
+#~ "Bed temperature of the initial layer. Value 0 means the filament does not "
+#~ "support to print on the Cool Plate"
+#~ msgstr ""
+#~ "A kezdőréteg asztalhőmérséklete. A 0 érték azt jelenti, hogy a filament "
+#~ "nem támogatja a Cool Plate-re történő nyomtatást"
+
+#~ msgid "This setting specifies the count of walls around support"
+#~ msgstr "Ez a beállítás határozza meg a falak számát a támasz körül"
+
+#~ msgid "China"
+#~ msgstr "Kína"
+
+#~ msgid "Tree support brim width"
+#~ msgstr "Fa támasz peremének szélessége"
+
+#~ msgid "The brim width around tree support. 0 means auto."
+#~ msgstr ""
+#~ "Perem szélessége a fa támaszok körül. A 0 az automatikus módot jelenti."
+
+#~ msgid "Show &Labels"
+#~ msgstr "Címkék megjelenítése"
+
+#~ msgid "The 3mf is generated by old Bambu Studio, load geometry data only."
+#~ msgstr ""
+#~ "A 3mf a Bambu Studio egy régebbi verziójával lett létrehozva, csak a "
+#~ "geometriai adatok kerülnek betöltésre."
+
+#~ msgid ""
+#~ "*We recommend you to add brand, materia, type, and even humidity level in "
+#~ "the Name"
+#~ msgstr ""
+#~ "* Javasoljuk, hogy a névhez add hozzá a márkát, az anyagot, a típust, "
+#~ "illetve a páratartalmat is"
+
+#~ msgid "Alt + Mouse wheel"
+#~ msgstr "Alt + Egérgörgő"
+
+#~ msgid "Alt + Shift + Enter"
+#~ msgstr "Alt + Shift + Enter"
+
+#~ msgid "Current Cabin humidity"
+#~ msgstr "Current Cabin humidity"
+
+#~ msgid "Move: press to snap by 1mm"
+#~ msgstr "Mozgatás: nyomd meg, hogy 1 mm-t mozduljon"
+
+#~ msgid "⌘+Mouse wheel"
+#~ msgstr "⌘+Egérgörgő"
+
+#~ msgid "⌥+Mouse wheel"
+#~ msgstr "⌥+Egérgörgő"
+
+#~ msgid "Alt+Mouse wheel"
+#~ msgstr "Alt+Egérgörgő"
+
 #~ msgid ""
 #~ "Please find the details of Flow Dynamics Calibration from our wiki.\n"
 #~ "\n"
@@ -13329,9 +14126,6 @@ msgstr ""
 
 #~ msgid "- \\u2103"
 #~ msgstr "- u2103"
-
-#~ msgid "0"
-#~ msgstr "0"
 
 #~ msgid "0%"
 #~ msgstr "0%"
@@ -14550,9 +15344,6 @@ msgstr ""
 #~ msgid "Management"
 #~ msgstr "Kezelés"
 
-#~ msgid "Manual"
-#~ msgstr "Manuális"
-
 #~ msgid ""
 #~ "Material becomes soft at this temperature. Thus the heatbed cannot be "
 #~ "hotter than this tempature"
@@ -14581,9 +15372,6 @@ msgstr ""
 #~ "nagyobb, mint ez az érték. A kitérő megadható abszolút értékként vagy a "
 #~ "közvetlen útvonal százalékában (például 50%). Állítsd az értéket 0-ra a "
 #~ "kikapcsoláshoz"
-
-#~ msgid "Media"
-#~ msgstr "Média"
 
 #~ msgid "Missing LAN ip of printer!"
 #~ msgstr "Hiányzik a nyomtató LAN IP-címe!"

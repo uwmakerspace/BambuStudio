@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Bambu Studio\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-05-31 17:44+0800\n"
+"POT-Creation-Date: 2024-10-15 16:47+0800\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: BambuLab Україна\n"
@@ -19,8 +19,8 @@ msgstr "Малювання підтримки"
 msgid "Please select single object."
 msgstr "Будь ласка, виберіть один об’єкт."
 
-msgid "Alt + Mouse wheel"
-msgstr "Alt + Коліщатко миші"
+msgid "Mouse wheel"
+msgstr "Колісок миші"
 
 msgid "Section view"
 msgstr "Вигляд у розрізі"
@@ -104,6 +104,11 @@ msgstr "Немає автоматичної підтримки"
 msgid "Support Generated"
 msgstr "Генерація підтримки"
 
+msgid ""
+"Warning: All triangle areas are too small,The current function is not "
+"working."
+msgstr ""
+
 msgid "Lay on face"
 msgstr "Покласти в обличчя"
 
@@ -151,14 +156,23 @@ msgstr "Заливка відра"
 msgid "Height range"
 msgstr "Діапазон висот"
 
-msgid "Alt + Shift + Enter"
-msgstr "Alt + Shift + Enter"
+msgid "Shift + Enter"
+msgstr ""
 
 msgid "Toggle Wireframe"
 msgstr "Переключення каркасу"
 
+msgid "Shift + L"
+msgstr ""
+
+msgid "Toggle non-manifold edges"
+msgstr ""
+
 msgid "Rotate horizontally"
 msgstr "Поверніть горизонтально"
+
+msgid "hit face"
+msgstr ""
 
 msgid "Shortcut Key "
 msgstr "Поєднання клавіш "
@@ -168,6 +182,9 @@ msgstr "Трикутник"
 
 msgid "Height Range"
 msgstr "Переключити каркас"
+
+msgid "Place input box of bottom near mouse"
+msgstr ""
 
 msgid "Vertical"
 msgstr "Вертикально"
@@ -227,20 +244,26 @@ msgstr "in"
 msgid "mm"
 msgstr "мм"
 
+msgid "Part selection"
+msgstr ""
+
+msgid "Fixed step drag"
+msgstr ""
+
+msgid "Single sided scaling"
+msgstr ""
+
 msgid "Position"
 msgstr "Позиція"
 
-msgid "Rotation"
-msgstr "Обертання"
+msgid "Rotate (relative)"
+msgstr "Повернути (відносно)"
 
 msgid "Scale ratios"
 msgstr "Коефіцієнти масштабування"
 
 msgid "Object Operations"
 msgstr "Операції з об'єктами"
-
-msgid "Rotate (relative)"
-msgstr "Повернути (відносно)"
 
 msgid "Volume Operations"
 msgstr "Операції з об’ємом"
@@ -250,9 +273,6 @@ msgstr "Перекласти"
 
 msgid "Group Operations"
 msgstr "Групова орієнтація"
-
-msgid "Set Position"
-msgstr "Встановити позицію"
 
 msgid "Set Orientation"
 msgstr "Встановити орієнтацію"
@@ -266,17 +286,30 @@ msgstr "Скинути позицію"
 msgid "Reset Rotation"
 msgstr "Скинути орієнтацію"
 
+msgid "Object coordinates"
+msgstr ""
+
 msgid "World coordinates"
 msgstr "Світові координати"
+
+msgid "Reset current rotation to real zeros."
+msgstr ""
 
 msgid "°"
 msgstr "°"
 
-msgid "Size"
-msgstr "Розмір"
+msgid "Reset current rotation to the value when open the rotation tool."
+msgstr ""
+
+msgid "Part coordinates"
+msgstr ""
 
 msgid "%"
 msgstr "%"
+
+#. TRN - Input label. Be short as possible
+msgid "Size"
+msgstr "Розмір"
 
 msgid "uniform scale"
 msgstr "єдина шкала"
@@ -350,6 +383,9 @@ msgstr "Відновлення об'єкта моделі"
 msgid "Connector"
 msgstr "З'єднувач"
 
+msgid "Flip cut plane"
+msgstr ""
+
 msgid "Planar"
 msgstr "Плоский"
 
@@ -364,6 +400,10 @@ msgstr "Рух:"
 
 msgid "Groove Angle"
 msgstr "Кут жолоба"
+
+#. TRN - Input label. Be short as possible
+msgid "Rotation"
+msgstr "Обертання"
 
 msgid "Movement"
 msgstr "Рух"
@@ -380,6 +420,7 @@ msgstr "Додати з'єднувачі"
 msgid "Groove"
 msgstr "Жолобок"
 
+#. TRN - Input label. Be short as possible
 msgid "Depth"
 msgstr "Глибина"
 
@@ -791,11 +832,276 @@ msgstr ""
 "Вбудована\r\n"
 "глибина"
 
+msgid "Warning:Input cannot be empty!"
+msgstr ""
+
+msgid "Warning:create text fail."
+msgstr ""
+
 msgid "Surface"
 msgstr "Поверхня"
 
 msgid "Horizontal text"
 msgstr "Горизонтальний текст"
+
+msgid "Head diameter"
+msgstr ""
+
+msgid "Max angle"
+msgstr ""
+
+msgid "Detection radius"
+msgstr ""
+
+msgid "Remove selected points"
+msgstr ""
+
+msgid "Remove all points"
+msgstr ""
+
+msgid "Auto-generate points"
+msgstr ""
+
+msgid "Add a brim ear"
+msgstr ""
+
+msgid "Delete a brim ear"
+msgstr ""
+
+msgid "Ctrl+Mouse wheel"
+msgstr "Ctrl+Колесо миші"
+
+msgid "Adjust section view"
+msgstr ""
+
+msgid ""
+"Warning: The brim type is not set to \"painted\",the brim ears will not take "
+"effect !"
+msgstr ""
+
+msgid "(Set the brim type to \"painted\")"
+msgstr ""
+
+msgid " invalid brim ears"
+msgstr ""
+
+msgid "Brim Ears"
+msgstr ""
+
+msgid "Choose SVG file for emboss:"
+msgstr ""
+
+#, boost-format
+msgid "File does NOT exist (%1%)."
+msgstr ""
+
+#, boost-format
+msgid "Filename has to end with \".svg\" but you selected %1%"
+msgstr ""
+
+#, boost-format
+msgid "Nano SVG parser can't load from file (%1%)."
+msgstr ""
+
+#, boost-format
+msgid "SVG file does NOT contain a single path to be embossed (%1%)."
+msgstr ""
+
+#. TRN - Input label. Be short as possible
+msgid "Use surface"
+msgstr ""
+
+#. TRN - Input label. Be short as possible
+msgid "From surface"
+msgstr ""
+
+#. TRN - Input label. Be short as possible
+msgid "Mirror"
+msgstr "Дзеркально"
+
+#, boost-format
+msgid "Opacity (%1%)"
+msgstr ""
+
+#, boost-format
+msgid "Color gradient (%1%)"
+msgstr ""
+
+msgid "Undefined fill type"
+msgstr ""
+
+msgid "Linear gradient"
+msgstr ""
+
+msgid "Radial gradient"
+msgstr ""
+
+msgid "Open filled path"
+msgstr ""
+
+msgid "Undefined stroke type"
+msgstr ""
+
+msgid "Path can't be healed from selfintersection and multiple points."
+msgstr ""
+
+msgid ""
+"Final shape constains selfintersection or multiple points with same "
+"coordinate."
+msgstr ""
+
+#, boost-format
+msgid "Shape is marked as invisible (%1%)."
+msgstr ""
+
+#. TRN: The first placeholder is shape identifier, the second one is text describing the problem.
+#, boost-format
+msgid "Fill of shape (%1%) contains unsupported: %2%."
+msgstr ""
+
+#, boost-format
+msgid "Stroke of shape (%1%) is too thin (minimal width is %2% mm)."
+msgstr ""
+
+#, boost-format
+msgid "Stroke of shape (%1%) contains unsupported: %2%."
+msgstr ""
+
+msgid "Not valid state please report reproduction steps on github"
+msgstr ""
+
+msgid "No embossed file"
+msgstr ""
+
+msgid "Missing svg file in embossed shape"
+msgstr ""
+
+msgid "Missing data of svg file"
+msgstr ""
+
+msgid ""
+"Tip:If you want to place svg file on another part surface,\n"
+"you should select part first, and then drag svg file to the part surface."
+msgstr ""
+
+#. TRN - Preview of filename after clear local filepath.
+msgid "Unknown filename"
+msgstr ""
+
+#, boost-format
+msgid "SVG file path is \"%1%\""
+msgstr ""
+
+msgid "Reload SVG file from disk."
+msgstr ""
+
+msgid "Change file"
+msgstr ""
+
+msgid "Change to another .svg file"
+msgstr ""
+
+#. TRN: An menu option to convert the SVG into an unmodifiable model part.
+msgid "Bake to model"
+msgstr ""
+
+#. TRN: Tooltip for the menu item.
+msgid "Bake into model as uneditable part"
+msgstr ""
+
+msgid "Save as"
+msgstr ""
+
+msgid "Save SVG file"
+msgstr ""
+
+msgid "Save as '.svg' file"
+msgstr ""
+
+msgid "Size in emboss direction."
+msgstr ""
+
+#. TRN: The placeholder contains a number.
+#, boost-format
+msgid "Scale also changes amount of curve samples (%1%)"
+msgstr ""
+
+msgid "width:"
+msgstr ""
+
+msgid "height:"
+msgstr ""
+
+msgid "set width and height keep ratio with width"
+msgstr ""
+
+msgid "Width of SVG."
+msgstr ""
+
+msgid "Height of SVG."
+msgstr ""
+
+msgid "Lock/unlock the aspect ratio of the SVG."
+msgstr ""
+
+msgid "Reset scale"
+msgstr ""
+
+msgid "Distance of the center of the SVG to the model surface."
+msgstr ""
+
+msgid "Reset distance"
+msgstr ""
+
+msgid "Rotate text Clock-wise."
+msgstr ""
+
+msgid "Reset rotation"
+msgstr ""
+
+msgid "Lock/unlock rotation angle when dragging above the surface."
+msgstr ""
+
+msgid "Mirror vertically"
+msgstr ""
+
+msgid "Mirror horizontally"
+msgstr ""
+
+msgid "Set Mirror"
+msgstr ""
+
+msgid "Face the camera"
+msgstr ""
+
+msgid "Operation"
+msgstr ""
+
+msgid "Join"
+msgstr ""
+
+msgid "Click to change text into object part."
+msgstr ""
+
+msgid "You can't change a type of the last solid part of the object."
+msgstr ""
+
+msgctxt "EmbossOperation"
+msgid "Cut"
+msgstr ""
+
+msgid "Click to change part type into negative volume."
+msgstr ""
+
+msgid "Modifier"
+msgstr "Модифікатор"
+
+msgid "Click to change part type into modifier."
+msgstr ""
+
+#. TRN: This is the name of the action that shows in undo/redo stack (changing part type from SVG to something else).
+msgid "Change SVG Type"
+msgstr ""
 
 msgid "Ctrl+"
 msgstr "Ctrl+"
@@ -957,6 +1263,15 @@ msgstr ""
 msgid "User logged out"
 msgstr "Користувач вийшов із системи"
 
+msgid "Install network plug-in"
+msgstr ""
+
+msgid "Please Install network plug-in before log in."
+msgstr ""
+
+msgid "Install Network Plug-in"
+msgstr ""
+
 msgid "new or open project file is not allowed during the slicing process!"
 msgstr "новий або відкритий файл проекту не дозволяється в процесі нарізки!"
 
@@ -1093,6 +1408,24 @@ msgstr "Додати блокувальник підтримки"
 msgid "Add support enforcer"
 msgstr "Додати засіб примусової підтримки"
 
+msgid "Add text"
+msgstr ""
+
+msgid "Add negative text"
+msgstr ""
+
+msgid "Add text modifier"
+msgstr ""
+
+msgid "Add SVG part"
+msgstr ""
+
+msgid "Add negative SVG"
+msgstr ""
+
+msgid "Add SVG modifier"
+msgstr ""
+
 msgid "Select settings"
 msgstr "Виберіть налаштування"
 
@@ -1108,8 +1441,17 @@ msgstr "Видалити"
 msgid "Delete the selected object"
 msgstr "Видалити вибраний об'єкт"
 
+msgid "Delete all cutter"
+msgstr ""
+
 msgid "Edit Text"
 msgstr "Редагувати текст"
+
+msgid "Edit SVG"
+msgstr ""
+
+msgid "Change SVG source file, projection, size, ..."
+msgstr ""
 
 msgid "Load..."
 msgstr "Завантажити..."
@@ -1122,6 +1464,9 @@ msgstr "Циліндр"
 
 msgid "Cone"
 msgstr "Конус"
+
+msgid "Double Tear Romboid Cylinder"
+msgstr ""
 
 msgid "Disc"
 msgstr "Диск"
@@ -1143,6 +1488,9 @@ msgstr "3DBenchy"
 
 msgid "ksr FDMTest"
 msgstr "ksr FDMTest"
+
+msgid "SVG"
+msgstr ""
 
 msgid "Height range Modifier"
 msgstr "Модифікатор діапазону висот"
@@ -1264,9 +1612,6 @@ msgstr "По осі Z"
 
 msgid "Mirror along the Z axis"
 msgstr "Відобразити осі Z"
-
-msgid "Mirror"
-msgstr "Дзеркально"
 
 msgid "Mirror object"
 msgstr "Дзеркальний об'єкт"
@@ -1546,9 +1891,6 @@ msgstr "Тип останньої твердотільної частини об
 
 msgid "Negative Part"
 msgstr "Негативна частина"
-
-msgid "Modifier"
-msgstr "Модифікатор"
 
 msgid "Support Blocker"
 msgstr "Блокувальник підтримки"
@@ -1956,6 +2298,23 @@ msgstr "Заповнення ліжка скасоване."
 msgid "Bed filling done."
 msgstr "Заповнення ліжка виконане."
 
+#. TRN: This is the title of the action appearing in undo/redo stack.
+#. It is same for Text and SVG.
+msgid "Emboss attribute change"
+msgstr ""
+
+msgid "Add Emboss text object"
+msgstr ""
+
+msgid "Add Emboss text Volume"
+msgstr ""
+
+msgid "Font doesn't have any shape for given text."
+msgstr ""
+
+msgid "There is no valid surface for text projection."
+msgstr ""
+
 msgid "Error! Unable to create thread!"
 msgstr "Помилка! Неможливо створити тему!"
 
@@ -2242,9 +2601,6 @@ msgstr "Вхідне значення має бути більше %1% і мен
 msgid "SN"
 msgstr "SN"
 
-msgid "Setting AMS slot information while printing is not supported"
-msgstr "Встановлення інформації про слот AMS під час друку не підтримується"
-
 msgid "Factors of Flow Dynamics Calibration"
 msgstr "Фактори калібрування динаміки потоку"
 
@@ -2256,6 +2612,9 @@ msgstr "Фактор K"
 
 msgid "Factor N"
 msgstr "Фактор N"
+
+msgid "Setting AMS slot information while printing is not supported"
+msgstr "Встановлення інформації про слот AMS під час друку не підтримується"
 
 msgid "Setting Virtual slot information while printing is not supported"
 msgstr ""
@@ -2375,8 +2734,8 @@ msgid "Print with the filament mounted on the back of chassis"
 msgstr ""
 "Друкуйте з використанням філаменту, встановленого на задній частині шасі"
 
-msgid "Current Cabin humidity"
-msgstr "Поточна вологість у кабіні"
+msgid "Current AMS humidity"
+msgstr ""
 
 msgid ""
 "Please change the desiccant when it is too wet. The indicator may not "
@@ -2775,20 +3134,6 @@ msgid ""
 msgstr ""
 "Надто висока висота шару.\n"
 "Скинути на 0,2"
-
-msgid ""
-"Too small scarf start height.\n"
-"Reset to 50%"
-msgstr ""
-"Занадто мала висота початку шарфа.\n"
-"Скинути до 50%"
-
-msgid ""
-"Too big scarf start height.\n"
-"Reset to 50%"
-msgstr ""
-"Занадто велика висота початку шарфа.\n"
-"Скинути до 50%"
 
 msgid ""
 "Too small ironing spacing.\n"
@@ -3213,14 +3558,11 @@ msgstr "Вежа"
 msgid "Total"
 msgstr "Загальний"
 
-msgid "Total Estimation"
-msgstr "Загальна оцінка"
-
-msgid "Total time"
-msgstr "Загальний час"
-
 msgid "Total cost"
 msgstr "Загальна вартість"
+
+msgid "Time Estimation"
+msgstr "Оцінка часу"
 
 msgid "up to"
 msgstr "аж до"
@@ -3309,8 +3651,8 @@ msgstr "Принтер"
 msgid "Print settings"
 msgstr "Параметри друку"
 
-msgid "Time Estimation"
-msgstr "Оцінка часу"
+msgid "Total Estimation"
+msgstr "Загальна оцінка"
 
 msgid "Normal mode"
 msgstr "Нормальний режим"
@@ -3326,6 +3668,9 @@ msgstr "Час підготовки"
 
 msgid "Model printing time"
 msgstr "Час друку моделі"
+
+msgid "Total time"
+msgstr "Загальний час"
 
 msgid "Switch to silent mode"
 msgstr "Переключитися в тихий режим"
@@ -3496,6 +3841,9 @@ msgstr "Розріз"
 msgid "Assemble Control"
 msgstr "Складання керування"
 
+msgid "Selection Mode"
+msgstr ""
+
 msgid "Total Volume:"
 msgstr "Загальний обсяг:"
 
@@ -3649,9 +3997,6 @@ msgstr "Ні"
 msgid "will be closed before creating a new model. Do you want to continue?"
 msgstr "буде закрито перед створенням нової моделі. Ви хочете продовжувати?"
 
-msgid "Upload"
-msgstr "Завантаження"
-
 msgid "Slice plate"
 msgstr "Нарізати моделі"
 
@@ -3702,6 +4047,9 @@ msgstr "Повідомити про проблему"
 
 msgid "Check for Update"
 msgstr "Перевірити оновлення"
+
+msgid "Check for Presets Update"
+msgstr ""
 
 msgid "Open Network Test"
 msgstr "Відкритий мережевий тест"
@@ -3835,6 +4183,9 @@ msgstr "Експорт поточної конфігурації до файлі
 msgid "Export"
 msgstr "Експорт"
 
+msgid "Publish to MakerWorld"
+msgstr ""
+
 msgid "Quit"
 msgstr "Вихід"
 
@@ -3895,9 +4246,6 @@ msgstr "Використовуйте вигляд у перспективі"
 msgid "Use Orthogonal View"
 msgstr "Використовувати ортогональний вигляд"
 
-msgid "Show &Labels"
-msgstr "Показати &Ярлики"
-
 msgid "Show object labels in 3D scene"
 msgstr "Показати мітки об'єктів у 3D-сцені"
 
@@ -3906,6 +4254,12 @@ msgstr "Показати &Виступ"
 
 msgid "Show object overhang highlight in 3D scene"
 msgstr "Показати підсвічування виступу об'єкта у 3D сцені"
+
+msgid "Set 3DConnexion"
+msgstr ""
+
+msgid "Set 3DConnexion mouse"
+msgstr ""
 
 msgid "Services"
 msgstr "Послуги"
@@ -4124,6 +4478,12 @@ msgstr ""
 "Програвач не завантажений, будь ласка, натисніть кнопку “Відтворити”, щоб "
 "спробувати ще раз."
 
+msgid "Temporarily closed because there is no operating for a long time."
+msgstr ""
+
+msgid "Temporarily closed because there is no printing for a while."
+msgstr ""
+
 msgid "Please confirm if the printer is connected."
 msgstr "Будь ласка, підтвердіть, чи принтер підключений."
 
@@ -4167,8 +4527,8 @@ msgstr ""
 msgid "The printer has been logged out and cannot connect."
 msgstr "Принтер був вийшов із системи та не може підключитися."
 
-msgid "Stopped."
-msgstr "Зупинено."
+msgid "Video Stopped."
+msgstr ""
 
 msgid "LAN Connection Failed (Failed to start liveview)"
 msgstr ""
@@ -4410,6 +4770,14 @@ msgstr "Стоп"
 msgid "Layer: N/A"
 msgstr "Шар: немає даних"
 
+msgid "Finish Time: N/A"
+msgstr ""
+
+msgid ""
+"The estimated printing time for \n"
+"multi-color models may be inaccurate."
+msgstr ""
+
 msgid "Clear"
 msgstr "Очищення"
 
@@ -4430,6 +4798,12 @@ msgstr "(Модель вже була оцінена. Ваша оцінка пе
 
 msgid "Rate"
 msgstr "Оцінити"
+
+msgid "Finished"
+msgstr "Завершено"
+
+msgid "Finish Time: "
+msgstr ""
 
 msgid "Camera"
 msgstr "Камера"
@@ -4496,6 +4870,15 @@ msgstr "Шар: %s"
 #, c-format, boost-format
 msgid "Layer: %d/%d"
 msgstr "Шар: %d/%d"
+
+msgid "Auto homing"
+msgstr ""
+
+msgid "Are you sure you want to trigger auto homing?"
+msgstr ""
+
+msgid "Homing"
+msgstr ""
 
 msgid ""
 "Please heat the nozzle to above 170 degree before loading or unloading "
@@ -4645,6 +5028,30 @@ msgstr ""
 "Для того щоб поставити позитивний рейтинг (4 або 5 зірок), потрібно \n"
 "мати принаймні один успішний запис про друк з цим профілем друку."
 
+msgid "Step file import parameters"
+msgstr ""
+
+msgid "Linear Deflection"
+msgstr ""
+
+msgid "Please input a valid value (0.001 < linear deflection < 0.1)"
+msgstr ""
+
+msgid "Angle Deflection"
+msgstr ""
+
+msgid "Please input a valid value (0.01 < angle deflection < 1.0)"
+msgstr ""
+
+msgid "Number of triangular facets"
+msgstr ""
+
+msgid "0"
+msgstr "0"
+
+msgid "Calculating, please wait..."
+msgstr ""
+
 msgid "Status"
 msgstr "Статус"
 
@@ -4713,6 +5120,25 @@ msgstr "Остання версія: "
 
 msgid "Not for now"
 msgstr "Наразі не потрібно"
+
+msgid "Server Exception"
+msgstr ""
+
+msgid ""
+"The server is unable to respond. Please click the link below to check the "
+"server status."
+msgstr ""
+
+msgid ""
+"If the server is in a fault state, you can temporarily use offline printing "
+"or local network printing."
+msgstr ""
+
+msgid "How to use LAN only mode"
+msgstr ""
+
+msgid "Don't show this dialog again"
+msgstr ""
 
 msgid "3D Mouse disconnected."
 msgstr "3D-миша відключена."
@@ -4809,9 +5235,6 @@ msgstr "Завантажений файл моделі."
 
 msgid "Serious warning:"
 msgstr "Серйозне попередження:"
-
-msgid " (Repair)"
-msgstr " (Ремонт)"
 
 msgid " Click here to install it."
 msgstr " Натисніть тут, щоб встановити його."
@@ -5098,9 +5521,10 @@ msgstr "Завантажити 3mf"
 msgid "The Config can not be loaded."
 msgstr "Конфіг не завантажується."
 
-msgid "The 3mf is generated by old Bambu Studio, load geometry data only."
+msgid ""
+"Due to the lower version of Bambu Studio, this 3mf file cannot be fully "
+"loaded. Please update Bambu Studio to the latest version"
 msgstr ""
-"3mf генерується старим слайсером Orca, завантажувати лише дані геометрії."
 
 msgid "Found following keys unrecognized:\n"
 msgstr "Знайдені наступні невпізнані ключі:\n"
@@ -5376,6 +5800,9 @@ msgstr "Відкрити як проект"
 msgid "Import geometry only"
 msgstr "Імпортувати лише геометрію"
 
+msgid "Please import multiple files with the same suffix."
+msgstr ""
+
 msgid "Only one G-code file can be opened at the same time."
 msgstr "Водночас можна відкрити лише один файл G-коду."
 
@@ -5460,6 +5887,15 @@ msgstr ""
 "експортом?"
 
 msgid ""
+"Are you sure you want to store original SVGs with their local paths into the "
+"3MF file?\n"
+"If you hit 'NO', all SVGs in the project will not be editable any more."
+msgstr ""
+
+msgid "Private protection"
+msgstr ""
+
+msgid ""
 "Print By Object: \n"
 "Suggest to use auto-arrange to avoid collisions when printing."
 msgstr ""
@@ -5483,6 +5919,17 @@ msgstr "Неправильний номер"
 
 msgid "Plate Settings"
 msgstr "Налаштування столу"
+
+msgid "Prime Tower:"
+msgstr ""
+
+msgid ""
+"A cube printed during a filament change to purge old color and ensure smooth "
+"color transition."
+msgstr ""
+
+msgid "View Wiki for more information"
+msgstr ""
 
 #, boost-format
 msgid "Number of currently selected parts: %1%\n"
@@ -5520,16 +5967,16 @@ msgstr "Об'єм: %1% мм³\n"
 msgid "Triangles: %1%\n"
 msgstr "Трикутники: %1%\n"
 
+msgid " (Repair)"
+msgstr " (Ремонт)"
+
 msgid "Tips:"
 msgstr "Поради:"
 
 msgid ""
-"\"Fix Model\" feature is currently only on Windows. Please repair the model "
-"on Bambu Studio(windows) or CAD softwares."
+"\"Fix Model\" feature is currently only on Windows. Please use a third-party "
+"tool to repair the model before importing it into Bambu Studio, such as "
 msgstr ""
-"Функція \\Fix Model\\ доступна лише у Windows. Будь ласка, відремонтуйте "
-"модель \n"
-"на Bambu Studio (Windows) або у програмах САПР."
 
 #, c-format, boost-format
 msgid ""
@@ -5569,6 +6016,15 @@ msgstr "Вибір регіону"
 msgid "Second"
 msgstr "Другий"
 
+msgid ""
+"Please note that the model show will undergo certain changes at small pixels "
+"case.\n"
+"Enabled LOD requires application restart."
+msgstr ""
+
+msgid "Enable LOD"
+msgstr ""
+
 msgid "Browse"
 msgstr "Огляд"
 
@@ -5581,8 +6037,8 @@ msgstr "Основні налаштування"
 msgid "Asia-Pacific"
 msgstr "Азіатсько-Тихоокеанський регіон"
 
-msgid "China"
-msgstr "Китай"
+msgid "Chinese Mainland"
+msgstr "Материковый Китай"
 
 msgid "Europe"
 msgstr "Європа"
@@ -5627,15 +6083,6 @@ msgstr ""
 "екземпляр цього ж Bambu Studio вже працює, то активується цей інший "
 "екземпляр замість створення нового."
 
-msgid "Zoom to mouse position"
-msgstr "Збільшити до позиції миші"
-
-msgid ""
-"Zoom in towards the mouse pointer's position in the 3D view, rather than the "
-"2D window center."
-msgstr ""
-"Наблизьтеся до положення покажчика миші у 3D-виді, а не до центру 2D вікна."
-
 msgid "Auto plate type"
 msgstr "Автоматичний тип пластини"
 
@@ -5674,6 +6121,49 @@ msgstr ""
 "З цією опцією ввімкненою, ви можете відправляти завдання на кілька пристроїв "
 "одночасно та керувати декількома пристроями."
 
+msgid "Support beta version update."
+msgstr ""
+
+msgid "With this option enabled, you can receive beta version updates."
+msgstr ""
+
+msgid "3D Settings"
+msgstr ""
+
+msgid "Zoom to mouse position"
+msgstr "Збільшити до позиції миші"
+
+msgid ""
+"Zoom in towards the mouse pointer's position in the 3D view, rather than the "
+"2D window center."
+msgstr ""
+"Наблизьтеся до положення покажчика миші у 3D-виді, а не до центру 2D вікна."
+
+msgid "Always show shells in preview"
+msgstr ""
+
+msgid ""
+"Always show shells or not in preview view tab.If change value,you should "
+"reslice."
+msgstr ""
+
+msgid "Improve rendering performance by lod"
+msgstr ""
+
+msgid ""
+"Improved rendering performance under the scene of multiple plates and many "
+"models."
+msgstr ""
+
+msgid "Grabber scale"
+msgstr ""
+
+msgid "Set grabber size for move,rotate,scale tool."
+msgstr ""
+
+msgid "Value range"
+msgstr ""
+
 msgid "Presets"
 msgstr "Пресети"
 
@@ -5681,14 +6171,18 @@ msgid "Auto sync user presets(Printer/Filament/Process)"
 msgstr ""
 "Автоматична синхронізація користувацьких пресетів (принтер/філамент/процес)"
 
-msgid "User Sync"
-msgstr "Синхронізація користувачів"
+msgid ""
+"If enabled, auto sync user presets with cloud after Bambu Studio startup or "
+"presets modified."
+msgstr ""
 
-msgid "Update built-in Presets automatically."
-msgstr "Оновлюйте вбудовані пресети автоматично."
+msgid "Auto check for system presets updates"
+msgstr ""
 
-msgid "System Sync"
-msgstr "Синхронізація системи"
+msgid ""
+"If enabled, auto check whether there are system presets updates after Bambu "
+"Studio startup."
+msgstr ""
 
 msgid "Clear my choice on the unsaved presets."
 msgstr "Очистіть мій вибір від незахищених пресетів."
@@ -5754,8 +6248,16 @@ msgstr "кожну"
 msgid "The peroid of backup in seconds."
 msgstr "Період резервного копіювання в секундах."
 
-msgid "Downloads"
-msgstr "Завантаження"
+msgid "Media"
+msgstr "Media"
+
+msgid "Keep liveview when printing."
+msgstr ""
+
+msgid ""
+"By default, Liveview will pause after 15 minutes of inactivity on the "
+"computer. Check this box to disable this feature during printing."
+msgstr ""
 
 msgid "Dark Mode"
 msgstr "Темний режим"
@@ -6109,6 +6611,9 @@ msgstr "Не в мережі"
 msgid "Busy"
 msgstr "Зайнятий"
 
+msgid "Bambu Cool Plate SuperTack"
+msgstr ""
+
 msgid "Bambu Cool Plate"
 msgstr "Bambu Cool Plate"
 
@@ -6345,6 +6850,18 @@ msgstr "Зміна імені пристрою"
 msgid "Bind with Pin Code"
 msgstr "Прив’язати за допомогою Пін-коду"
 
+msgid "Bind with Access Code"
+msgstr ""
+
+msgid ""
+"Please log in before binding your device with a PIN code.\n"
+"Alternatively, you can use LAN mode to bind your device. Learn about LAN "
+"mode."
+msgstr ""
+
+msgid "Go to Login"
+msgstr ""
+
 msgid "Send to Printer SD card"
 msgstr "Надіслати на SD-карту принтера"
 
@@ -6545,14 +7062,15 @@ msgid "Still print by object?"
 msgstr "Ви все ще друкуєте за об’єктом?"
 
 msgid ""
-"We have added an experimental style \"Tree Slim\" that features smaller "
-"support volume but weaker strength.\n"
-"We recommend using it with: 0 interface layers, 0 top distance, 2 walls."
+"When using support material for the support interface, We recommend the "
+"following settings:\n"
+"0 top z distance, 0 interface spacing, interlaced rectilinear pattern and "
+"disable independent support layer height"
 msgstr ""
-"Ми додали експериментальний стиль \"Tree Slim\", який відрізняється меншим "
-"розміром, але слабким.\n"
-"Ми рекомендуємо використовувати його з: 0 інтерфейсних шарів, 0 верхнього "
-"відстань, 2 периметри."
+"При використанні матеріалу підтримки для інтерфейсу підтримки ми "
+"рекомендуємо наступні налаштування:\n"
+"0 відстань верхнього шару Z, 0 відстань між інтерфейсами, перемежований "
+"прямокутний візерунок та вимкнена незалежна висота шару підтримки"
 
 msgid ""
 "Change these settings automatically? \n"
@@ -6564,24 +7082,9 @@ msgstr ""
 "Ні - Не змінювати ці настройки для мене"
 
 msgid ""
-"For \"Tree Strong\" and \"Tree Hybrid\" styles, we recommend the following "
-"settings: at least 2 interface layers, at least 0.1mm top z distance or "
-"using support materials on interface."
+"Layer height is too small.\n"
+"It will set to min_layer_height\n"
 msgstr ""
-"Для стилів \"Tree Strong\" та \"Tree Hybrid\" ми рекомендуємо наступні "
-"параметри: не менше 2 інтерфейсних шарів, не менше 0,1 мм відстань між "
-"вершинами z або використання допоміжних матеріалів в якості інтерфейсу."
-
-msgid ""
-"When using support material for the support interface, We recommend the "
-"following settings:\n"
-"0 top z distance, 0 interface spacing, interlaced rectilinear pattern and "
-"disable independent support layer height"
-msgstr ""
-"При використанні матеріалу підтримки для інтерфейсу підтримки ми "
-"рекомендуємо наступні налаштування:\n"
-"0 відстань верхнього шару Z, 0 відстань між інтерфейсами, перемежований "
-"прямокутний візерунок та вимкнена незалежна висота шару підтримки"
 
 msgid ""
 "Layer height exceeds the limit in Printer Settings -> Extruder -> Layer "
@@ -6632,6 +7135,11 @@ msgstr ""
 "“Timelapse Wipe Tower” \n"
 "Клацніть правою кнопкою миші на порожній позиції монтажної плити та виберіть "
 "\"Додати Примітів\"->\"Timelapse Wipe Tower\"."
+
+msgid ""
+"The notes are too large, and may not be synchronized to the cloud. Please "
+"keep it within 40k."
+msgstr ""
 
 msgid "Line width"
 msgstr "Ширина лінії"
@@ -6687,6 +7195,9 @@ msgstr "Підкладка"
 msgid "Support filament"
 msgstr "Філамент підтримки"
 
+msgid "Tree Support"
+msgstr ""
+
 msgid "Prime tower"
 msgstr "Підставка для очищення форсунки"
 
@@ -6724,6 +7235,11 @@ msgstr[1] ""
 msgid "Reserved keywords found"
 msgstr "Знайдено зарезервовані ключові слова"
 
+msgid ""
+"Custom G-code files are too large, and may not be synchronized to the cloud. "
+"Please keep it within 40k."
+msgstr ""
+
 msgid "Setting Overrides"
 msgstr "Налаштування перевизначень"
 
@@ -6749,6 +7265,11 @@ msgstr "Сопло"
 
 msgid "Nozzle temperature when printing"
 msgstr "Температура сопла під час друку"
+
+msgid ""
+"Bed temperature when cool plate is installed. Value 0 means the filament "
+"does not support to print on the Bambu Cool Plate SuperTack"
+msgstr ""
 
 msgid "Cool Plate / PLA Plate"
 msgstr "Cool Plate / PLA Plate"
@@ -6795,6 +7316,9 @@ msgstr ""
 
 msgid "Volumetric speed limitation"
 msgstr "Об'ємне обмеження швидкості"
+
+msgid "Filament scarf seam settings"
+msgstr ""
 
 msgid "Cooling"
 msgstr "Охолодження"
@@ -7345,9 +7869,6 @@ msgstr "Повернути вигляд"
 msgid "Pan View"
 msgstr "Панорамний вигляд"
 
-msgid "Mouse wheel"
-msgstr "Колісок миші"
-
 msgid "Zoom View"
 msgstr "Перегляд масштабу"
 
@@ -7471,26 +7992,11 @@ msgstr "Швид, що фарбується Gizmo FDM"
 msgid "Plater"
 msgstr "Тарілка"
 
-msgid "Move: press to snap by 1mm"
-msgstr "Переміщення: натисніть для переміщення на 1 мм"
-
-msgid "⌘+Mouse wheel"
-msgstr "⌘+Колесо миші"
-
 msgid "Support/Color Painting: adjust pen radius"
 msgstr "Підтримка/Колірне малювання: регулювання радіуса пера"
 
-msgid "⌥+Mouse wheel"
-msgstr "⌥+Колесо миші"
-
 msgid "Support/Color Painting: adjust section position"
 msgstr "Підтримка/кольорове фарбування: регулювання положення секцій"
-
-msgid "Ctrl+Mouse wheel"
-msgstr "Ctrl+Колесо миші"
-
-msgid "Alt+Mouse wheel"
-msgstr "Alt+колесо миші"
 
 msgid "Gizmo"
 msgstr "Gizmo"
@@ -7605,8 +8111,8 @@ msgstr "Перегляд в реальному часі"
 msgid "Confirm and Update Nozzle"
 msgstr "Підтвердити і оновити сопло"
 
-msgid "LAN Connection Failed (Sending print file)"
-msgstr "Помилка з’єднання LAN (Надсилання файлу друку)"
+msgid "Connect the printer using IP and access code"
+msgstr ""
 
 msgid ""
 "Step 1, please confirm Bambu Studio and your printer are in the same LAN."
@@ -7631,11 +8137,29 @@ msgid "Step 3: Ping the IP address to check for packet loss and latency."
 msgstr ""
 "Крок 3: Виконайте пінг до IP-адреси для перевірки втрат пакетів та затримки."
 
-msgid "Test"
-msgstr "Тест"
+msgid "Connect"
+msgstr ""
 
-msgid "IP and Access Code Verified! You may close the window"
-msgstr "IP-адреса та доступний код перевірено! Ви можете закрити вікно"
+msgid "connecting..."
+msgstr ""
+
+msgid "Failed to connect to printer."
+msgstr ""
+
+msgid "Failed to publish login request."
+msgstr ""
+
+msgid "The device does not support using IP and Access Code for connection."
+msgstr ""
+
+msgid "The printer has already been bound."
+msgstr ""
+
+msgid "The printer mode is incorrect, please switch to LAN Only."
+msgstr ""
+
+msgid "Connecting to printer... The dialog will close later"
+msgstr ""
 
 msgid "Connection failed, please double check IP and Access Code"
 msgstr "З’єднання не вдалося, будь ласка, перевірте IP-адресу та доступний код"
@@ -8306,10 +8830,8 @@ msgstr "Температура першого шару"
 
 msgid ""
 "Bed temperature of the initial layer. Value 0 means the filament does not "
-"support to print on the Cool Plate"
+"support to print on the Bambu Cool Plate SuperTack"
 msgstr ""
-"Температура першого шару. Значення 0 означає, що філамент не підтримує друк "
-"на Cool Plate"
 
 msgid ""
 "Bed temperature of the initial layer. Value 0 means the filament does not "
@@ -8416,6 +8938,17 @@ msgstr ""
 "означає примусове охолодження всього зовнішнього периметра незалежно від "
 "ступеня звису"
 
+msgid "Overhang threshold for participating cooling"
+msgstr ""
+
+#, c-format
+msgid ""
+"Decide which overhang part join the cooling function to slow down the speed."
+"Expressed as percentage which indicides how much width of the line without "
+"support from lower layer. 100% means forcing cooling for all outer wall no "
+"matter how much overhang degree"
+msgstr ""
+
 msgid "Bridge direction"
 msgstr "Напрямок мосту"
 
@@ -8501,6 +9034,15 @@ msgstr ""
 msgid "mm/s"
 msgstr "мм/с"
 
+msgid "over 100% wall (not bridge)"
+msgstr ""
+
+#, c-format, boost-format
+msgid ""
+"Speed for line of wall which has degree of overhang over 100% line width, "
+"but the wall is not a bridge wall."
+msgstr ""
+
 msgid "Speed of bridge and completely overhang wall"
 msgstr "Швидкість мосту і периметр, що повністю звисає"
 
@@ -8519,6 +9061,9 @@ msgid ""
 msgstr ""
 "Це керує формуванням поля на зовнішній та/або внутрішній сторонімоделей. "
 "Auto означає, що ширина поля аналізується та обчислюється автоматично."
+
+msgid "Painted"
+msgstr ""
 
 msgid "Brim-object gap"
 msgstr "Зазор між каймою та об'єктом"
@@ -9026,6 +9571,48 @@ msgid ""
 "Soluble material is commonly used to print support and support interface"
 msgstr "Розчинний матеріал зазвичай використовується для друку підтримки"
 
+msgid "Scarf seam type"
+msgstr ""
+
+msgid ""
+"Set scarf seam type for this filament. This setting could minimize seam "
+"visibiliy."
+msgstr ""
+
+msgid "Contour"
+msgstr "Контур"
+
+msgid "Contour and hole"
+msgstr "Контур та отвір"
+
+msgid "Scarf start height"
+msgstr "Висота початку шарфу"
+
+msgid ""
+"This amount can be specified in millimeters or as a percentage of the "
+"current layer height."
+msgstr ""
+
+msgid "mm/%"
+msgstr ""
+
+msgid "Scarf slope gap"
+msgstr ""
+
+msgid ""
+"In order to reduce the visiblity of the seam in closed loop, the inner wall "
+"and outer wall are shortened by a specified amount."
+msgstr ""
+
+msgid "Scarf length"
+msgstr "Довжина шарфа"
+
+msgid ""
+"Length of the scarf. Setting this parameter to zero effectively disables the "
+"scarf."
+msgstr ""
+"Довжина шарфа. Встановлення цього параметра на нуль ефективно вимикає шарф."
+
 msgid "Support material"
 msgstr "Матеріал підтримки"
 
@@ -9234,12 +9821,6 @@ msgid ""
 msgstr ""
 "Випадкове тремтіння під час друку зовнішнього периметра, так що поверхня "
 "була шорсткої. Цей параметр керує нечіткою оболонкою"
-
-msgid "Contour"
-msgstr "Контур"
-
-msgid "Contour and hole"
-msgstr "Контур та отвір"
 
 msgid "All walls"
 msgstr "Всі периметри"
@@ -9547,6 +10128,13 @@ msgstr "Крок лінії розглажування"
 msgid "The distance between the lines of ironing"
 msgstr "Відстань між лініями розглажування"
 
+msgid "Ironing inset"
+msgstr ""
+
+msgid ""
+"The distance to keep the from the edges of ironing line. 0 means not apply."
+msgstr ""
+
 msgid "Ironing speed"
 msgstr "Швидкість розглажування"
 
@@ -9796,6 +10384,18 @@ msgstr ""
 "Визначте відсоток звису щодо ширини лінії та використовуйте для друку іншу "
 "швидкість. Для 100 відсоткового звису використовується швидкість моста."
 
+msgid "Smooth speed discontinuity area"
+msgstr ""
+
+msgid "Add the speed transition between discontinuity area."
+msgstr ""
+
+msgid "Smooth coefficient"
+msgstr ""
+
+msgid "The smaller the number, the longer the speed transition path."
+msgstr ""
+
 msgid "Line width of inner wall"
 msgstr "Ширина лінії внутрішніх стінок"
 
@@ -9850,10 +10450,8 @@ msgstr "Кількість шарів підкладки"
 
 msgid ""
 "Object will be raised by this number of support layers. Use this function to "
-"avoid wrapping when print ABS"
+"avoid warping when print ABS"
 msgstr ""
-"Об'єкт буде піднятий такою кількістю опорних шарів. Використовуйте цю "
-"функцію, щоб уникнути обтікання під час друку ABS"
 
 msgid ""
 "G-code path is generated after simplifying the contour of model to avoid too "
@@ -10023,14 +10621,6 @@ msgstr ""
 "Ця кількість виражена у відсотках від поточного діаметра екструдера. За "
 "замовчуванням, цей параметр має значення 15"
 
-msgid "Scarf joint seam (experimental)"
-msgstr "З’єднання з шарфом (експериментально)"
-
-msgid "Use scarf joint to minimize seam visibility and increase seam strength."
-msgstr ""
-"Використовуйте з’єднання з шарфом, щоб мінімізувати видимість шва та "
-"збільшити міцність шва."
-
 msgid "Conditional scarf joint"
 msgstr "Умовне з’єднання з шарфом"
 
@@ -10057,32 +10647,11 @@ msgstr ""
 "відсутність гострих кутів), буде використовуватися з’єднання шва шарфа. "
 "Значення за замовчуванням - 155°."
 
-msgid "Scarf start height"
-msgstr "Висота початку шарфу"
-
-msgid ""
-"Start height of the scarf.\n"
-"This amount can be specified in millimeters or as a percentage of the "
-"current layer height. The default value for this parameter is 0."
-msgstr ""
-"Висота початку шарфу.\n"
-"Ця величина може бути вказана в міліметрах або як відсоток від поточної "
-"товщини шару. Значення за замовчуванням для цього параметра - 0."
-
 msgid "Scarf around entire wall"
 msgstr "Шарф навколо всієї стіни"
 
 msgid "The scarf extends to the entire length of the wall."
 msgstr "Шарф простягається на всю довжину стіни."
-
-msgid "Scarf length"
-msgstr "Довжина шарфа"
-
-msgid ""
-"Length of the scarf. Setting this parameter to zero effectively disables the "
-"scarf."
-msgstr ""
-"Довжина шарфа. Встановлення цього параметра на нуль ефективно вимикає шарф."
 
 msgid "Scarf steps"
 msgstr "Кроки шарфа"
@@ -10109,6 +10678,15 @@ msgstr ""
 "данійконфігурації. Якщо це значення виражено у відсотках (наприклад, 80%), "
 "то воно буде розраховано на основі наведеної вище установки швидкості руху. "
 "За замовчуванням для цього параметра - 80%"
+
+msgid "Role base wipe speed"
+msgstr ""
+
+msgid ""
+"The wipe speed is determined by speed of current extrusion role. e.g if a "
+"wip action is executed immediately following an outer wall extrusion, the "
+"speed of the outer wall extrusion will be utilized for the wipe action."
+msgstr ""
 
 msgid "Skirt distance"
 msgstr "Відстань між спідницею/каймою"
@@ -10531,14 +11109,10 @@ msgstr "Цей параметр визначає початковий діаме
 msgid "Support wall loops"
 msgstr "Опорні стінові петлі"
 
-msgid "This setting specifies the count of walls around support"
-msgstr "Цей параметр визначає кількість стін навколо опори"
-
-msgid "Tree support brim width"
-msgstr "Підтримка дерева із заповненням"
-
-msgid "The brim width around tree support. 0 means auto."
-msgstr "The brim width around tree support. 0 means auto."
+msgid ""
+"This setting specifies the count of support walls in the range of [0,2]. 0 "
+"means auto."
+msgstr ""
 
 msgid "Chamber temperature"
 msgstr "Температура в камері"
@@ -11336,11 +11910,9 @@ msgstr ""
 "спробу. Невдалі результати тесту будуть видалені."
 
 msgid ""
-"*We recommend you to add brand, materia, type, and even humidity level in "
+"*We recommend you to add brand, material, type, and even humidity level in "
 "the Name"
 msgstr ""
-"*Ми рекомендуємо вам додати бренд, матеріал, тип і навіть рівень вологості у "
-"назву"
 
 msgid "Failed"
 msgstr "Помилка"
@@ -11657,9 +12229,6 @@ msgstr "Версія OctoPrint"
 msgid "Searching for devices"
 msgstr "Пошук пристроїв"
 
-msgid "Finished"
-msgstr "Завершено"
-
 msgid "Send to print"
 msgstr "Надіслати на друк"
 
@@ -11674,6 +12243,9 @@ msgstr ""
 msgid "Upload filename doesn't end with \"%s\". Do you wish to continue?"
 msgstr ""
 "Назва файлу для завантаження не закінчується на \"%s\". Бажаєте продовжити?"
+
+msgid "Upload"
+msgstr "Завантаження"
 
 msgid "Simulate"
 msgstr "Запустити симуляцію"
@@ -11728,15 +12300,15 @@ msgstr ""
 msgid "Mesh Boolean"
 msgstr "Булева операція меша"
 
-msgid "Please right click to assembly these objects."
-msgstr "Будь ласка, натисніть праву кнопку миші, щоб зібрати ці об’єкти."
-
 msgid ""
 "Please add at least one more object and select them together,\n"
 "then right click to assembly these objects."
 msgstr ""
 "Будь ласка, додайте ще хоча б один об’єкт і виберіть їх разом, \n"
 "потім натисніть праву кнопку миші, щоб зібрати ці об’єкти."
+
+msgid "Please right click to assembly these objects."
+msgstr "Будь ласка, натисніть праву кнопку миші, щоб зібрати ці об’єкти."
 
 msgid "Union"
 msgstr "Об'єднання"
@@ -12394,6 +12966,9 @@ msgstr "Фізичний Принтер"
 msgid "Print Host upload"
 msgstr "Завантаження на Принт-Сервер"
 
+msgid "Test"
+msgstr "Тест"
+
 msgid "Could not get a valid Printer Host reference"
 msgstr "Не вдалося отримати дійсне посилання на Принт-Сервер"
 
@@ -12812,6 +13387,80 @@ msgstr ""
 "він значно відрізняється від бренду до бренду. Тому високо рекомендується "
 "звернутися до його постачальника за відповідним профілем перед друкуванням і "
 "налаштувати деякі параметри відповідно до його характеристик."
+
+msgid ""
+"When printing this filament, there's a risk of warping and low layer "
+"adhesion strength. To get better results, please refer to this wiki: "
+"Printing Tips for High Temp / Engineering materials."
+msgstr ""
+
+msgid ""
+"When printing this filament, there's a risk of nozzle clogging, oozing, "
+"warping and low layer adhesion strength. To get better results, please refer "
+"to this wiki: Printing Tips for High Temp / Engineering materials."
+msgstr ""
+
+msgid ""
+"To get better transparent or translucent results with the corresponding "
+"filament, please refer to this wiki: Printing tips for transparent PETG."
+msgstr ""
+
+msgid ""
+"To make the prints get higher gloss, please dry the filament before use, and "
+"set the outer wall speed to be 40 to 60 mm/s when slicing."
+msgstr ""
+
+msgid ""
+"This filament is only used to print models with a low density usually, and "
+"some special parameters are required. To get better printing quality, please "
+"refer to this wiki: Instructions for printing RC model with foaming PLA (PLA "
+"Aero)."
+msgstr ""
+
+msgid ""
+"This filament is only used to print models with a low density usually, and "
+"some special parameters are required. To get better printing quality, please "
+"refer to this wiki: ASA Aero Printing Guide."
+msgstr ""
+
+msgid ""
+"This filament is too soft and not compatible with the AMS. Printing it is of "
+"many requirements, and to get better printing quality, please refer to this "
+"wiki: TPU printing guide."
+msgstr ""
+
+msgid ""
+"This filament has high enough hardness (about 67D)  and is compatible with "
+"the AMS. Printing it is of many requirements, and to get better printing "
+"quality, please refer to this wiki: TPU printing guide."
+msgstr ""
+
+msgid ""
+"If you are to print a kind of soft TPU, please don't slice with this "
+"profile, and it is only for TPU that has high enough hardness (not less than "
+"55D) and is compatible with the AMS. To get better printing quality, please "
+"refer to this wiki: TPU printing guide."
+msgstr ""
+
+msgid ""
+"This is a water-soluble support filament, and usually it is only for the "
+"support structure and not for the model body. Printing this filament is of "
+"many requirements, and to get better printing quality, please refer to this "
+"wiki: PVA Printing Guide."
+msgstr ""
+
+msgid ""
+"This is a non-water-soluble support filament, and usually it is only for the "
+"support structure and not for the model body. To get better printing "
+"quality, please refer to this wiki: Printing Tips for Support Filament and "
+"Support Function."
+msgstr ""
+
+msgid ""
+"The generic presets are conservatively tuned for compatibility with a wider "
+"range of filaments. For higher printing quality and speeds, please use Bambu "
+"filaments with Bambu presets."
+msgstr ""
 
 msgid "No AMS"
 msgstr "Немає AMS"
@@ -13245,6 +13894,153 @@ msgstr ""
 "Чи знаєте ви, що при друку матеріалами, схильними до деформації, такими як "
 "ABS, відповідне підвищення температури гарячого ліжка може зменшити "
 "ймовірність деформації."
+
+#~ msgid "Manual"
+#~ msgstr "Manual"
+
+#~ msgid ""
+#~ "Object will be raised by this number of support layers. Use this function "
+#~ "to avoid wrapping when print ABS"
+#~ msgstr ""
+#~ "Об'єкт буде піднятий такою кількістю опорних шарів. Використовуйте цю "
+#~ "функцію, щоб уникнути обтікання під час друку ABS"
+
+#~ msgid "User Sync"
+#~ msgstr "Синхронізація користувачів"
+
+#~ msgid "Update built-in Presets automatically."
+#~ msgstr "Оновлюйте вбудовані пресети автоматично."
+
+#~ msgid "System Sync"
+#~ msgstr "Синхронізація системи"
+
+#~ msgid ""
+#~ "Too small scarf start height.\n"
+#~ "Reset to 50%"
+#~ msgstr ""
+#~ "Занадто мала висота початку шарфа.\n"
+#~ "Скинути до 50%"
+
+#~ msgid ""
+#~ "Too big scarf start height.\n"
+#~ "Reset to 50%"
+#~ msgstr ""
+#~ "Занадто велика висота початку шарфа.\n"
+#~ "Скинути до 50%"
+
+#~ msgid "Scarf joint seam (experimental)"
+#~ msgstr "З’єднання з шарфом (експериментально)"
+
+#~ msgid ""
+#~ "Use scarf joint to minimize seam visibility and increase seam strength."
+#~ msgstr ""
+#~ "Використовуйте з’єднання з шарфом, щоб мінімізувати видимість шва та "
+#~ "збільшити міцність шва."
+
+#~ msgid ""
+#~ "Start height of the scarf.\n"
+#~ "This amount can be specified in millimeters or as a percentage of the "
+#~ "current layer height. The default value for this parameter is 0."
+#~ msgstr ""
+#~ "Висота початку шарфу.\n"
+#~ "Ця величина може бути вказана в міліметрах або як відсоток від поточної "
+#~ "товщини шару. Значення за замовчуванням для цього параметра - 0."
+
+#~ msgid "Set Position"
+#~ msgstr "Встановити позицію"
+
+#~ msgid "Stopped."
+#~ msgstr "Зупинено."
+
+#~ msgid ""
+#~ "\"Fix Model\" feature is currently only on Windows. Please repair the "
+#~ "model on Bambu Studio(windows) or CAD softwares."
+#~ msgstr ""
+#~ "Функція \\Fix Model\\ доступна лише у Windows. Будь ласка, відремонтуйте "
+#~ "модель \n"
+#~ "на Bambu Studio (Windows) або у програмах САПР."
+
+#~ msgid "Downloads"
+#~ msgstr "Завантаження"
+
+#~ msgid ""
+#~ "We have added an experimental style \"Tree Slim\" that features smaller "
+#~ "support volume but weaker strength.\n"
+#~ "We recommend using it with: 0 interface layers, 0 top distance, 2 walls."
+#~ msgstr ""
+#~ "Ми додали експериментальний стиль \"Tree Slim\", який відрізняється "
+#~ "меншим розміром, але слабким.\n"
+#~ "Ми рекомендуємо використовувати його з: 0 інтерфейсних шарів, 0 верхнього "
+#~ "відстань, 2 периметри."
+
+#~ msgid ""
+#~ "For \"Tree Strong\" and \"Tree Hybrid\" styles, we recommend the "
+#~ "following settings: at least 2 interface layers, at least 0.1mm top z "
+#~ "distance or using support materials on interface."
+#~ msgstr ""
+#~ "Для стилів \"Tree Strong\" та \"Tree Hybrid\" ми рекомендуємо наступні "
+#~ "параметри: не менше 2 інтерфейсних шарів, не менше 0,1 мм відстань між "
+#~ "вершинами z або використання допоміжних матеріалів в якості інтерфейсу."
+
+#~ msgid "LAN Connection Failed (Sending print file)"
+#~ msgstr "Помилка з’єднання LAN (Надсилання файлу друку)"
+
+#~ msgid "IP and Access Code Verified! You may close the window"
+#~ msgstr "IP-адреса та доступний код перевірено! Ви можете закрити вікно"
+
+#~ msgid ""
+#~ "Bed temperature of the initial layer. Value 0 means the filament does not "
+#~ "support to print on the Cool Plate"
+#~ msgstr ""
+#~ "Температура першого шару. Значення 0 означає, що філамент не підтримує "
+#~ "друк на Cool Plate"
+
+#~ msgid "This setting specifies the count of walls around support"
+#~ msgstr "Цей параметр визначає кількість стін навколо опори"
+
+#~ msgid "China"
+#~ msgstr "Китай"
+
+#~ msgid "Tree support brim width"
+#~ msgstr "Підтримка дерева із заповненням"
+
+#~ msgid "The brim width around tree support. 0 means auto."
+#~ msgstr "The brim width around tree support. 0 means auto."
+
+#~ msgid "Show &Labels"
+#~ msgstr "Показати &Ярлики"
+
+#~ msgid "The 3mf is generated by old Bambu Studio, load geometry data only."
+#~ msgstr ""
+#~ "3mf генерується старим слайсером Orca, завантажувати лише дані геометрії."
+
+#~ msgid ""
+#~ "*We recommend you to add brand, materia, type, and even humidity level in "
+#~ "the Name"
+#~ msgstr ""
+#~ "*Ми рекомендуємо вам додати бренд, матеріал, тип і навіть рівень "
+#~ "вологості у назву"
+
+#~ msgid "Alt + Mouse wheel"
+#~ msgstr "Alt + Коліщатко миші"
+
+#~ msgid "Alt + Shift + Enter"
+#~ msgstr "Alt + Shift + Enter"
+
+#~ msgid "Current Cabin humidity"
+#~ msgstr "Поточна вологість у кабіні"
+
+#~ msgid "Move: press to snap by 1mm"
+#~ msgstr "Переміщення: натисніть для переміщення на 1 мм"
+
+#~ msgid "⌘+Mouse wheel"
+#~ msgstr "⌘+Колесо миші"
+
+#~ msgid "⌥+Mouse wheel"
+#~ msgstr "⌥+Колесо миші"
+
+#~ msgid "Alt+Mouse wheel"
+#~ msgstr "Alt+колесо миші"
 
 #~ msgid ""
 #~ "Please find the details of Flow Dynamics Calibration from our wiki.\n"
@@ -14133,9 +14929,6 @@ msgstr ""
 
 #~ msgid "1080p"
 #~ msgstr "1080p"
-
-#~ msgid "0"
-#~ msgstr "0"
 
 #~ msgid "HMS"
 #~ msgstr "HMS"
@@ -15443,9 +16236,6 @@ msgstr ""
 #~ msgid "Management"
 #~ msgstr "Management"
 
-#~ msgid "Manual"
-#~ msgstr "Manual"
-
 #~ msgid "Max travel detour distance"
 #~ msgstr "Max travel detour distance"
 
@@ -15455,9 +16245,6 @@ msgstr ""
 #~ msgstr ""
 #~ "Maximum detour distance for avoiding travel across walls. If the distance "
 #~ "is larger than this value, there will be no detour."
-
-#~ msgid "Media"
-#~ msgstr "Media"
 
 #~ msgid "Missing LAN ip of printer!"
 #~ msgstr "Missing LAN IP of printer!"

@@ -309,7 +309,8 @@ public:
     void bbl_close_plugin_install_notification();
 
 	//BBS--Objects Info
-	void bbl_show_objectsinfo_notification(const std::string &text, bool is_warning, bool is_hidden);
+	void bbl_show_objectsinfo_notification(const std::string &text, bool is_warning, bool is_hidden,
+		const std::string hypertext = "", std::function<bool(wxEvtHandler*)> callback = std::function<bool(wxEvtHandler*)>());
     void bbl_close_objectsinfo_notification();
 
     void bbl_show_seqprintinfo_notification(const std::string &text);
@@ -461,9 +462,9 @@ private:
 		virtual bool push_background_color();
 		// used this function instead of reading directly m_data.duration. Some notifications might need to return changing value.
 		virtual int  get_duration() { return m_data.duration; }
-
+        void        ensure_ui_inited();
 		bool m_is_dark = false;
-
+        bool m_is_dark_inited = false;
 		const NotificationData m_data;
 		// For reusing ImGUI windows.
 		NotificationIDProvider &m_id_provider;
@@ -492,7 +493,7 @@ private:
 		ImVec4     m_CurrentColor;
 
         float      m_WindowRadius;
-
+        bool       m_WindowRadius_inited = false;
 		void use_bbl_theme();
         void restore_default_theme();
 
@@ -866,7 +867,7 @@ private:
                          }},
 
         NotificationData{NotificationType::BBLUserPresetExceedLimit, NotificationLevel::WarningNotificationLevel, BBL_NOTICE_MAX_INTERVAL,
-			_u8L("The number of user presets cached in the cloud has exceeded the upper limit, newly created user presets can only be used locally."), 
+			_u8L("The number of user presets cached in the cloud has exceeded the upper limit, newly created user presets can only be used locally."),
 			_u8L("Wiki"),
                          [](wxEvtHandler* evnthndlr) {
 				wxLaunchDefaultBrowser("https://wiki.bambulab.com/en/software/bambu-studio/3rd-party-printer-profile#cloud-user-presets-limit");

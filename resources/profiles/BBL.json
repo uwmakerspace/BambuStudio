@@ -1,7 +1,7 @@
 {
     "name": "Bambulab",
     "url": "http://www.bambulab.com/Parameters/vendor/BBL.json",
-    "version": "01.09.00.14",
+    "version": "01.10.00.10",
     "force_update": "0",
     "description": "the initial version of BBL configurations",
     "machine_model_list": [
@@ -790,6 +790,10 @@
             "sub_path": "filament/Bambu TPU 95A HF @base.json"
         },
         {
+            "name": "Generic TPU for AMS @base",
+            "sub_path": "filament/Generic TPU for AMS @base.json"
+        },
+        {
             "name": "Bambu PETG Basic @base",
             "sub_path": "filament/Bambu PETG Basic @base.json"
         },
@@ -822,6 +826,22 @@
             "sub_path": "filament/Generic PCTG @base.json"
         },
         {
+            "name": "Bambu PETG HF @base",
+            "sub_path": "filament/Bambu PETG HF @base.json"
+        },
+        {
+            "name": "Fiberon PETG-ESD @base",
+            "sub_path": "filament/Fiberon PETG-ESD @base.json"
+        },
+        {
+            "name": "Fiberon PETG-rCF @base",
+            "sub_path": "filament/Fiberon PETG-rCF @base.json"
+        },
+        {
+            "name": "Fiberon PET-CF @base",
+            "sub_path": "filament/Fiberon PET-CF @base.json"
+        },
+        {
             "name": "Bambu ABS @base",
             "sub_path": "filament/Bambu ABS @base.json"
         },
@@ -836,6 +856,10 @@
         {
             "name": "Bambu ABS-GF @base",
             "sub_path": "filament/Bambu ABS-GF @base.json"
+        },
+        {
+            "name": "Bambu Support for ABS @base",
+            "sub_path": "filament/Bambu Support for ABS @base.json"
         },
         {
             "name": "Bambu PC @base",
@@ -860,6 +884,10 @@
         {
             "name": "Bambu ASA-Aero @base",
             "sub_path": "filament/Bambu ASA-Aero @base.json"
+        },
+        {
+            "name": "Bambu ASA-CF @base",
+            "sub_path": "filament/Bambu ASA-CF @base.json"
         },
         {
             "name": "Generic PVA @base",
@@ -910,6 +938,22 @@
             "sub_path": "filament/Bambu PA6-GF @base.json"
         },
         {
+            "name": "Fiberon PA6-CF @base",
+            "sub_path": "filament/Fiberon PA6-CF @base.json"
+        },
+        {
+            "name": "Fiberon PA6-GF @base",
+            "sub_path": "filament/Fiberon PA6-GF @base.json"
+        },
+        {
+            "name": "Fiberon PA12-CF @base",
+            "sub_path": "filament/Fiberon PA12-CF @base.json"
+        },
+        {
+            "name": "Fiberon PA612-CF @base",
+            "sub_path": "filament/Fiberon PA612-CF @base.json"
+        },
+        {
             "name": "Generic HIPS @base",
             "sub_path": "filament/Generic HIPS @base.json"
         },
@@ -920,6 +964,14 @@
         {
             "name": "Generic PPS @base",
             "sub_path": "filament/Generic PPS @base.json"
+        },
+        {
+            "name": "Bambu PPS-CF @base",
+            "sub_path": "filament/Bambu PPS-CF @base.json"
+        },
+        {
+            "name": "Bambu PPA-CF @base",
+            "sub_path": "filament/Bambu PPA-CF @base.json"
         },
         {
             "name": "Generic PPA-CF @base",
@@ -1718,6 +1770,22 @@
             "sub_path": "filament/Bambu TPU 95A HF @BBL A1.json"
         },
         {
+            "name": "Generic TPU for AMS @BBL X1C",
+            "sub_path": "filament/Generic TPU for AMS @BBL X1C.json"
+        },
+        {
+            "name": "Generic TPU for AMS @BBL P1P",
+            "sub_path": "filament/Generic TPU for AMS @BBL P1P.json"
+        },
+        {
+            "name": "Generic TPU for AMS @BBL A1",
+            "sub_path": "filament/Generic TPU for AMS @BBL A1.json"
+        },
+        {
+            "name": "Generic TPU for AMS @BBL A1M",
+            "sub_path": "filament/Generic TPU for AMS @BBL A1M.json"
+        },
+        {
             "name": "Bambu PETG Basic @BBL X1C",
             "sub_path": "filament/Bambu PETG Basic @BBL X1C.json"
         },
@@ -1870,6 +1938,42 @@
             "sub_path": "filament/Bambu PETG Translucent @BBL A1.json"
         },
         {
+            "name": "Bambu PETG HF @BBL X1C",
+            "sub_path": "filament/Bambu PETG HF @BBL X1C.json"
+        },
+        {
+            "name": "Bambu PETG HF @BBL X1C 0.2 nozzle",
+            "sub_path": "filament/Bambu PETG HF @BBL X1C 0.2 nozzle.json"
+        },
+        {
+            "name": "Bambu PETG HF @BBL X1C 0.8 nozzle",
+            "sub_path": "filament/Bambu PETG HF @BBL X1C 0.8 nozzle.json"
+        },
+        {
+            "name": "Bambu PETG HF @BBL A1",
+            "sub_path": "filament/Bambu PETG HF @BBL A1.json"
+        },
+        {
+            "name": "Bambu PETG HF @BBL A1 0.2 nozzle",
+            "sub_path": "filament/Bambu PETG HF @BBL A1 0.2 nozzle.json"
+        },
+        {
+            "name": "Bambu PETG HF @BBL A1 0.8 nozzle",
+            "sub_path": "filament/Bambu PETG HF @BBL A1 0.8 nozzle.json"
+        },
+        {
+            "name": "Bambu PETG HF @BBL A1M",
+            "sub_path": "filament/Bambu PETG HF @BBL A1M.json"
+        },
+        {
+            "name": "Bambu PETG HF @BBL A1M 0.2 nozzle",
+            "sub_path": "filament/Bambu PETG HF @BBL A1M 0.2 nozzle.json"
+        },
+        {
+            "name": "Bambu PETG HF @BBL A1M 0.8 nozzle",
+            "sub_path": "filament/Bambu PETG HF @BBL A1M 0.8 nozzle.json"
+        },
+        {
             "name": "Generic PCTG @BBL X1C",
             "sub_path": "filament/Generic PCTG @BBL X1C.json"
         },
@@ -1880,6 +1984,18 @@
         {
             "name": "Generic PCTG @BBL A1M",
             "sub_path": "filament/Generic PCTG @BBL A1M.json"
+        },
+        {
+            "name": "Fiberon PETG-ESD @BBL X1C",
+            "sub_path": "filament/Fiberon PETG-ESD @BBL X1C.json"
+        },
+        {
+            "name": "Fiberon PETG-rCF @BBL X1C",
+            "sub_path": "filament/Fiberon PETG-rCF @BBL X1C.json"
+        },
+        {
+            "name": "Fiberon PET-CF @BBL X1C",
+            "sub_path": "filament/Fiberon PET-CF @BBL X1C.json"
         },
         {
             "name": "Bambu ABS @BBL X1C",
@@ -1960,6 +2076,14 @@
         {
             "name": "Bambu ABS-GF @BBL A1",
             "sub_path": "filament/Bambu ABS-GF @BBL A1.json"
+        },
+        {
+            "name": "Bambu Support for ABS @BBL X1C",
+            "sub_path": "filament/Bambu Support for ABS @BBL X1C.json"
+        },
+        {
+            "name": "Bambu Support for ABS @BBL A1",
+            "sub_path": "filament/Bambu Support for ABS @BBL A1.json"
         },
         {
             "name": "Bambu PC @BBL X1C",
@@ -2100,6 +2224,30 @@
         {
             "name": "Bambu ASA-Aero @BBL A1",
             "sub_path": "filament/Bambu ASA-Aero @BBL A1.json"
+        },
+        {
+            "name": "Bambu ASA-CF @BBL X1C",
+            "sub_path": "filament/Bambu ASA-CF @BBL X1C.json"
+        },
+        {
+            "name": "Bambu ASA-CF @BBL X1C 0.6 nozzle",
+            "sub_path": "filament/Bambu ASA-CF @BBL X1C 0.6 nozzle.json"
+        },
+        {
+            "name": "Bambu ASA-CF @BBL P1P",
+            "sub_path": "filament/Bambu ASA-CF @BBL P1P.json"
+        },
+        {
+            "name": "Bambu ASA-CF @BBL P1P 0.6 nozzle",
+            "sub_path": "filament/Bambu ASA-CF @BBL P1P 0.6 nozzle.json"
+        },
+        {
+            "name": "Bambu ASA-CF @BBL A1",
+            "sub_path": "filament/Bambu ASA-CF @BBL A1.json"
+        },
+        {
+            "name": "Bambu ASA-CF @BBL A1 0.6 nozzle",
+            "sub_path": "filament/Bambu ASA-CF @BBL A1 0.6 nozzle.json"
         },
         {
             "name": "Generic PVA @0.2 nozzle",
@@ -2250,6 +2398,22 @@
             "sub_path": "filament/Bambu PA6-GF @BBL A1.json"
         },
         {
+            "name": "Fiberon PA6-CF @BBL X1C",
+            "sub_path": "filament/Fiberon PA6-CF @BBL X1C.json"
+        },
+        {
+            "name": "Fiberon PA6-GF @BBL X1C",
+            "sub_path": "filament/Fiberon PA6-GF @BBL X1C.json"
+        },
+        {
+            "name": "Fiberon PA12-CF @BBL X1C",
+            "sub_path": "filament/Fiberon PA12-CF @BBL X1C.json"
+        },
+        {
+            "name": "Fiberon PA612-CF @BBL X1C",
+            "sub_path": "filament/Fiberon PA612-CF @BBL X1C.json"
+        },
+        {
             "name": "Generic HIPS @BBL X1C",
             "sub_path": "filament/Generic HIPS @BBL X1C.json"
         },
@@ -2280,6 +2444,18 @@
         {
             "name": "Generic PPS @BBL X1E",
             "sub_path": "filament/Generic PPS @BBL X1E.json"
+        },
+        {
+            "name": "Bambu PPS-CF @BBL X1E",
+            "sub_path": "filament/Bambu PPS-CF @BBL X1E.json"
+        },
+        {
+            "name": "Bambu PPA-CF @BBL X1C",
+            "sub_path": "filament/Bambu PPA-CF @BBL X1C.json"
+        },
+        {
+            "name": "Bambu PPA-CF @BBL X1E",
+            "sub_path": "filament/Bambu PPA-CF @BBL X1E.json"
         },
         {
             "name": "Generic PPA-CF @BBL X1E",

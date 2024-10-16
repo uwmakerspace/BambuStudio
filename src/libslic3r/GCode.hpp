@@ -151,6 +151,7 @@ public:
         m_layer(nullptr),
         m_object_layer_over_raft(false),
         //m_volumetric_speed(0),
+        m_last_scarf_seam_flag(false),
         m_last_pos_defined(false),
         m_last_extrusion_role(erNone),
         m_last_width(0.0f),
@@ -179,6 +180,7 @@ public:
     void            set_origin(const Vec2d &pointf);
     void            set_origin(const coordf_t x, const coordf_t y) { this->set_origin(Vec2d(x, y)); }
     const Point&    last_pos() const { return m_last_pos; }
+    const bool&     last_scarf_seam_flag() const { return m_last_scarf_seam_flag; }
     Vec2d           point_to_gcode(const Point &point) const;
     Point           gcode_to_point(const Vec2d &point) const;
     const FullPrintConfig &config() const { return m_config; }
@@ -332,6 +334,7 @@ private:
     void check_placeholder_parser_failed();
 
     void            set_last_pos(const Point &pos) { m_last_pos = pos; m_last_pos_defined = true; }
+    void            set_last_scarf_seam_flag(bool flag) { m_last_scarf_seam_flag = flag; }
     bool            last_pos_defined() const { return m_last_pos_defined; }
     void            set_extruders(const std::vector<unsigned int> &extruder_ids);
     std::string     preamble();
@@ -342,6 +345,9 @@ private:
     std::string     extrude_multi_path(ExtrusionMultiPath multipath, std::string description = "", double speed = -1.);
     std::string     extrude_path(ExtrusionPath path, std::string description = "", double speed = -1.);
 
+    //smooth speed function
+    void            smooth_speed_discontinuity_area(ExtrusionPaths &paths);
+    ExtrusionPaths  merge_same_speed_paths(const ExtrusionPaths &paths);
     // Extruding multiple objects with soluble / non-soluble / combined supports
     // on a multi-material printer, trying to minimize tool switches.
     // Following structures sort extrusions by the extruder ID, by an order of objects and object islands.
@@ -473,7 +479,7 @@ private:
 
     Point                               m_last_pos;
     bool                                m_last_pos_defined;
-
+    bool                                m_last_scarf_seam_flag;
     std::unique_ptr<CoolingBuffer>      m_cooling_buffer;
     std::unique_ptr<SpiralVase>         m_spiral_vase;
 #ifdef HAS_PRESSURE_EQUALIZER
@@ -514,8 +520,12 @@ private:
     int get_bed_temperature(const int extruder_id, const bool is_first_layer, const BedType bed_type) const;
 
     std::string _extrude(const ExtrusionPath &path, std::string description = "", double speed = -1, bool is_first_slope = false);
+    ExtrusionPaths set_speed_transition(ExtrusionPaths &paths);
+    ExtrusionPaths split_and_mapping_speed(double &other_path_v, double &final_v, ExtrusionPath &this_path, double max_smooth_length, bool split_from_left = true);
     double get_path_speed(const ExtrusionPath &path);
     double get_overhang_degree_corr_speed(float speed, double path_degree);
+    double mapping_speed(double dist);
+    double get_speed_coor_x(double speed);
     void print_machine_envelope(GCodeOutputStream &file, Print &print);
     void _print_first_layer_bed_temperature(GCodeOutputStream &file, Print &print, const std::string &gcode, unsigned int first_printing_extruder_id, bool wait);
     void _print_first_layer_extruder_temperatures(GCodeOutputStream &file, Print &print, const std::string &gcode, unsigned int first_printing_extruder_id, bool wait);

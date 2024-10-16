@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Bambu Studio\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-05-31 17:44+0800\n"
+"POT-Creation-Date: 2024-10-15 16:47+0800\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -19,8 +19,8 @@ msgstr "Supports Peints"
 msgid "Please select single object."
 msgstr "Please select single object."
 
-msgid "Alt + Mouse wheel"
-msgstr "Alt + molette de la souris"
+msgid "Mouse wheel"
+msgstr "Molette de souris"
 
 msgid "Section view"
 msgstr "Vue en coupe"
@@ -105,6 +105,11 @@ msgstr "Pas de support auto"
 msgid "Support Generated"
 msgstr "Supports Générés"
 
+msgid ""
+"Warning: All triangle areas are too small,The current function is not "
+"working."
+msgstr ""
+
 msgid "Lay on face"
 msgstr "Positionner sur une face"
 
@@ -153,14 +158,23 @@ msgstr "Pot de peinture"
 msgid "Height range"
 msgstr "Plage de hauteur"
 
-msgid "Alt + Shift + Enter"
-msgstr "Alt + Shift + Entrée"
+msgid "Shift + Enter"
+msgstr ""
 
 msgid "Toggle Wireframe"
 msgstr "Activer Filaire"
 
+msgid "Shift + L"
+msgstr ""
+
+msgid "Toggle non-manifold edges"
+msgstr ""
+
 msgid "Rotate horizontally"
 msgstr "Rotation horizontale"
+
+msgid "hit face"
+msgstr ""
 
 msgid "Shortcut Key "
 msgstr "Touche de raccourci"
@@ -170,6 +184,9 @@ msgstr "Triangle"
 
 msgid "Height Range"
 msgstr "Plage de hauteur"
+
+msgid "Place input box of bottom near mouse"
+msgstr ""
 
 msgid "Vertical"
 msgstr "Vertical"
@@ -229,20 +246,26 @@ msgstr "dans"
 msgid "mm"
 msgstr "mm"
 
+msgid "Part selection"
+msgstr ""
+
+msgid "Fixed step drag"
+msgstr ""
+
+msgid "Single sided scaling"
+msgstr ""
+
 msgid "Position"
 msgstr "Emplacement"
 
-msgid "Rotation"
-msgstr "Rotation"
+msgid "Rotate (relative)"
+msgstr "Rotate (relative)"
 
 msgid "Scale ratios"
 msgstr "Rapports d'échelle"
 
 msgid "Object Operations"
 msgstr "Opérations sur les Objets"
-
-msgid "Rotate (relative)"
-msgstr "Rotate (relative)"
 
 msgid "Volume Operations"
 msgstr "Opérations sur les Volumes"
@@ -252,9 +275,6 @@ msgstr "Traduire"
 
 msgid "Group Operations"
 msgstr "Opérations de Groupe"
-
-msgid "Set Position"
-msgstr "Définir la Position"
 
 msgid "Set Orientation"
 msgstr "Définir l'Orientation"
@@ -268,17 +288,30 @@ msgstr "Réinitialiser la Position"
 msgid "Reset Rotation"
 msgstr "Réinitialiser la Rotation"
 
+msgid "Object coordinates"
+msgstr ""
+
 msgid "World coordinates"
 msgstr "Les coordonnées mondiales"
+
+msgid "Reset current rotation to real zeros."
+msgstr ""
 
 msgid "°"
 msgstr "°"
 
-msgid "Size"
-msgstr "Taille"
+msgid "Reset current rotation to the value when open the rotation tool."
+msgstr ""
+
+msgid "Part coordinates"
+msgstr ""
 
 msgid "%"
 msgstr "%"
+
+#. TRN - Input label. Be short as possible
+msgid "Size"
+msgstr "Taille"
 
 msgid "uniform scale"
 msgstr "Échelle uniforme"
@@ -352,6 +385,9 @@ msgstr "Réparer l'objet modèle"
 msgid "Connector"
 msgstr "Connecteur"
 
+msgid "Flip cut plane"
+msgstr ""
+
 msgid "Planar"
 msgstr "Planaire"
 
@@ -366,6 +402,10 @@ msgstr "Mouvement:"
 
 msgid "Groove Angle"
 msgstr "Angle de Rainure"
+
+#. TRN - Input label. Be short as possible
+msgid "Rotation"
+msgstr "Rotation"
 
 msgid "Movement"
 msgstr "Mouvement"
@@ -382,6 +422,7 @@ msgstr "Ajouter des connecteurs"
 msgid "Groove"
 msgstr "Rainure"
 
+#. TRN - Input label. Be short as possible
 msgid "Depth"
 msgstr "Profondeur"
 
@@ -792,11 +833,276 @@ msgstr ""
 "Embedded\n"
 "depth"
 
+msgid "Warning:Input cannot be empty!"
+msgstr ""
+
+msgid "Warning:create text fail."
+msgstr ""
+
 msgid "Surface"
 msgstr "Surface"
 
 msgid "Horizontal text"
 msgstr "Texte horizontal"
+
+msgid "Head diameter"
+msgstr ""
+
+msgid "Max angle"
+msgstr ""
+
+msgid "Detection radius"
+msgstr ""
+
+msgid "Remove selected points"
+msgstr ""
+
+msgid "Remove all points"
+msgstr ""
+
+msgid "Auto-generate points"
+msgstr ""
+
+msgid "Add a brim ear"
+msgstr ""
+
+msgid "Delete a brim ear"
+msgstr ""
+
+msgid "Ctrl+Mouse wheel"
+msgstr "Ctrl+molette de la souris"
+
+msgid "Adjust section view"
+msgstr ""
+
+msgid ""
+"Warning: The brim type is not set to \"painted\",the brim ears will not take "
+"effect !"
+msgstr ""
+
+msgid "(Set the brim type to \"painted\")"
+msgstr ""
+
+msgid " invalid brim ears"
+msgstr ""
+
+msgid "Brim Ears"
+msgstr ""
+
+msgid "Choose SVG file for emboss:"
+msgstr ""
+
+#, boost-format
+msgid "File does NOT exist (%1%)."
+msgstr ""
+
+#, boost-format
+msgid "Filename has to end with \".svg\" but you selected %1%"
+msgstr ""
+
+#, boost-format
+msgid "Nano SVG parser can't load from file (%1%)."
+msgstr ""
+
+#, boost-format
+msgid "SVG file does NOT contain a single path to be embossed (%1%)."
+msgstr ""
+
+#. TRN - Input label. Be short as possible
+msgid "Use surface"
+msgstr ""
+
+#. TRN - Input label. Be short as possible
+msgid "From surface"
+msgstr ""
+
+#. TRN - Input label. Be short as possible
+msgid "Mirror"
+msgstr "Symétrie"
+
+#, boost-format
+msgid "Opacity (%1%)"
+msgstr ""
+
+#, boost-format
+msgid "Color gradient (%1%)"
+msgstr ""
+
+msgid "Undefined fill type"
+msgstr ""
+
+msgid "Linear gradient"
+msgstr ""
+
+msgid "Radial gradient"
+msgstr ""
+
+msgid "Open filled path"
+msgstr ""
+
+msgid "Undefined stroke type"
+msgstr ""
+
+msgid "Path can't be healed from selfintersection and multiple points."
+msgstr ""
+
+msgid ""
+"Final shape constains selfintersection or multiple points with same "
+"coordinate."
+msgstr ""
+
+#, boost-format
+msgid "Shape is marked as invisible (%1%)."
+msgstr ""
+
+#. TRN: The first placeholder is shape identifier, the second one is text describing the problem.
+#, boost-format
+msgid "Fill of shape (%1%) contains unsupported: %2%."
+msgstr ""
+
+#, boost-format
+msgid "Stroke of shape (%1%) is too thin (minimal width is %2% mm)."
+msgstr ""
+
+#, boost-format
+msgid "Stroke of shape (%1%) contains unsupported: %2%."
+msgstr ""
+
+msgid "Not valid state please report reproduction steps on github"
+msgstr ""
+
+msgid "No embossed file"
+msgstr ""
+
+msgid "Missing svg file in embossed shape"
+msgstr ""
+
+msgid "Missing data of svg file"
+msgstr ""
+
+msgid ""
+"Tip:If you want to place svg file on another part surface,\n"
+"you should select part first, and then drag svg file to the part surface."
+msgstr ""
+
+#. TRN - Preview of filename after clear local filepath.
+msgid "Unknown filename"
+msgstr ""
+
+#, boost-format
+msgid "SVG file path is \"%1%\""
+msgstr ""
+
+msgid "Reload SVG file from disk."
+msgstr ""
+
+msgid "Change file"
+msgstr ""
+
+msgid "Change to another .svg file"
+msgstr ""
+
+#. TRN: An menu option to convert the SVG into an unmodifiable model part.
+msgid "Bake to model"
+msgstr ""
+
+#. TRN: Tooltip for the menu item.
+msgid "Bake into model as uneditable part"
+msgstr ""
+
+msgid "Save as"
+msgstr ""
+
+msgid "Save SVG file"
+msgstr ""
+
+msgid "Save as '.svg' file"
+msgstr ""
+
+msgid "Size in emboss direction."
+msgstr ""
+
+#. TRN: The placeholder contains a number.
+#, boost-format
+msgid "Scale also changes amount of curve samples (%1%)"
+msgstr ""
+
+msgid "width:"
+msgstr ""
+
+msgid "height:"
+msgstr ""
+
+msgid "set width and height keep ratio with width"
+msgstr ""
+
+msgid "Width of SVG."
+msgstr ""
+
+msgid "Height of SVG."
+msgstr ""
+
+msgid "Lock/unlock the aspect ratio of the SVG."
+msgstr ""
+
+msgid "Reset scale"
+msgstr ""
+
+msgid "Distance of the center of the SVG to the model surface."
+msgstr ""
+
+msgid "Reset distance"
+msgstr ""
+
+msgid "Rotate text Clock-wise."
+msgstr ""
+
+msgid "Reset rotation"
+msgstr ""
+
+msgid "Lock/unlock rotation angle when dragging above the surface."
+msgstr ""
+
+msgid "Mirror vertically"
+msgstr ""
+
+msgid "Mirror horizontally"
+msgstr ""
+
+msgid "Set Mirror"
+msgstr ""
+
+msgid "Face the camera"
+msgstr ""
+
+msgid "Operation"
+msgstr ""
+
+msgid "Join"
+msgstr ""
+
+msgid "Click to change text into object part."
+msgstr ""
+
+msgid "You can't change a type of the last solid part of the object."
+msgstr ""
+
+msgctxt "EmbossOperation"
+msgid "Cut"
+msgstr ""
+
+msgid "Click to change part type into negative volume."
+msgstr ""
+
+msgid "Modifier"
+msgstr "Modificateur"
+
+msgid "Click to change part type into modifier."
+msgstr ""
+
+#. TRN: This is the name of the action that shows in undo/redo stack (changing part type from SVG to something else).
+msgid "Change SVG Type"
+msgstr ""
 
 msgid "Ctrl+"
 msgstr "Ctrl+"
@@ -964,6 +1270,15 @@ msgstr ""
 msgid "User logged out"
 msgstr "Utilisateur déconnecté"
 
+msgid "Install network plug-in"
+msgstr ""
+
+msgid "Please Install network plug-in before log in."
+msgstr ""
+
+msgid "Install Network Plug-in"
+msgstr ""
+
 msgid "new or open project file is not allowed during the slicing process!"
 msgstr ""
 "L'ouverture ou la création d'un fichier de projet n'est pas autorisée "
@@ -1102,6 +1417,24 @@ msgstr "Ajouter un bloqueur de supports"
 msgid "Add support enforcer"
 msgstr "Ajouter un générateur de supports"
 
+msgid "Add text"
+msgstr ""
+
+msgid "Add negative text"
+msgstr ""
+
+msgid "Add text modifier"
+msgstr ""
+
+msgid "Add SVG part"
+msgstr ""
+
+msgid "Add negative SVG"
+msgstr ""
+
+msgid "Add SVG modifier"
+msgstr ""
+
 msgid "Select settings"
 msgstr "Sélectionnez les paramètres"
 
@@ -1117,8 +1450,17 @@ msgstr "Eff."
 msgid "Delete the selected object"
 msgstr "Supprimer l'objet sélectionné"
 
+msgid "Delete all cutter"
+msgstr ""
+
 msgid "Edit Text"
 msgstr "Modifier texte"
+
+msgid "Edit SVG"
+msgstr ""
+
+msgid "Change SVG source file, projection, size, ..."
+msgstr ""
 
 msgid "Load..."
 msgstr "Charger..."
@@ -1131,6 +1473,9 @@ msgstr "Cylindre"
 
 msgid "Cone"
 msgstr "Cône"
+
+msgid "Double Tear Romboid Cylinder"
+msgstr ""
 
 msgid "Disc"
 msgstr "Disque"
@@ -1152,6 +1497,9 @@ msgstr "3DBenchy"
 
 msgid "ksr FDMTest"
 msgstr "KSR Test FDM"
+
+msgid "SVG"
+msgstr ""
 
 msgid "Height range Modifier"
 msgstr "Modificateur dans plage de hauteur"
@@ -1273,9 +1621,6 @@ msgstr "Selon l'axe Z"
 
 msgid "Mirror along the Z axis"
 msgstr "Miroir selon l'axe Z"
-
-msgid "Mirror"
-msgstr "Symétrie"
 
 msgid "Mirror object"
 msgstr "Symétriser l'Objet"
@@ -1561,9 +1906,6 @@ msgstr ""
 
 msgid "Negative Part"
 msgstr "Partie négative"
-
-msgid "Modifier"
-msgstr "Modificateur"
 
 msgid "Support Blocker"
 msgstr "Bloqueur de Support"
@@ -1970,6 +2312,23 @@ msgstr "Remplissage de plateau annulé."
 msgid "Bed filling done."
 msgstr "Remplissage du plateau fait."
 
+#. TRN: This is the title of the action appearing in undo/redo stack.
+#. It is same for Text and SVG.
+msgid "Emboss attribute change"
+msgstr ""
+
+msgid "Add Emboss text object"
+msgstr ""
+
+msgid "Add Emboss text Volume"
+msgstr ""
+
+msgid "Font doesn't have any shape for given text."
+msgstr ""
+
+msgid "There is no valid surface for text projection."
+msgstr ""
+
 msgid "Error! Unable to create thread!"
 msgstr "Erreur! Impossible de créer le processus !"
 
@@ -2257,11 +2616,6 @@ msgstr "La valeur saisie doit être supérieure à %1% et inférieure à %2%"
 msgid "SN"
 msgstr "Numéro de série"
 
-msgid "Setting AMS slot information while printing is not supported"
-msgstr ""
-"La définition des informations relatives aux emplacements AMS pendant "
-"l'impression n'est pas prise en charge."
-
 msgid "Factors of Flow Dynamics Calibration"
 msgstr "Calibration Dynamique du Facteur de Flux"
 
@@ -2273,6 +2627,11 @@ msgstr "Facteur K"
 
 msgid "Factor N"
 msgstr "Facteur N"
+
+msgid "Setting AMS slot information while printing is not supported"
+msgstr ""
+"La définition des informations relatives aux emplacements AMS pendant "
+"l'impression n'est pas prise en charge."
 
 msgid "Setting Virtual slot information while printing is not supported"
 msgstr ""
@@ -2392,8 +2751,8 @@ msgstr "Désactiver l'AMS"
 msgid "Print with the filament mounted on the back of chassis"
 msgstr "Impression depuis la bobine externe"
 
-msgid "Current Cabin humidity"
-msgstr "Current Cabin humidity"
+msgid "Current AMS humidity"
+msgstr ""
 
 msgid ""
 "Please change the desiccant when it is too wet. The indicator may not "
@@ -2794,20 +3153,6 @@ msgid ""
 msgstr ""
 "Hauteur de couche trop importante.\n"
 "Réinitialisation à 0,2"
-
-msgid ""
-"Too small scarf start height.\n"
-"Reset to 50%"
-msgstr ""
-"Too small scarf start height.\n"
-"Reset to 50%"
-
-msgid ""
-"Too big scarf start height.\n"
-"Reset to 50%"
-msgstr ""
-"Too big scarf start height.\n"
-"Reset to 50%"
 
 msgid ""
 "Too small ironing spacing.\n"
@@ -3246,14 +3591,11 @@ msgstr "Tour"
 msgid "Total"
 msgstr "Total"
 
-msgid "Total Estimation"
-msgstr "Informations Tranchage"
-
-msgid "Total time"
-msgstr "Durée totale"
-
 msgid "Total cost"
 msgstr "Total cost"
+
+msgid "Time Estimation"
+msgstr "Estimation de temps"
 
 msgid "up to"
 msgstr "jusqu'à"
@@ -3342,8 +3684,8 @@ msgstr "Imprimante"
 msgid "Print settings"
 msgstr "Réglages d'impression"
 
-msgid "Time Estimation"
-msgstr "Estimation de temps"
+msgid "Total Estimation"
+msgstr "Informations Tranchage"
 
 msgid "Normal mode"
 msgstr "Mode normal"
@@ -3359,6 +3701,9 @@ msgstr "Temps de préparation"
 
 msgid "Model printing time"
 msgstr "Temps d'impression du modèle"
+
+msgid "Total time"
+msgstr "Durée totale"
 
 msgid "Switch to silent mode"
 msgstr "Passer en mode silencieux"
@@ -3529,6 +3874,9 @@ msgstr "Vue en coupe"
 msgid "Assemble Control"
 msgstr "Contrôle de l'Assemblage"
 
+msgid "Selection Mode"
+msgstr ""
+
 msgid "Total Volume:"
 msgstr "Volume total:"
 
@@ -3684,9 +4032,6 @@ msgstr "Non"
 msgid "will be closed before creating a new model. Do you want to continue?"
 msgstr "sera fermé avant de créer un nouveau modèle. Voulez-vous continuer ?"
 
-msgid "Upload"
-msgstr "Téléverser"
-
 msgid "Slice plate"
 msgstr "Trancher le plateau"
 
@@ -3737,6 +4082,9 @@ msgstr "Signaler un problème"
 
 msgid "Check for Update"
 msgstr "Vérifier la mise à jour"
+
+msgid "Check for Presets Update"
+msgstr ""
 
 msgid "Open Network Test"
 msgstr "Ouvrir le Test de Réseau"
@@ -3870,6 +4218,9 @@ msgstr "Exporter la configuration actuelle vers des fichiers"
 msgid "Export"
 msgstr "Exporter"
 
+msgid "Publish to MakerWorld"
+msgstr ""
+
 msgid "Quit"
 msgstr "Quitter"
 
@@ -3930,9 +4281,6 @@ msgstr "Utiliser la vue en perspective"
 msgid "Use Orthogonal View"
 msgstr "Utiliser la vue orthogonale"
 
-msgid "Show &Labels"
-msgstr "Afficher &Les Étiquettes"
-
 msgid "Show object labels in 3D scene"
 msgstr "Afficher les étiquettes des objets dans la scène 3D"
 
@@ -3941,6 +4289,12 @@ msgstr "Montrer Surplombs"
 
 msgid "Show object overhang highlight in 3D scene"
 msgstr "Afficher la surbrillance des surplombs d'un objet dans la scène 3D"
+
+msgid "Set 3DConnexion"
+msgstr ""
+
+msgid "Set 3DConnexion mouse"
+msgstr ""
 
 msgid "Services"
 msgstr "Services"
@@ -4157,6 +4511,12 @@ msgstr ""
 "Le lecteur n'est pas chargé, veuillez cliquer sur le bouton \"Lecture\" pour "
 "réessayer."
 
+msgid "Temporarily closed because there is no operating for a long time."
+msgstr ""
+
+msgid "Temporarily closed because there is no printing for a while."
+msgstr ""
+
 msgid "Please confirm if the printer is connected."
 msgstr "Veuillez vérifier que l'imprimante est bien connectée."
 
@@ -4199,8 +4559,8 @@ msgstr ""
 msgid "The printer has been logged out and cannot connect."
 msgstr "L'imprimante a été déconnectée et ne peut pas se connecter."
 
-msgid "Stopped."
-msgstr "Arrêté."
+msgid "Video Stopped."
+msgstr ""
 
 msgid "LAN Connection Failed (Failed to start liveview)"
 msgstr ""
@@ -4440,6 +4800,14 @@ msgstr "Arrêt"
 msgid "Layer: N/A"
 msgstr "Couche : N/A"
 
+msgid "Finish Time: N/A"
+msgstr ""
+
+msgid ""
+"The estimated printing time for \n"
+"multi-color models may be inaccurate."
+msgstr ""
+
 msgid "Clear"
 msgstr "Nettoyer"
 
@@ -4460,6 +4828,12 @@ msgstr "(Le modèle a déjà été noté. Votre note écrasera la précédente.)
 
 msgid "Rate"
 msgstr "Note"
+
+msgid "Finished"
+msgstr "Terminé"
+
+msgid "Finish Time: "
+msgstr ""
 
 msgid "Camera"
 msgstr "Caméra"
@@ -4526,6 +4900,15 @@ msgstr "Couche : %s"
 #, c-format, boost-format
 msgid "Layer: %d/%d"
 msgstr "Couche : %d/%d"
+
+msgid "Auto homing"
+msgstr ""
+
+msgid "Are you sure you want to trigger auto homing?"
+msgstr ""
+
+msgid "Homing"
+msgstr ""
 
 msgid ""
 "Please heat the nozzle to above 170 degree before loading or unloading "
@@ -4674,6 +5057,30 @@ msgstr ""
 "At least one successful print record of this print profile is required \n"
 "to give a positive rating (4 or 5 stars)."
 
+msgid "Step file import parameters"
+msgstr ""
+
+msgid "Linear Deflection"
+msgstr ""
+
+msgid "Please input a valid value (0.001 < linear deflection < 0.1)"
+msgstr ""
+
+msgid "Angle Deflection"
+msgstr ""
+
+msgid "Please input a valid value (0.01 < angle deflection < 1.0)"
+msgstr ""
+
+msgid "Number of triangular facets"
+msgstr ""
+
+msgid "0"
+msgstr "0"
+
+msgid "Calculating, please wait..."
+msgstr ""
+
 msgid "Status"
 msgstr "État"
 
@@ -4747,6 +5154,25 @@ msgstr "Dernière Version : "
 
 msgid "Not for now"
 msgstr "Not for now"
+
+msgid "Server Exception"
+msgstr ""
+
+msgid ""
+"The server is unable to respond. Please click the link below to check the "
+"server status."
+msgstr ""
+
+msgid ""
+"If the server is in a fault state, you can temporarily use offline printing "
+"or local network printing."
+msgstr ""
+
+msgid "How to use LAN only mode"
+msgstr ""
+
+msgid "Don't show this dialog again"
+msgstr ""
 
 msgid "3D Mouse disconnected."
 msgstr "Souris 3D déconnectée."
@@ -4843,9 +5269,6 @@ msgstr "Fichier modèle téléchargé."
 
 msgid "Serious warning:"
 msgstr "Alerte importante:"
-
-msgid " (Repair)"
-msgstr "(Réparation)"
 
 msgid " Click here to install it."
 msgstr " Cliquez ici pour l'installer."
@@ -5133,10 +5556,10 @@ msgstr "Charger 3mf"
 msgid "The Config can not be loaded."
 msgstr "La Configuration ne peut pas être chargée."
 
-msgid "The 3mf is generated by old Bambu Studio, load geometry data only."
+msgid ""
+"Due to the lower version of Bambu Studio, this 3mf file cannot be fully "
+"loaded. Please update Bambu Studio to the latest version"
 msgstr ""
-"Le 3mf provient d'une ancienne version de Bambu Studio, seules les données "
-"de géométrie seront chargées."
 
 msgid "Found following keys unrecognized:\n"
 msgstr "Les clés inconnues suivantes ont été détectées :\n"
@@ -5413,6 +5836,9 @@ msgstr "Ouvrir en tant que projet"
 msgid "Import geometry only"
 msgstr "Importer la géométrie uniquement"
 
+msgid "Please import multiple files with the same suffix."
+msgstr ""
+
 msgid "Only one G-code file can be opened at the same time."
 msgstr "Un seul fichier G-code peut être ouvert à la fois."
 
@@ -5503,6 +5929,15 @@ msgstr ""
 "avant d'exporter ?"
 
 msgid ""
+"Are you sure you want to store original SVGs with their local paths into the "
+"3MF file?\n"
+"If you hit 'NO', all SVGs in the project will not be editable any more."
+msgstr ""
+
+msgid "Private protection"
+msgstr ""
+
+msgid ""
 "Print By Object: \n"
 "Suggest to use auto-arrange to avoid collisions when printing."
 msgstr ""
@@ -5525,6 +5960,17 @@ msgstr "Numéro invalide"
 
 msgid "Plate Settings"
 msgstr "Paramètres de la plaque"
+
+msgid "Prime Tower:"
+msgstr ""
+
+msgid ""
+"A cube printed during a filament change to purge old color and ensure smooth "
+"color transition."
+msgstr ""
+
+msgid "View Wiki for more information"
+msgstr ""
 
 #, boost-format
 msgid "Number of currently selected parts: %1%\n"
@@ -5562,16 +6008,16 @@ msgstr "Volume : %1% mm³\n"
 msgid "Triangles: %1%\n"
 msgstr "Triangles : %1%\n"
 
+msgid " (Repair)"
+msgstr "(Réparation)"
+
 msgid "Tips:"
 msgstr "Astuces:"
 
 msgid ""
-"\"Fix Model\" feature is currently only on Windows. Please repair the model "
-"on Bambu Studio(windows) or CAD softwares."
+"\"Fix Model\" feature is currently only on Windows. Please use a third-party "
+"tool to repair the model before importing it into Bambu Studio, such as "
 msgstr ""
-"La fonctionnalité « Fix Model » n'est actuellement disponible que sous "
-"Windows. Réparez le modèle dans Bambu Studio (Windows) ou dans un logiciel "
-"de CAO."
 
 #, c-format, boost-format
 msgid ""
@@ -5614,6 +6060,15 @@ msgstr "Choix de la région"
 msgid "Second"
 msgstr "Seconde"
 
+msgid ""
+"Please note that the model show will undergo certain changes at small pixels "
+"case.\n"
+"Enabled LOD requires application restart."
+msgstr ""
+
+msgid "Enable LOD"
+msgstr ""
+
 msgid "Browse"
 msgstr "Parcourir"
 
@@ -5626,8 +6081,8 @@ msgstr "Paramètres généraux"
 msgid "Asia-Pacific"
 msgstr "Asie-Pacifique"
 
-msgid "China"
-msgstr "Chine"
+msgid "Chinese Mainland"
+msgstr "Chine continentale"
 
 msgid "Europe"
 msgstr "Europe"
@@ -5671,16 +6126,6 @@ msgstr ""
 "same Bambu Studio is already running, that instance will be reactivated "
 "instead."
 
-msgid "Zoom to mouse position"
-msgstr "Zoom sur la position de la souris"
-
-msgid ""
-"Zoom in towards the mouse pointer's position in the 3D view, rather than the "
-"2D window center."
-msgstr ""
-"Zoomez sur la position du pointeur de la souris dans la vue 3D, plutôt que "
-"sur le centre de la fenêtre 2D."
-
 msgid "Auto plate type"
 msgstr "Auto plate type"
 
@@ -5717,6 +6162,50 @@ msgstr ""
 "With this option enabled, you can send a task to multiple devices at the "
 "same time and manage multiple devices."
 
+msgid "Support beta version update."
+msgstr ""
+
+msgid "With this option enabled, you can receive beta version updates."
+msgstr ""
+
+msgid "3D Settings"
+msgstr ""
+
+msgid "Zoom to mouse position"
+msgstr "Zoom sur la position de la souris"
+
+msgid ""
+"Zoom in towards the mouse pointer's position in the 3D view, rather than the "
+"2D window center."
+msgstr ""
+"Zoomez sur la position du pointeur de la souris dans la vue 3D, plutôt que "
+"sur le centre de la fenêtre 2D."
+
+msgid "Always show shells in preview"
+msgstr ""
+
+msgid ""
+"Always show shells or not in preview view tab.If change value,you should "
+"reslice."
+msgstr ""
+
+msgid "Improve rendering performance by lod"
+msgstr ""
+
+msgid ""
+"Improved rendering performance under the scene of multiple plates and many "
+"models."
+msgstr ""
+
+msgid "Grabber scale"
+msgstr ""
+
+msgid "Set grabber size for move,rotate,scale tool."
+msgstr ""
+
+msgid "Value range"
+msgstr ""
+
 msgid "Presets"
 msgstr "Préréglages"
 
@@ -5725,14 +6214,18 @@ msgstr ""
 "Synchronisation automatique des pré-réglages utilisateur (Imprimante/"
 "Filament/Traitement)"
 
-msgid "User Sync"
-msgstr "Synchronisation utilisateur"
+msgid ""
+"If enabled, auto sync user presets with cloud after Bambu Studio startup or "
+"presets modified."
+msgstr ""
 
-msgid "Update built-in Presets automatically."
-msgstr "Mettre à jour automatiquement les Préréglages intégrés."
+msgid "Auto check for system presets updates"
+msgstr ""
 
-msgid "System Sync"
-msgstr "Synchronisation du système"
+msgid ""
+"If enabled, auto check whether there are system presets updates after Bambu "
+"Studio startup."
+msgstr ""
 
 msgid "Clear my choice on the unsaved presets."
 msgstr "Efface mon choix sur les préréglages non enregistrés."
@@ -5796,8 +6289,16 @@ msgstr "chaque"
 msgid "The peroid of backup in seconds."
 msgstr "Fréquence de sauvegarde en secondes."
 
-msgid "Downloads"
-msgstr "Téléchargements"
+msgid "Media"
+msgstr "Médias"
+
+msgid "Keep liveview when printing."
+msgstr ""
+
+msgid ""
+"By default, Liveview will pause after 15 minutes of inactivity on the "
+"computer. Check this box to disable this feature during printing."
+msgstr ""
 
 msgid "Dark Mode"
 msgstr "Mode Sombre"
@@ -6157,6 +6658,9 @@ msgstr "Hors ligne"
 msgid "Busy"
 msgstr "Occupé"
 
+msgid "Bambu Cool Plate SuperTack"
+msgstr ""
+
 msgid "Bambu Cool Plate"
 msgstr "Plaque Bambu Cool Plate"
 
@@ -6406,6 +6910,18 @@ msgstr "Modification du nom de l'appareil"
 msgid "Bind with Pin Code"
 msgstr "Bind with Pin Code"
 
+msgid "Bind with Access Code"
+msgstr ""
+
+msgid ""
+"Please log in before binding your device with a PIN code.\n"
+"Alternatively, you can use LAN mode to bind your device. Learn about LAN "
+"mode."
+msgstr ""
+
+msgid "Go to Login"
+msgstr ""
+
 msgid "Send to Printer SD card"
 msgstr "Envoyer à la carte SD de l'imprimante"
 
@@ -6620,14 +7136,15 @@ msgid "Still print by object?"
 msgstr "Vous imprimez toujours par objet ?"
 
 msgid ""
-"We have added an experimental style \"Tree Slim\" that features smaller "
-"support volume but weaker strength.\n"
-"We recommend using it with: 0 interface layers, 0 top distance, 2 walls."
+"When using support material for the support interface, We recommend the "
+"following settings:\n"
+"0 top z distance, 0 interface spacing, interlaced rectilinear pattern and "
+"disable independent support layer height"
 msgstr ""
-"Nous avons ajouté un style expérimental « Arborescent Fin » qui offre un "
-"volume de support plus petit mais également une résistance plus faible.\n"
-"Nous recommandons de l'utiliser avec : 0 couches d'interface, 0 distance "
-"supérieure, 2 murs."
+"When using support material for the support interface, We recommend the "
+"following settings:\n"
+"0 top z distance, 0 interface spacing, interlaced rectilinear pattern and "
+"disable independent support layer height"
 
 msgid ""
 "Change these settings automatically? \n"
@@ -6639,25 +7156,9 @@ msgstr ""
 "Non - Ne modifiez pas ces paramètres pour moi."
 
 msgid ""
-"For \"Tree Strong\" and \"Tree Hybrid\" styles, we recommend the following "
-"settings: at least 2 interface layers, at least 0.1mm top z distance or "
-"using support materials on interface."
+"Layer height is too small.\n"
+"It will set to min_layer_height\n"
 msgstr ""
-"Pour les styles \"Arborescent fort\" et \"Arborescent Hybride\", nous "
-"recommandons les réglages suivants : au moins 2 couches d'interface, au "
-"moins 0,1 mm de distance entre le haut et le z ou l'utilisation de matériaux "
-"de support sur l'interface."
-
-msgid ""
-"When using support material for the support interface, We recommend the "
-"following settings:\n"
-"0 top z distance, 0 interface spacing, interlaced rectilinear pattern and "
-"disable independent support layer height"
-msgstr ""
-"When using support material for the support interface, We recommend the "
-"following settings:\n"
-"0 top z distance, 0 interface spacing, interlaced rectilinear pattern and "
-"disable independent support layer height"
 
 msgid ""
 "Layer height exceeds the limit in Printer Settings -> Extruder -> Layer "
@@ -6708,6 +7209,11 @@ msgstr ""
 "d’ajouter une \"Tour de nettoyage timelapse\".\n"
 "en faisant un clic droit sur un emplacement vide sur le plateau et en "
 "choisissant \"Ajouter Primitive\"-> \"Tour de nettoyage Timelapse\"."
+
+msgid ""
+"The notes are too large, and may not be synchronized to the cloud. Please "
+"keep it within 40k."
+msgstr ""
 
 msgid "Line width"
 msgstr "Largeur d'extrusion"
@@ -6764,6 +7270,9 @@ msgstr "Radeau"
 msgid "Support filament"
 msgstr "Filament de support"
 
+msgid "Tree Support"
+msgstr ""
+
 msgid "Prime tower"
 msgstr "Tour de nettoyage"
 
@@ -6803,6 +7312,11 @@ msgstr[1] ""
 msgid "Reserved keywords found"
 msgstr "Mots clés réservés trouvés"
 
+msgid ""
+"Custom G-code files are too large, and may not be synchronized to the cloud. "
+"Please keep it within 40k."
+msgstr ""
+
 msgid "Setting Overrides"
 msgstr "Forçage des réglages"
 
@@ -6828,6 +7342,11 @@ msgstr "Buse"
 
 msgid "Nozzle temperature when printing"
 msgstr "Température de la buse lors de l'impression"
+
+msgid ""
+"Bed temperature when cool plate is installed. Value 0 means the filament "
+"does not support to print on the Bambu Cool Plate SuperTack"
+msgstr ""
 
 msgid "Cool Plate / PLA Plate"
 msgstr "Cool Plate / PLA Plate"
@@ -6876,6 +7395,9 @@ msgstr ""
 
 msgid "Volumetric speed limitation"
 msgstr "Limitation de vitesse volumétrique"
+
+msgid "Filament scarf seam settings"
+msgstr ""
 
 msgid "Cooling"
 msgstr "Refroidissement"
@@ -7436,9 +7958,6 @@ msgstr "Rotation de la vue"
 msgid "Pan View"
 msgstr "Déplacement de vue"
 
-msgid "Mouse wheel"
-msgstr "Molette de souris"
-
 msgid "Zoom View"
 msgstr "Vue agrandie"
 
@@ -7561,26 +8080,11 @@ msgstr "Couture peinte Gizmo FDM"
 msgid "Plater"
 msgstr "Plateau"
 
-msgid "Move: press to snap by 1mm"
-msgstr "Déplacer : appuyez pour aligner de 1 mm"
-
-msgid "⌘+Mouse wheel"
-msgstr "⌘+molette de la souris"
-
 msgid "Support/Color Painting: adjust pen radius"
 msgstr "Support/Peinture couleur : ajustez le rayon du stylet"
 
-msgid "⌥+Mouse wheel"
-msgstr "⌥+Molette de la souris"
-
 msgid "Support/Color Painting: adjust section position"
 msgstr "Support/Peinture couleur : ajuster la position de la section"
-
-msgid "Ctrl+Mouse wheel"
-msgstr "Ctrl+molette de la souris"
-
-msgid "Alt+Mouse wheel"
-msgstr "Alt+molette de la souris"
 
 msgid "Gizmo"
 msgstr "Bidule"
@@ -7700,8 +8204,8 @@ msgstr "View Liveview"
 msgid "Confirm and Update Nozzle"
 msgstr "Confirmer et mettre à jour Buse"
 
-msgid "LAN Connection Failed (Sending print file)"
-msgstr "Échec de la connexion au réseau local (envoi du fichier d'impression)"
+msgid "Connect the printer using IP and access code"
+msgstr ""
 
 msgid ""
 "Step 1, please confirm Bambu Studio and your printer are in the same LAN."
@@ -7725,11 +8229,29 @@ msgstr "Où trouver l'adresse IP et le code d'accès de votre imprimante ?"
 msgid "Step 3: Ping the IP address to check for packet loss and latency."
 msgstr "Étape 3 : ping l'IP pour vérifier la perte de paquets et la latence."
 
-msgid "Test"
-msgstr "Test"
+msgid "Connect"
+msgstr ""
 
-msgid "IP and Access Code Verified! You may close the window"
-msgstr "IP et code d'accès vérifiés ! Vous pouvez fermer la fenêtre"
+msgid "connecting..."
+msgstr ""
+
+msgid "Failed to connect to printer."
+msgstr ""
+
+msgid "Failed to publish login request."
+msgstr ""
+
+msgid "The device does not support using IP and Access Code for connection."
+msgstr ""
+
+msgid "The printer has already been bound."
+msgstr ""
+
+msgid "The printer mode is incorrect, please switch to LAN Only."
+msgstr ""
+
+msgid "Connecting to printer... The dialog will close later"
+msgstr ""
 
 msgid "Connection failed, please double check IP and Access Code"
 msgstr ""
@@ -8421,11 +8943,8 @@ msgstr "Température plateau première couche"
 
 msgid ""
 "Bed temperature of the initial layer. Value 0 means the filament does not "
-"support to print on the Cool Plate"
+"support to print on the Bambu Cool Plate SuperTack"
 msgstr ""
-"Il s'agit de la température du plateau pour la première couche. Une valeur à "
-"0 signifie que ce filament ne peut pas être imprimé sur le plateau froid "
-"(\"Cool plate\")."
 
 msgid ""
 "Bed temperature of the initial layer. Value 0 means the filament does not "
@@ -8537,6 +9056,17 @@ msgstr ""
 "provenant de la couche inférieure. 0%% signifie un refroidissement forcé de "
 "toutes les parois extérieures, quel que soit le degré de surplomb."
 
+msgid "Overhang threshold for participating cooling"
+msgstr ""
+
+#, c-format
+msgid ""
+"Decide which overhang part join the cooling function to slow down the speed."
+"Expressed as percentage which indicides how much width of the line without "
+"support from lower layer. 100% means forcing cooling for all outer wall no "
+"matter how much overhang degree"
+msgstr ""
+
 msgid "Bridge direction"
 msgstr "Direction du pont"
 
@@ -8623,6 +9153,15 @@ msgstr ""
 msgid "mm/s"
 msgstr "mm/s"
 
+msgid "over 100% wall (not bridge)"
+msgstr ""
+
+#, c-format, boost-format
+msgid ""
+"Speed for line of wall which has degree of overhang over 100% line width, "
+"but the wall is not a bridge wall."
+msgstr ""
+
 msgid "Speed of bridge and completely overhang wall"
 msgstr "Vitesse du pont et du mur complètement en surplomb"
 
@@ -8642,6 +9181,9 @@ msgstr ""
 "Cela contrôle la génération de bordure extérieur et/ou intérieur des "
 "modèles. Auto signifie que la largeur de bordure est analysée et calculée "
 "automatiquement."
+
+msgid "Painted"
+msgstr ""
 
 msgid "Brim-object gap"
 msgstr "Écart bord-objet"
@@ -9157,6 +9699,49 @@ msgstr ""
 "Le matériau soluble est couramment utilisé pour imprimer les supports ainsi "
 "que leurs interfaces"
 
+msgid "Scarf seam type"
+msgstr ""
+
+msgid ""
+"Set scarf seam type for this filament. This setting could minimize seam "
+"visibiliy."
+msgstr ""
+
+msgid "Contour"
+msgstr "Contour"
+
+msgid "Contour and hole"
+msgstr "Contour et trou"
+
+msgid "Scarf start height"
+msgstr "Scarf start height"
+
+msgid ""
+"This amount can be specified in millimeters or as a percentage of the "
+"current layer height."
+msgstr ""
+
+msgid "mm/%"
+msgstr ""
+
+msgid "Scarf slope gap"
+msgstr ""
+
+msgid ""
+"In order to reduce the visiblity of the seam in closed loop, the inner wall "
+"and outer wall are shortened by a specified amount."
+msgstr ""
+
+msgid "Scarf length"
+msgstr "Scarf length"
+
+msgid ""
+"Length of the scarf. Setting this parameter to zero effectively disables the "
+"scarf."
+msgstr ""
+"Length of the scarf. Setting this parameter to zero effectively disables the "
+"scarf."
+
 msgid "Support material"
 msgstr "Supports"
 
@@ -9367,12 +9952,6 @@ msgstr ""
 "Des vibrations aléatoires apparaissent lors de l'impression du mur de sorte "
 "que la surface ait un aspect rugueux. Ce réglage défini où s'applique la "
 "surface irrégulière."
-
-msgid "Contour"
-msgstr "Contour"
-
-msgid "Contour and hole"
-msgstr "Contour et trou"
 
 msgid "All walls"
 msgstr "Toutes les parois"
@@ -9684,6 +10263,13 @@ msgstr "Espacement des lignes de repassage"
 msgid "The distance between the lines of ironing"
 msgstr "La distance entre les lignes de lissage"
 
+msgid "Ironing inset"
+msgstr ""
+
+msgid ""
+"The distance to keep the from the edges of ironing line. 0 means not apply."
+msgstr ""
+
 msgid "Ironing speed"
 msgstr "Vitesse de repassage"
 
@@ -9941,6 +10527,18 @@ msgstr ""
 "utilise une vitesse d'impression différente. Pour un surplomb de 100 %, la "
 "vitesse du pont est utilisée."
 
+msgid "Smooth speed discontinuity area"
+msgstr ""
+
+msgid "Add the speed transition between discontinuity area."
+msgstr ""
+
+msgid "Smooth coefficient"
+msgstr ""
+
+msgid "The smaller the number, the longer the speed transition path."
+msgstr ""
+
 msgid "Line width of inner wall"
 msgstr "Largeur d'extrusion murs intérieurs"
 
@@ -9996,10 +10594,8 @@ msgstr "Couches du radeau"
 
 msgid ""
 "Object will be raised by this number of support layers. Use this function to "
-"avoid wrapping when print ABS"
+"avoid warping when print ABS"
 msgstr ""
-"L’objet sera surélevé de ce nombre de couches de support. Utilisez cette "
-"fonction pour éviter le warping lors d’impression en ABS"
 
 msgid ""
 "G-code path is generated after simplifying the contour of model to avoid too "
@@ -10170,13 +10766,6 @@ msgstr ""
 "Cette quantité est exprimée en pourcentage du diamètre de la buse actuelle. "
 "La valeur par défaut de ce paramètre est 15."
 
-msgid "Scarf joint seam (experimental)"
-msgstr "Scarf joint seam (experimental)"
-
-msgid "Use scarf joint to minimize seam visibility and increase seam strength."
-msgstr ""
-"Use scarf joint to minimize seam visibility and increase seam strength."
-
 msgid "Conditional scarf joint"
 msgstr "Conditional scarf joint"
 
@@ -10203,33 +10792,11 @@ msgstr ""
 "the absence of sharp corners), a scarf joint seam will be used. The default "
 "value is 155°."
 
-msgid "Scarf start height"
-msgstr "Scarf start height"
-
-msgid ""
-"Start height of the scarf.\n"
-"This amount can be specified in millimeters or as a percentage of the "
-"current layer height. The default value for this parameter is 0."
-msgstr ""
-"Start height of the scarf.\n"
-"This amount can be specified in millimeters or as a percentage of the "
-"current layer height. The default value for this parameter is 0."
-
 msgid "Scarf around entire wall"
 msgstr "Scarf around entire wall"
 
 msgid "The scarf extends to the entire length of the wall."
 msgstr "The scarf extends to the entire length of the wall."
-
-msgid "Scarf length"
-msgstr "Scarf length"
-
-msgid ""
-"Length of the scarf. Setting this parameter to zero effectively disables the "
-"scarf."
-msgstr ""
-"Length of the scarf. Setting this parameter to zero effectively disables the "
-"scarf."
 
 msgid "Scarf steps"
 msgstr "Scarf steps"
@@ -10256,6 +10823,15 @@ msgstr ""
 "dans ce paramètre. Si la valeur est exprimée en pourcentage (par exemple "
 "80%), elle sera calculée sur la base du réglage de la vitesse de déplacement "
 "ci-dessus. La valeur par défaut de ce paramètre est 80%."
+
+msgid "Role base wipe speed"
+msgstr ""
+
+msgid ""
+"The wipe speed is determined by speed of current extrusion role. e.g if a "
+"wip action is executed immediately following an outer wall extrusion, the "
+"speed of the outer wall extrusion will be utilized for the wipe action."
+msgstr ""
 
 msgid "Skirt distance"
 msgstr "Distance jupe"
@@ -10688,15 +11264,10 @@ msgstr "Ce paramètre détermine le diamètre initial des nœuds de support."
 msgid "Support wall loops"
 msgstr "Parois des supports"
 
-msgid "This setting specifies the count of walls around support"
-msgstr "Ce paramètre spécifie le nombre de parois autour du support."
-
-msgid "Tree support brim width"
-msgstr "Largeur de bordure du support de l'arbre"
-
-msgid "The brim width around tree support. 0 means auto."
+msgid ""
+"This setting specifies the count of support walls in the range of [0,2]. 0 "
+"means auto."
 msgstr ""
-"La largeur de la bordure autour du support de l'arbre. 0 signifie auto."
 
 msgid "Chamber temperature"
 msgstr "Température de la chambre"
@@ -11503,11 +12074,9 @@ msgstr ""
 "plaque et de réessayer. Le résultat du test échoué sera effacé."
 
 msgid ""
-"*We recommend you to add brand, materia, type, and even humidity level in "
+"*We recommend you to add brand, material, type, and even humidity level in "
 "the Name"
 msgstr ""
-"*Nous vous recommandons d'ajouter la marque, le matériau, le type et même le "
-"niveau d'humidité au Nom"
 
 msgid "Failed"
 msgstr "Échoué"
@@ -11828,9 +12397,6 @@ msgstr "Version OctoPrint"
 msgid "Searching for devices"
 msgstr "Recherche d'appareils"
 
-msgid "Finished"
-msgstr "Terminé"
-
 msgid "Send to print"
 msgstr "Envoyer pour imprimer"
 
@@ -11847,6 +12413,9 @@ msgid "Upload filename doesn't end with \"%s\". Do you wish to continue?"
 msgstr ""
 "Le nom de fichier à télécharger ne se termine pas par « %s ». Voulez-vous "
 "continuer ?"
+
+msgid "Upload"
+msgstr "Téléverser"
 
 msgid "Simulate"
 msgstr "Simuler"
@@ -11902,15 +12471,15 @@ msgstr ""
 msgid "Mesh Boolean"
 msgstr "Opération Booléenne"
 
-msgid "Please right click to assembly these objects."
-msgstr "Please right click to assemble these objects."
-
 msgid ""
 "Please add at least one more object and select them together,\n"
 "then right click to assembly these objects."
 msgstr ""
 "Please add at least one more object and select them together,\n"
 "then right click to assemble these objects."
+
+msgid "Please right click to assembly these objects."
+msgstr "Please right click to assemble these objects."
 
 msgid "Union"
 msgstr "Union"
@@ -12563,6 +13132,9 @@ msgstr "Imprimante Physique"
 msgid "Print Host upload"
 msgstr "Envoi Hôte d'Impression"
 
+msgid "Test"
+msgstr "Test"
+
 msgid "Could not get a valid Printer Host reference"
 msgstr "Impossible d'obtenir une référence d'Hôte d'Imprimante valide"
 
@@ -12976,6 +13548,80 @@ msgstr ""
 "varies a lot from brand to brand, so it's highly recommended to ask the "
 "vendor for a suitable profile before printing and adjust some parameters "
 "according to its performance."
+
+msgid ""
+"When printing this filament, there's a risk of warping and low layer "
+"adhesion strength. To get better results, please refer to this wiki: "
+"Printing Tips for High Temp / Engineering materials."
+msgstr ""
+
+msgid ""
+"When printing this filament, there's a risk of nozzle clogging, oozing, "
+"warping and low layer adhesion strength. To get better results, please refer "
+"to this wiki: Printing Tips for High Temp / Engineering materials."
+msgstr ""
+
+msgid ""
+"To get better transparent or translucent results with the corresponding "
+"filament, please refer to this wiki: Printing tips for transparent PETG."
+msgstr ""
+
+msgid ""
+"To make the prints get higher gloss, please dry the filament before use, and "
+"set the outer wall speed to be 40 to 60 mm/s when slicing."
+msgstr ""
+
+msgid ""
+"This filament is only used to print models with a low density usually, and "
+"some special parameters are required. To get better printing quality, please "
+"refer to this wiki: Instructions for printing RC model with foaming PLA (PLA "
+"Aero)."
+msgstr ""
+
+msgid ""
+"This filament is only used to print models with a low density usually, and "
+"some special parameters are required. To get better printing quality, please "
+"refer to this wiki: ASA Aero Printing Guide."
+msgstr ""
+
+msgid ""
+"This filament is too soft and not compatible with the AMS. Printing it is of "
+"many requirements, and to get better printing quality, please refer to this "
+"wiki: TPU printing guide."
+msgstr ""
+
+msgid ""
+"This filament has high enough hardness (about 67D)  and is compatible with "
+"the AMS. Printing it is of many requirements, and to get better printing "
+"quality, please refer to this wiki: TPU printing guide."
+msgstr ""
+
+msgid ""
+"If you are to print a kind of soft TPU, please don't slice with this "
+"profile, and it is only for TPU that has high enough hardness (not less than "
+"55D) and is compatible with the AMS. To get better printing quality, please "
+"refer to this wiki: TPU printing guide."
+msgstr ""
+
+msgid ""
+"This is a water-soluble support filament, and usually it is only for the "
+"support structure and not for the model body. Printing this filament is of "
+"many requirements, and to get better printing quality, please refer to this "
+"wiki: PVA Printing Guide."
+msgstr ""
+
+msgid ""
+"This is a non-water-soluble support filament, and usually it is only for the "
+"support structure and not for the model body. To get better printing "
+"quality, please refer to this wiki: Printing Tips for Support Filament and "
+"Support Function."
+msgstr ""
+
+msgid ""
+"The generic presets are conservatively tuned for compatibility with a wider "
+"range of filaments. For higher printing quality and speeds, please use Bambu "
+"filaments with Bambu presets."
+msgstr ""
 
 msgid "No AMS"
 msgstr "No AMS"
@@ -13414,6 +14060,157 @@ msgstr ""
 "que l'ABS, une augmentation appropriée de la température du plateau peut "
 "réduire le risque de déformation ?"
 
+#~ msgid "Manual"
+#~ msgstr "Manuel"
+
+#~ msgid ""
+#~ "Object will be raised by this number of support layers. Use this function "
+#~ "to avoid wrapping when print ABS"
+#~ msgstr ""
+#~ "L’objet sera surélevé de ce nombre de couches de support. Utilisez cette "
+#~ "fonction pour éviter le warping lors d’impression en ABS"
+
+#~ msgid "User Sync"
+#~ msgstr "Synchronisation utilisateur"
+
+#~ msgid "Update built-in Presets automatically."
+#~ msgstr "Mettre à jour automatiquement les Préréglages intégrés."
+
+#~ msgid "System Sync"
+#~ msgstr "Synchronisation du système"
+
+#~ msgid ""
+#~ "Too small scarf start height.\n"
+#~ "Reset to 50%"
+#~ msgstr ""
+#~ "Too small scarf start height.\n"
+#~ "Reset to 50%"
+
+#~ msgid ""
+#~ "Too big scarf start height.\n"
+#~ "Reset to 50%"
+#~ msgstr ""
+#~ "Too big scarf start height.\n"
+#~ "Reset to 50%"
+
+#~ msgid "Scarf joint seam (experimental)"
+#~ msgstr "Scarf joint seam (experimental)"
+
+#~ msgid ""
+#~ "Use scarf joint to minimize seam visibility and increase seam strength."
+#~ msgstr ""
+#~ "Use scarf joint to minimize seam visibility and increase seam strength."
+
+#~ msgid ""
+#~ "Start height of the scarf.\n"
+#~ "This amount can be specified in millimeters or as a percentage of the "
+#~ "current layer height. The default value for this parameter is 0."
+#~ msgstr ""
+#~ "Start height of the scarf.\n"
+#~ "This amount can be specified in millimeters or as a percentage of the "
+#~ "current layer height. The default value for this parameter is 0."
+
+#~ msgid "Set Position"
+#~ msgstr "Définir la Position"
+
+#~ msgid "Stopped."
+#~ msgstr "Arrêté."
+
+#~ msgid ""
+#~ "\"Fix Model\" feature is currently only on Windows. Please repair the "
+#~ "model on Bambu Studio(windows) or CAD softwares."
+#~ msgstr ""
+#~ "La fonctionnalité « Fix Model » n'est actuellement disponible que sous "
+#~ "Windows. Réparez le modèle dans Bambu Studio (Windows) ou dans un "
+#~ "logiciel de CAO."
+
+#~ msgid "Downloads"
+#~ msgstr "Téléchargements"
+
+#~ msgid ""
+#~ "We have added an experimental style \"Tree Slim\" that features smaller "
+#~ "support volume but weaker strength.\n"
+#~ "We recommend using it with: 0 interface layers, 0 top distance, 2 walls."
+#~ msgstr ""
+#~ "Nous avons ajouté un style expérimental « Arborescent Fin » qui offre un "
+#~ "volume de support plus petit mais également une résistance plus faible.\n"
+#~ "Nous recommandons de l'utiliser avec : 0 couches d'interface, 0 distance "
+#~ "supérieure, 2 murs."
+
+#~ msgid ""
+#~ "For \"Tree Strong\" and \"Tree Hybrid\" styles, we recommend the "
+#~ "following settings: at least 2 interface layers, at least 0.1mm top z "
+#~ "distance or using support materials on interface."
+#~ msgstr ""
+#~ "Pour les styles \"Arborescent fort\" et \"Arborescent Hybride\", nous "
+#~ "recommandons les réglages suivants : au moins 2 couches d'interface, au "
+#~ "moins 0,1 mm de distance entre le haut et le z ou l'utilisation de "
+#~ "matériaux de support sur l'interface."
+
+#~ msgid "LAN Connection Failed (Sending print file)"
+#~ msgstr ""
+#~ "Échec de la connexion au réseau local (envoi du fichier d'impression)"
+
+#~ msgid "IP and Access Code Verified! You may close the window"
+#~ msgstr "IP et code d'accès vérifiés ! Vous pouvez fermer la fenêtre"
+
+#~ msgid ""
+#~ "Bed temperature of the initial layer. Value 0 means the filament does not "
+#~ "support to print on the Cool Plate"
+#~ msgstr ""
+#~ "Il s'agit de la température du plateau pour la première couche. Une "
+#~ "valeur à 0 signifie que ce filament ne peut pas être imprimé sur le "
+#~ "plateau froid (\"Cool plate\")."
+
+#~ msgid "This setting specifies the count of walls around support"
+#~ msgstr "Ce paramètre spécifie le nombre de parois autour du support."
+
+#~ msgid "China"
+#~ msgstr "Chine"
+
+#~ msgid "Tree support brim width"
+#~ msgstr "Largeur de bordure du support de l'arbre"
+
+#~ msgid "The brim width around tree support. 0 means auto."
+#~ msgstr ""
+#~ "La largeur de la bordure autour du support de l'arbre. 0 signifie auto."
+
+#~ msgid "Show &Labels"
+#~ msgstr "Afficher &Les Étiquettes"
+
+#~ msgid "The 3mf is generated by old Bambu Studio, load geometry data only."
+#~ msgstr ""
+#~ "Le 3mf provient d'une ancienne version de Bambu Studio, seules les "
+#~ "données de géométrie seront chargées."
+
+#~ msgid ""
+#~ "*We recommend you to add brand, materia, type, and even humidity level in "
+#~ "the Name"
+#~ msgstr ""
+#~ "*Nous vous recommandons d'ajouter la marque, le matériau, le type et même "
+#~ "le niveau d'humidité au Nom"
+
+#~ msgid "Alt + Mouse wheel"
+#~ msgstr "Alt + molette de la souris"
+
+#~ msgid "Alt + Shift + Enter"
+#~ msgstr "Alt + Shift + Entrée"
+
+#~ msgid "Current Cabin humidity"
+#~ msgstr "Current Cabin humidity"
+
+#~ msgid "Move: press to snap by 1mm"
+#~ msgstr "Déplacer : appuyez pour aligner de 1 mm"
+
+#~ msgid "⌘+Mouse wheel"
+#~ msgstr "⌘+molette de la souris"
+
+#~ msgid "⌥+Mouse wheel"
+#~ msgstr "⌥+Molette de la souris"
+
+#~ msgid "Alt+Mouse wheel"
+#~ msgstr "Alt+molette de la souris"
+
 #~ msgid ""
 #~ "Please find the details of Flow Dynamics Calibration from our wiki.\n"
 #~ "\n"
@@ -13537,9 +14334,6 @@ msgstr ""
 
 #~ msgid "- \\u2103"
 #~ msgstr "- u2103"
-
-#~ msgid "0"
-#~ msgstr "0"
 
 #~ msgid "0%"
 #~ msgstr "0%"
@@ -14785,9 +15579,6 @@ msgstr ""
 #~ msgid "Management"
 #~ msgstr "Gestion"
 
-#~ msgid "Manual"
-#~ msgstr "Manuel"
-
 #~ msgid ""
 #~ "Material becomes soft at this temperature. Thus the heatbed cannot be "
 #~ "hotter than this tempature"
@@ -14816,9 +15607,6 @@ msgstr ""
 #~ "valeur. La longueur du détour peut être spécifiée soit en valeur absolue, "
 #~ "soit en pourcentage (par exemple 50 %) d'une trajectoire directe. Zéro "
 #~ "pour désactiver"
-
-#~ msgid "Media"
-#~ msgstr "Médias"
 
 #~ msgid "Missing LAN ip of printer!"
 #~ msgstr "Adresse IP locale manquante de l'imprimante !"

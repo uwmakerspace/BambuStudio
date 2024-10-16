@@ -61,7 +61,10 @@ const std::vector<std::string> GCodeProcessor::Reserved_Tags = {
     "_GP_ESTIMATED_PRINTING_TIME_PLACEHOLDER",
     "_GP_TOTAL_LAYER_NUMBER_PLACEHOLDER",
     " WIPE_TOWER_START",
-    " WIPE_TOWER_END"
+    " WIPE_TOWER_END",
+    "_GP_FILAMENT_USED_WEIGHT_PLACEHOLDER",
+    "_GP_FILAMENT_USED_VOLUME_PLACEHOLDER",
+    "_GP_FILAMENT_USED_LENGTH_PLACEHOLDER"
 };
 
 const std::string GCodeProcessor::Flush_Start_Tag = " FLUSH_START";
@@ -370,7 +373,7 @@ void GCodeProcessor::TimeProcessor::reset()
     machines[static_cast<size_t>(PrintEstimatedStatistics::ETimeMode::Normal)].enabled = true;
 }
 
-void GCodeProcessor::TimeProcessor::post_process(const std::string& filename, std::vector<GCodeProcessorResult::MoveVertex>& moves, std::vector<size_t>& lines_ends, size_t total_layer_num)
+void GCodeProcessor::TimeProcessor::post_process(const std::string& filename, std::vector<GCodeProcessorResult::MoveVertex>& moves, std::vector<size_t>& lines_ends, const TimeProcessContext& context)
 {
     FilePtr in{ boost::nowide::fopen(filename.c_str(), "rb") };
     if (in.f == nullptr)
@@ -448,6 +451,20 @@ void GCodeProcessor::TimeProcessor::post_process(const std::string& filename, st
     auto process_placeholders = [&](std::string& gcode_line) {
         unsigned int extra_lines_count = 0;
 
+        auto format_filament_used_info = [](const std::string& info, std::map<size_t, double>val_per_extruder) {
+            auto double_to_fmt_string = [](double num) -> std::string {
+                char buf[20];
+                sprintf(buf, "%.2f", num);
+                return std::string(buf);
+            };
+            std::string buf = "; " + info + " : ";
+            size_t idx = 0;
+            for (auto item : val_per_extruder)
+                buf += (idx++ == 0 ? double_to_fmt_string(item.second) : "," + double_to_fmt_string(item.second));
+            buf += '\n';
+            return buf;
+        };
+
         // remove trailing '\n'
         auto line = std::string_view(gcode_line).substr(0, gcode_line.length() - 1);
 
@@ -485,11 +502,12 @@ void GCodeProcessor::TimeProcessor::post_process(const std::string& filename, st
                             sprintf(buf, "; estimated printing time (normal mode) = %s\n",
                                 get_time_dhms(machine.time).c_str());
                             ret += buf;
-                        } else {
+                        }
+                        else {
                             // BBS estimator
                             sprintf(buf, "; model printing time: %s; total estimated time: %s\n",
-                                    get_time_dhms(machine.time - machine.prepare_time).c_str(),
-                                    get_time_dhms(machine.time).c_str());
+                                get_time_dhms(machine.time - machine.prepare_time).c_str(),
+                                get_time_dhms(machine.time).c_str());
                             ret += buf;
                         }
                     }
@@ -498,8 +516,47 @@ void GCodeProcessor::TimeProcessor::post_process(const std::string& filename, st
             //BBS: write total layer number
             else if (line == reserved_tag(ETags::Total_Layer_Number_Placeholder)) {
                 char buf[128];
-                sprintf(buf, "; total layer number: %zd\n", total_layer_num);
+                sprintf(buf, "; total layer number: %zd\n", context.total_layer_num);
                 ret += buf;
+            }
+            else if (line == reserved_tag(ETags::Used_Filament_Weight_Placeholder)) {
+                std::map<size_t, double>total_weight_per_extruder;
+                for (const auto& pair : context.used_filaments.total_volumes_per_extruder) {
+                    auto filament_id = pair.first;
+                    auto volume = pair.second;
+                    auto iter = std::find_if(context.filament_lists.begin(), context.filament_lists.end(), [filament_id](const Extruder& filament) { return filament.id() == filament_id; });
+                    if (iter == context.filament_lists.end())
+                        continue;
+                    double weight = volume * iter->filament_density() * 0.001;
+                    total_weight_per_extruder[filament_id] += weight;
+                }
+
+                ret += format_filament_used_info("total filament weight [g]", total_weight_per_extruder);
+            }
+            else if (line == reserved_tag(ETags::Used_Filament_Volume_Placeholder)) {
+                std::map<size_t, double>total_volume_per_extruder;
+                for (const auto& pair : context.used_filaments.total_volumes_per_extruder) {
+                    auto filament_id = pair.first;
+                    auto volume = pair.second;
+                    auto iter = std::find_if(context.filament_lists.begin(), context.filament_lists.end(), [filament_id](const Extruder& filament) { return filament.id() == filament_id; });
+                    if (iter == context.filament_lists.end())
+                        continue;
+                    total_volume_per_extruder[filament_id] += volume;
+                }
+                ret += format_filament_used_info("total filament volume [cm^3]", total_volume_per_extruder);
+            }
+            else if (line == reserved_tag(ETags::Used_Filament_Length_Placeholder)) {
+                std::map<size_t, double>total_length_per_extruder;
+                for (const auto& pair : context.used_filaments.total_volumes_per_extruder) {
+                    auto filament_id = pair.first;
+                    auto volume = pair.second;
+                    auto iter = std::find_if(context.filament_lists.begin(), context.filament_lists.end(), [filament_id](const Extruder& filament) { return filament.id() == filament_id; });
+                    if (iter == context.filament_lists.end())
+                        continue;
+                    double length = volume / (PI * sqr(0.5 * iter->filament_diameter()));
+                    total_length_per_extruder[filament_id] += length;
+                }
+                ret += format_filament_used_info("total filament length [mm]", total_length_per_extruder);
             }
         }
 
@@ -1578,7 +1635,8 @@ void GCodeProcessor::finalize(bool post_process)
     m_width_compare.output();
 #endif // ENABLE_GCODE_VIEWER_DATA_CHECKING
     if (post_process){
-        m_time_processor.post_process(m_result.filename, m_result.moves, m_result.lines_ends, m_layer_id);
+        TimeProcessContext context(m_layer_id,m_filament_lists,m_used_filaments);
+        m_time_processor.post_process(m_result.filename, m_result.moves, m_result.lines_ends, context);
     }
 #if ENABLE_GCODE_VIEWER_STATISTICS
     m_result.time = std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::high_resolution_clock::now() - m_start_time).count();
@@ -1894,12 +1952,14 @@ void GCodeProcessor::process_gcode_line(const GCodeReader::GCodeLine& line, bool
                         case '0': { process_M140(line); break; } // Set bed temperature
                         default: break;
                         }
+                        break;
                     case '9':
                         switch (cmd[3]) {
                         case '0': { process_M190(line); break; } // Wait bed temperature
                         case '1': { process_M191(line); break; } // Wait chamber temperature
                         default: break;
-                    }
+                        }
+                        break;
                     default:
                         break;
                     }
@@ -3619,6 +3679,17 @@ void  GCodeProcessor::process_G2_G3(const GCodeReader::GCodeLine& line)
         m_seams_detector.activate(true);
         m_seams_detector.set_first_vertex(m_result.moves.back().position - m_extruder_offsets[m_extruder_id] - plate_offset);
     }
+
+    //BBS: some layer may only has G3/G3, update right layer height
+    if (m_detect_layer_based_on_tag && !m_result.spiral_vase_layers.empty()) {
+        if (delta_pos[Z] >= 0.0 && type == EMoveType::Extrude && m_result.spiral_vase_layers.back().first == FLT_MAX) {
+            // replace layer height placeholder with correct value
+            m_result.spiral_vase_layers.back().first = static_cast<float>(m_end_position[Z]);
+        }
+        if (!m_result.moves.empty())
+            m_result.spiral_vase_layers.back().second.second = m_result.moves.size() - 1 - m_seams_count;
+    }
+
     //BBS: store move
     store_move_vertex(type, m_move_path_type);
 }
