@@ -1,0 +1,26 @@
+to Build a container use:
+DockerBuild.sh
+
+Always export the built container from portainer just in case
+
+
+To Run a container for testing
+
+- The base command can be found in makerspace os,
+
+test command:
+sudo docker run --privileged=true --rm -v /media/print-jobs:/media/print-jobs mkos-bambuslicer-cli --slice 0  --debug 5 --export-3mf /media/print-jobs/0c9f8d4b-7256-454e-ba0c-d551e17bd44c/0c9f8d4b-7256-454e-ba0c-d551e17bd44c.3mf.gcode.2 /media/print-jobs/0c9f8d4b-7256-454e-ba0c-d551e17bd44c/0c9f8d4b-7256-454e-ba0c-d551e17bd44c.3mf
+
+sudo docker run --privileged=true --rm -v /media/print-jobs:/media/print-jobs mkos-bambuslicer-cli --slice 0  --allow-newer-file --debug 5 --exort-3mf /media/print-jobs/0c9f8d4b-7256-454e-ba0c-d551e17bd44c/0c9f8d4b-7256-454e-ba0c-d551e17bd44c.3mf.gcode.2 /media/print-jobs/0c9f8d4b-7256-454e-ba0c-d551e17bd44c/0c9f8d4b-7256-454e-ba0c-d551e17bd44c.3mf
+
+
+test script:
+
+DockerRun.sh - script provided by bambu
+
+DockerRun_map.sh - maps home folder as the user account is shared, modified from offical recommended run script
+
+DockerRun_min.sh - minimum required run command when using no-GUI, uses my home folder as mapping
+                 - basically the same as the slicer_entry.sh API script used by makerspace os, except for makerspace os a folder with eveyrone r/w permission was mounted, so no user permission pass through required to access it.
+
+entrypoint.sh - was experimenting with using xvfb to trick it into running without GUI, turns out not required
