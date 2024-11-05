@@ -19,6 +19,7 @@ RUN apt-get update && apt-get install  -y \
     extra-cmake-modules \
     file \
     git \
+    ffmpeg \
     gstreamer1.0-plugins-bad \
     gstreamer1.0-libav \
     libcairo2-dev \
