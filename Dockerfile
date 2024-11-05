@@ -41,7 +41,6 @@ RUN apt-get update && apt-get install  -y \
     libssl-dev \
     libudev-dev \
     libwayland-dev \
-    libwebkit2gtk-4.0-dev \
     libxkbcommon-dev \
     locales \
     locales-all \
@@ -51,6 +50,11 @@ RUN apt-get update && apt-get install  -y \
     wayland-protocols \
     bash \
     wget 
+
+#temp fix for 24.10 dependency
+RUN echo 'deb http://gb.archive.ubuntu.com/ubuntu jammy main' >> /etc/apt/sources.list
+
+RUN apt-get update && apt-get install -y libwebkit2gtk-4.0-dev
 
 # Change your locale here if you want.  See the output
 # of `locale -a` to pick the correct string formatting.
