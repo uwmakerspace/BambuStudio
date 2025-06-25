@@ -57,10 +57,10 @@ var LangText={
 		"t62": "Others",
 		"t63": "After changing the region, your account will be logged out. Please log in again later.",
 		"t64": "Bambu Network plug-in",
-		"t65": "Sending print job via WLAN",
+		"t65": "Sending print job via WLAN or cloud service",
 		"t66": "Full remote control",
-		"t67": "Liveview streaming",
-		"t68": "User data synchronization",
+		"t67": "Liveview streaming and printer status monitor",
+		"t68": "Cloud synchronization for slicing configuration",
 		"t69": "Install Bambu Network plug-in",
 		"t70": "",
 		"t71": "Downloading",
@@ -107,7 +107,17 @@ var LangText={
 		"t113": "You may change your choice in preference anytime.",
 		"t114": "Home",
 		"t115": "Batch",
-		"t116": "Retry"
+		"t116": "Retry",
+		"t117": "Print History",
+		"t118": "Printing",
+		"t119": "Success",
+		"t120": "Canceled",
+		"t121": "Search",
+		"t122": "Search online models",
+		"t123": "Plate",
+		"t124": "",
+		"t125": "Maker’s Supply",
+		"t126": "Loading……"
 	},
 	"zh_CN": {
 		"t1": "欢迎使用Bambu Studio",
@@ -167,10 +177,10 @@ var LangText={
 		"t62": "其他",
 		"t63": "切换区域后，你的账号会被登出。稍后请重新登录。",
 		"t64": "Bambu网络插件",
-		"t65": "通过WLAN发送打印任务",
+		"t65": "通过局域网或云服务发送打印任务",
 		"t66": "强大的远程控制功能",
-		"t67": "实时视频流",
-		"t68": "用户数据同步",
+		"t67": "实时视频流和打印机状态管理",
+		"t68": "通过云端同步切片设置",
 		"t69": "安装Bambu网络插件",
 		"t70": "",
 		"t71": "正在下载",
@@ -218,6 +228,16 @@ var LangText={
 		"t114": "首页",
 		"t115": "批量处理",
 		"t116": "重试",
+		"t117": "打印历史",
+		"t118": "正在打印",
+		"t119": "成功",
+		"t120": "已取消",
+		"t121": "搜索",
+		"t122": "搜索在线模型",
+		"t123": "第",
+		"t124": " 盘",
+		"t125": "创客宝库",
+		"t126": "正在加载……",
 		"wk1": "快速入门指南",
 		"wk2": "本文介绍了Bambu Studio的最基本用法。它指导用户配置软件，创建项目，并逐步完成第一个打印任务。",
 		"wk3": "基于项目的工作流",
@@ -293,10 +313,10 @@ var LangText={
 		"t62": "その他",
 		"t63": "地域を変更したら、一回サインアウトされます。もう一度サインインしてください",
 		"t64": "Bambu ネットワークプラグイン",
-		"t65": "WiFi経由で造形タスクを送信します",
+		"t65": "印刷ジョブをWLANまたはクラウドサービスで送信する",
 		"t66": "リモートコントロール",
-		"t67": "ライブビュー",
-		"t68": "ユーザデータ同期",
+		"t67": "ライブビューストリーミングとプリンター状態モニタリング",
+		"t68": "スライシング設定のクラウド同期",
 		"t69": "Bambu ネットワークプラグインをインストール",
 		"t70": "",
 		"t71": "ダウンロード中",
@@ -343,7 +363,16 @@ var LangText={
 		"t113": "好みはいつでも変更できます.",
 		"t114": "トップページ",
 		"t115": "バッチ",
-		"t116": "[再試行]"
+		"t116": "[再試行]",
+		"t117": "印刷履歴",
+		"t118": "印刷中",
+		"t119": "成功",
+		"t120": "キャンセルされた",
+		"t121": "検索",
+		"t122": "オンラインモデルを検索する",
+		"t123": "シート材",
+		"t124": "",
+		"t126": "読み込み中……"
 	},
 	"it_IT": {
 		"t1": "Benvenuti allo Studio Bambu",
@@ -403,10 +432,10 @@ var LangText={
 		"t62": "Altri",
 		"t63": "Dopo aver cambiato la regione, il tuo account verrà disconnesso. Effettua nuovamente il login più tardi.",
 		"t64": "Plug-in di Bambu Network",
-		"t65": "Invio di lavori di stampa tramite WLAN",
+		"t65": "Invio del lavoro di stampa tramite WLAN o servizio cloud",
 		"t66": "Controllo remoto completo",
-		"t67": "Streaming Liveview",
-		"t68": "Sincronizzazione dei dati dell'utente",
+		"t67": "Streaming Liveview e monitoraggio dello stato della stampante",
+		"t68": "Sincronizzazione cloud per la configurazione del taglio",
 		"t69": "Installa il plug-in di Bambu Network",
 		"t70": "",
 		"t71": "Download in corso",
@@ -453,7 +482,16 @@ var LangText={
 		"t113": "Puoi cambiare la tua scelta in qualsiasi momento.",
 		"t114": "Home",
 		"t115": "Lotto",
-		"t116": "Riprova"
+		"t116": "Riprova",
+		"t117": "Storico di stampa",
+		"t118": "Stampa in corso",
+		"t119": "Successo",
+		"t120": "annullato",
+		"t121": "Ricerca",
+		"t122": "Cerca modelli online",
+		"t123": "piatto",
+		"t124": "",
+		"t126": "Caricamento in corso……"
 	},
 	"fr_FR": {
 		"t1": "Bienvenue chez Bambu Studio",
@@ -513,10 +551,10 @@ var LangText={
 		"t62": "Autres",
 		"t63": "Après avoir modifié la région, votre compte sera déconnecté. Veuillez vous reconnecter plus tard.",
 		"t64": "Plug-in Réseau Bambu",
-		"t65": "Envoi de travaux d'impression via WLAN",
+		"t65": "Envoi de tâches d'impression via WLAN ou service cloud",
 		"t66": "Contrôle complet à distance",
-		"t67": "Diffusion en direct",
-		"t68": "Synchronisation des données utilisateur",
+		"t67": "Streaming Liveview et surveillance de l'état de l'imprimante",
+		"t68": "Synchronisation cloud pour la configuration de tranchage",
 		"t69": "Installer le plug-in Réseau Bambu",
 		"t70": "",
 		"t71": "Téléchargement en cours",
@@ -563,7 +601,16 @@ var LangText={
 		"t113": "Vous pouvez modifier vos préférences à tout moment.",
 		"t114": "Accueil",
 		"t115": "Un lot de",
-		"t116": "Retenter"
+		"t116": "Retenter",
+		"t117": "Historique d'impression",
+		"t118": "Impression en cours",
+		"t119": "Succès",
+		"t120": "annulé",
+		"t121": "Recherche",
+		"t122": "Rechercher des modèles en ligne",
+		"t123": "assiette",
+		"t124": "",
+		"t126": "Chargement en cours……"
 	},
 	"de_DE": {
 		"t1": "Willkommen im Bambu Studio",
@@ -623,10 +670,10 @@ var LangText={
 		"t62": "Andere",
 		"t63": "Nach Änderung der Region wird Ihr Konto abgemeldet. Bitte melden Sie sich später wieder an.",
 		"t64": "Bambu Network-Plug-In",
-		"t65": "Senden von Druckaufträgen über WLAN",
+		"t65": "Senden von Druckaufgaben über WLAN oder Cloud Service",
 		"t66": "Vollständige Fernsteuerung",
-		"t67": "Liveview-Streaming",
-		"t68": "Synchronisation von Benutzerdaten",
+		"t67": "Liveview-Streaming und Druckerstatusüberwachung",
+		"t68": "Cloud-Synchronisierung für die Schneidkonfiguration",
 		"t69": "Installieren Sie das Bambu Network-Plug-In",
 		"t70": "",
 		"t71": "Herunterladen",
@@ -673,7 +720,16 @@ var LangText={
 		"t113": "Sie können Ihre Wahl jederzeit ändern.",
 		"t114": "Startseite",
 		"t115": "Charge",
-		"t116": "Erneut versuchen"
+		"t116": "Erneut versuchen",
+		"t117": "Druckverlauf",
+		"t118": "Wird gedruckt",
+		"t119": "Erfolg",
+		"t120": "storniert",
+		"t121": "Suche",
+		"t122": "Suche Online-Modelle",
+		"t123": "Teller",
+		"t124": "",
+		"t126": "Laden……"
 	},
 	"hu_HU": {
 		"t1": "Üdvözöljük a Bambu Stúdióban",
@@ -733,10 +789,10 @@ var LangText={
 		"t62": "Egyéb",
 		"t63": "A régió megváltoztatása után ki lesz jelentkezve a fiókodból. Kérjük, jelentkezzen be újra később.",
 		"t64": "Bambu Network plug-in",
-		"t65": "Nyomtatási munka küldése WLAN keresztül",
+		"t65": "Nyomtatási feladat küldése WLAN vagy felhőszolgáltatáson keresztül",
 		"t66": "Teljes távvezérlés",
-		"t67": "Élőkép közvetítés",
-		"t68": "Felhasználói adatszinkronizáció",
+		"t67": "Liveview-közvetítés és nyomtató állapotmonitorozás",
+		"t68": "Félezési konfiguráció felhőszinkronizációja",
 		"t69": "Bambu Network plug-in telepítése",
 		"t70": "",
 		"t71": "Letöltés",
@@ -783,7 +839,16 @@ var LangText={
 		"t113": "Bármikor megváltoztathatja a preferenciáját.",
 		"t114": "honlap",
 		"t115": "Tétel",
-		"t116": "Újrapróbálkozás"
+		"t116": "Újrapróbálkozás",
+		"t117": "Nyomtatási előzmények",
+		"t118": "Nyomtatás folyamatban",
+		"t119": "Siker",
+		"t120": "törölt",
+		"t121": "Keresés",
+		"t122": "Online modellek keresése",
+		"t123": "tányér",
+		"t124": "",
+		"t126": "Betöltés folyamatban……"
 	},
 	"es_ES": {
 		"t1": "Bienvenido a Bambu Studio",
@@ -843,10 +908,10 @@ var LangText={
 		"t62": "Otros",
 		"t63": "Después de cambiar la región, se cerrará la sesión de su cuenta. Por favor, vuelva a iniciar sesión más tarde.",
 		"t64": "Complemento de red de Bambu",
-		"t65": "Envío de trabajos de impresión a través de WLAN",
+		"t65": "Envío de trabajo de impresión a través de WLAN o servicio en la nube",
 		"t66": "Control remoto completo",
-		"t67": "Transmisión en vivo",
-		"t68": "Sincronización de datos de usuario",
+		"t67": "Streaming de Liveview y monitorización del estado de la impresora",
+		"t68": "Sincronización en la nube para la configuración de rebanado",
 		"t69": "Instalar complemento de red de Bambu",
 		"t70": "",
 		"t71": "Descargando",
@@ -893,7 +958,16 @@ var LangText={
 		"t113": "Puede cambiar sus preferencias en cualquier momento.",
 		"t114": "Página de inicio",
 		"t115": "Un lote",
-		"t116": "Reintentar"
+		"t116": "Reintentar",
+		"t117": "Historial de impresión",
+		"t118": "Imprimiendo",
+		"t119": "Éxito",
+		"t120": "cancelado",
+		"t121": "Búsqueda",
+		"t122": "Buscar modelos en línea",
+		"t123": "plato",
+		"t124": "",
+		"t126": "Carga en progreso……"
 	},
 	"sv_SE": {
 		"t1": "Välkommen till Bambu Studio",
@@ -953,10 +1027,10 @@ var LangText={
 		"t62": "Andra",
 		"t63": "Efter att ha ändrat regionen kommer ditt konto att loggas ut. Logga in igen senare.",
 		"t64": "Bambu Network plug-in",
-		"t65": "Skicka utskriftsjobb via WLAN",
+		"t65": "Skicka utskriftsjobb via WLAN eller molntjänst",
 		"t66": "Fullständig fjärrstyrning",
-		"t67": "Liveview streaming",
-		"t68": "Synchronisering av användardata",
+		"t67": "Liveview-strömning och statusövervakning av skrivaren",
+		"t68": "Molnsynkronisering för skärkonfiguration",
 		"t69": "Installera Bambu Network plug-in",
 		"t70": "",
 		"t71": "Laddar ner",
@@ -1003,7 +1077,16 @@ var LangText={
 		"t113": "Du kan ändra ditt val när som helst.",
 		"t114": "startsida",
 		"t115": "Batch",
-		"t116": "Försök igen"
+		"t116": "Försök igen",
+		"t117": "Utskriftshistorik",
+		"t118": "Skrivs ut",
+		"t119": "Lyckad",
+		"t120": "avbruten",
+		"t121": "Sök",
+		"t122": "Sök online-modeller",
+		"t123": "fat",
+		"t124": "",
+		"t126": "Laddning pågår……"
 	},
 	"cs_CZ": {
 		"t1": "Vítejte v Bambu Studio",
@@ -1063,10 +1146,10 @@ var LangText={
 		"t62": "Ostatní",
 		"t63": "Po změně regionu bude váš účet odhlášen. Prosím přihlašte se znovu později.",
 		"t64": "Zásuvný modul Bambu Network",
-		"t65": "Odesílání tiskových úloh přes WLAN",
+		"t65": "Odesílání tiskové úlohy přes WLAN nebo cloudovou službu",
 		"t66": "Plná vzdálená kontrola",
-		"t67": "Živé zobrazení ve streamu",
-		"t68": "Synchronizace uživatelských dat",
+		"t67": "Streamování Liveview a sledování stavu tiskárny",
+		"t68": "Cloudová synchronizace konfigurace řezání",
 		"t69": "Instalovat zásuvný modul Bambu Network",
 		"t70": "",
 		"t71": "Stahování",
@@ -1113,7 +1196,16 @@ var LangText={
 		"t113": "Své preference můžete kdykoliv změnit.",
 		"t114": "domovská stránka",
 		"t115": "Šarže",
-		"t116": "Zkuste to znovu"
+		"t116": "Zkuste to znovu",
+		"t117": "Historie tisku",
+		"t118": "Tisk probíhá",
+		"t119": "Úspěch",
+		"t120": "zrušený",
+		"t121": "Hledat",
+		"t122": "Hledat online modely",
+		"t123": "talíř",
+		"t124": "",
+		"t126": "Načtení probíhá……"
 	},
 	"nl_NL": {
 		"t1": "Welkom bij Bambu Studio",
@@ -1173,10 +1265,10 @@ var LangText={
 		"t62": "Andere",
 		"t63": "Na het wijzigen van de regio wordt uw account uitgelogd. Log later opnieuw in.",
 		"t64": "Bambu Network-plug-in",
-		"t65": "Afdruktaak verzenden via WLAN",
+		"t65": "Afdruktaak verzenden via WLAN of cloud service",
 		"t66": "Volledige externe bediening",
-		"t67": "Liveview-streaming",
-		"t68": "Gebruikersgegevenssynchronisatie",
+		"t67": "Liveview-streaming en printerstatusmonitoring",
+		"t68": "Cloudsynchronisatie voor slicingconfiguratie",
 		"t69": "Bambu Network-plug-in installeren",
 		"t70": "",
 		"t71": "Downloaden",
@@ -1223,7 +1315,16 @@ var LangText={
 		"t113": "U kunt uw keuze op elk gewenst moment wijzigen.",
 		"t114": "startpagina",
 		"t115": "Batch",
-		"t116": "Probeer het opnieuw"
+		"t116": "Probeer het opnieuw",
+		"t117": "Afdrukhistoriek",
+		"t118": "Aan het printen",
+		"t119": "Succes",
+		"t120": "geannuleerd",
+		"t121": "Zoeken",
+		"t122": "Zoek online modellen",
+		"t123": "bord",
+		"t124": "",
+		"t126": "Laden in uitvoering……"
 	},
 	"uk_UA": {
 		"t1": "Вітаємо в Bambu Studio!",
@@ -1283,10 +1384,10 @@ var LangText={
 		"t62": "Інший",
 		"t63": "Після зміни регіону відбудеться вихід з акаунта. Будь ласка, увійдіть пізніше.",
 		"t64": "Мережевий плагін Bambu",
-		"t65": "Відправлення завдання на друк через WLAN",
+		"t65": "Відправка завдань друку через WLAN або хмарну службу",
 		"t66": "Повне дистанційне керування",
-		"t67": "Перегляд прямої трансляції з камери",
-		"t68": "Синхронізація даних користувача",
+		"t67": "Стрімінг Liveview та моніторинг стану принтера",
+		"t68": "Хмарна синхронізація конфігурації різання",
 		"t69": "Встановити мережевий плагін Bambu",
 		"t70": "",
 		"t71": "Завантаження",
@@ -1333,7 +1434,16 @@ var LangText={
 		"t113": "Ви можете змінити свої переваги в будь-який час.",
 		"t114": "Головна сторінка",
 		"t115": "Одна партія",
-		"t116": "Спробувати знову"
+		"t116": "Спробувати знову",
+		"t117": "Історія друку",
+		"t118": "Друкується",
+		"t119": "Успіх",
+		"t120": "скасований",
+		"t121": "Пошук",
+		"t122": "Пошук онлайн-моделей",
+		"t123": "тарілка",
+		"t124": "",
+		"t126": "Завантаження триває……"
 	},
 	"ru_RU": {
 		"t1": "Приветствуем в Bambu Studio!",
@@ -1393,10 +1503,10 @@ var LangText={
 		"t62": "Другой",
 		"t63": "После смены региона произойдёт выход из аккаунта. Пожалуйста, войдите позже.",
 		"t64": "Сетевой плагин Bambu",
-		"t65": "Отправка задания на печать через WLAN",
+		"t65": "Отправка задания на печать через WLAN или облаконную службу",
 		"t66": "Полное дистанционное управление",
-		"t67": "Просмотр прямой трансляции с камеры",
-		"t68": "Синхронизация данных пользователя",
+		"t67": "Стриминг Liveview и мониторинг состояния принтера",
+		"t68": "Облачная синхронизация конфигурации среза",
 		"t69": "Установить сетевой плагин Bambu",
 		"t70": "",
 		"t71": "Загрузка",
@@ -1443,7 +1553,16 @@ var LangText={
 		"t113": "Вы можете изменить свои предпочтения в любое время.",
 		"t114": "Главная страница",
 		"t115": "Одна партия",
-		"t116": "Повторить попытку"
+		"t116": "Повторить попытку",
+		"t117": "История печати",
+		"t118": "Печатается",
+		"t119": "Успех",
+		"t120": "отмененный",
+		"t121": "Поиск",
+		"t122": "Поиск онлайн-моделей",
+		"t123": "тарелка",
+		"t124": "",
+		"t126": "Загрузка идёт……"
 	},
 	"tr_TR": {
 		"t1": "Bambu Stüdyo'ya Hoş Geldiniz",
@@ -1503,10 +1622,10 @@ var LangText={
 		"t62": "Others",
 		"t63": "Bölgeyi değiştirdikten sonra hesabınızdan çıkış yapılacaktır. Lütfen daha sonra tekrar giriş yapın.",
 		"t64": "Bambu Ağı eklentisi",
-		"t65": "Yazdırma işi WLAN aracılığıyla gönderiliyor",
+		"t65": "WLAN veya bulut hizmeti üzerinden yazdırma işi gönderme",
 		"t66": "Tam uzaktan kontrol",
-		"t67": "Canlı görüntü akışı",
-		"t68": "Kullanıcı veri senkronizasyonu",
+		"t67": "Liveview akışı ve yazıcı durumu izlemesi",
+		"t68": "Dilimleme yapılandırması için bulut eşitleme",
 		"t69": "Bambu Ağı eklentisini yükleyin",
 		"t70": "",
 		"t71": "İndiriliyor",
@@ -1553,7 +1672,16 @@ var LangText={
 		"t113": "ercihlerinizde istediğiniz zaman seçiminizi değiştirebilirsiniz.",
 		"t114": "Ana Sayfa",
 		"t115": "Toplu",
-		"t116": "Yeniden Dene"
+		"t116": "Yeniden Dene",
+		"t117": "Yazdırma geçmişi",
+		"t118": "Yazdırılıyor",
+		"t119": "Başarılı",
+		"t120": "iptal edildi",
+		"t121": "Arama",
+		"t122": "Çevrimiçi modelleri arayın",
+		"t123": "tabak",
+		"t124": "",
+		"t126": "Yükleme devam ediyor……"
 	},
 	"pt_BR": {
 		"t1": "Bem-vindo ao Bambu Studio",
@@ -1613,10 +1741,10 @@ var LangText={
 		"t62": "Outras",
 		"t63": "Após alterar sua região, sua conta será desconectada. Por favor conecte-se novamente mais tarde.",
 		"t64": "Bambu Network plug-in",
-		"t65": "Enviando trabalho de impressão via WLAN",
+		"t65": "Enviando trabalho de impressão via WLAN ou serviço de nuvem",
 		"t66": "Controle remoto total",
-		"t67": "Transmissão Ao Vivo",
-		"t68": "Sincronização de Dados do Usuário",
+		"t67": "Streaming do Liveview e monitoramento do status da impressora",
+		"t68": "Sincronização em nuvem para configuração de fatiamento",
 		"t69": "Instalar Bambu Network plug-in",
 		"t70": "",
 		"t71": "Baixando",
@@ -1663,7 +1791,16 @@ var LangText={
 		"t113": "Você pode alterar sua escolha nas Preferências a qualquer momento",
 		"t114": "Inicio",
 		"t115": "Lote",
-		"t116": "Retentar"
+		"t116": "Retentar",
+		"t117": "Histórico de impressão",
+		"t118": "Imprimindo",
+		"t119": "Sucesso",
+		"t120": "cancelado",
+		"t121": "Pesquisa",
+		"t122": "Procurar modelos online",
+		"t123": "prato",
+		"t124": "",
+		"t126": "Carregamento em andamento……"
 	},
 	"ko_KR": {
 		"t1": "Bambu Studio에 오신 것을 환영합니다",
@@ -1723,10 +1860,10 @@ var LangText={
 		"t62": "기타",
 		"t63": "지역을 변경한 후, 귀하의 계정은 로그아웃됩니다. 나중에 다시 로그인해 주세요.",
 		"t64": "Bambu Network 플러그인",
-		"t65": "WLAN을 통한 프린팅 작업 보내기",
+		"t65": "WLAN 또는 클라우드 서비스를 통해 인쇄 작업 보내기",
 		"t66": "완전한 원격 제어",
-		"t67": "라이브뷰 스트리밍",
-		"t68": "사용자 데이터 동기화",
+		"t67": "라이브뷰 스트리밍 및 프린터 상태 모니터링",
+		"t68": "슬라이싱 설정의 클라우드 동기화",
 		"t69": "Bambu Network 플러그인 설치",
 		"t70": "",
 		"t71": "다운로드 중",
@@ -1773,7 +1910,16 @@ var LangText={
 		"t113": "언제든지 환경 설정에서 선택을 변경할 수 있습니다.",
 		"t114": "홈",
 		"t115": "일괄 처리",
-		"t116": "재시도"
+		"t116": "재시도",
+		"t117": "인쇄 기록",
+		"t118": "인쇄 중",
+		"t119": "성공",
+		"t120": "취소된",
+		"t121": "검색",
+		"t122": "온라인 모델을 검색하다",
+		"t123": "접시",
+		"t124": "",
+		"t126": "로딩 중……"
 	},
 	"pl_PL": {
 		"t1": "Witamy w Bambu Studio",
@@ -1833,10 +1979,10 @@ var LangText={
 		"t62": "Inne",
 		"t63": "Po zmianie regionu Twoje konto zostanie wylogowane. Zaloguj się ponownie później.",
 		"t64": "Wtyczka Bambu Network",
-		"t65": "Wysyłanie zadania drukowania przez WLAN",
+		"t65": "Wysyłanie zadania drukowania przez WLAN lub usługę cloud",
 		"t66": "Pełne zdalne sterowanie",
-		"t67": "Transmisja strumieniowa Liveview",
-		"t68": "Synchronizacja danych użytkownika",
+		"t67": "Strumieniowe przesyłanie Liveview i monitorowanie stanu drukarki",
+		"t68": "Synchronizacja chmurowa konfiguracji krojenia",
 		"t69": "Zainstaluj wtyczkę Bambu Network",
 		"t70": "",
 		"t71": "Pobieranie",
@@ -1883,7 +2029,16 @@ var LangText={
 		"t113": "Opcja można zmienić w preferencjach w dowolnym momencie.",
 		"t114": "Strona główna",
 		"t115": "Wartość zbiorcza",
-		"t116": "Ponów"
+		"t116": "Ponów",
+		"t117": "Historia druku",
+		"t118": "Drukuje się",
+		"t119": "Sukces",
+		"t120": "anulowany",
+		"t121": "Wyszukiwanie",
+		"t122": "Wyszukaj modele online",
+		"t123": "talerz",
+		"t124": "",
+		"t126": "Ładowanie trwa……"
 	}
 };
 
@@ -1925,4 +2080,36 @@ function TranslatePage()
 			$(OneNode).html(LangText['en'][tid]);
 		}		
 	}
+}
+
+function GetCurrentTextByKey( key )
+{
+	let strLang=GetQueryString("lang");
+	if(strLang!=null)
+	{
+		//setCookie(LANG_COOKIE_NAME,strLang,LANG_COOKIE_EXPIRESECOND,'/');
+		localStorage.setItem(LANG_COOKIE_NAME,strLang);
+	}
+	else
+	{
+		//strLang=getCookie(LANG_COOKIE_NAME);
+		strLang=localStorage.getItem(LANG_COOKIE_NAME);
+	}
+	
+	//alert(strLang);
+	
+	if( !LangText.hasOwnProperty(strLang) )
+		strLang="en";
+
+	let strText='';
+	if( LangText[strLang].hasOwnProperty(key) )
+	{
+		strText=LangText[strLang][key];
+	}
+	else if(strLang!='en' && LangText['en'].hasOwnProperty(key) )
+	{
+		strText=LangText['en'][key];
+	}	
+	
+	return strText;
 }

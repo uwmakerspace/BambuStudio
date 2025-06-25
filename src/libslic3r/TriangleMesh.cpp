@@ -206,6 +206,9 @@ bool TriangleMesh::from_stl(stl_file& stl, bool repair)
 
     stl_generate_shared_vertices(&stl, this->its);
     fill_initial_stats(this->its, this->m_stats);
+    if (m_stats.volume < 0) {
+        flip_triangles();
+    }
     return true;
 }
 
@@ -386,8 +389,8 @@ bool TriangleMesh::is_splittable() const
 {
     return its_is_splittable(this->its);
 }
-
-std::vector<TriangleMesh> TriangleMesh::split() const
+const float  MIN_MESH_VOLUME = 1e-2f;
+std::vector<TriangleMesh> TriangleMesh::split(float scale_det) const
 {
     std::vector<indexed_triangle_set> itss = its_split(this->its);
     std::vector<TriangleMesh> out;
@@ -395,13 +398,37 @@ std::vector<TriangleMesh> TriangleMesh::split() const
     for (indexed_triangle_set &m : itss) {
         // The TriangleMesh constructor shall fill in the mesh statistics including volume.
         TriangleMesh temp_triangle_mesh(std::move(m));
-        if (abs(temp_triangle_mesh.volume()< 0.01)) {//0.01mm^3
+        if (abs(temp_triangle_mesh.volume() * scale_det) < MIN_MESH_VOLUME) {
             continue;
         }
         if (temp_triangle_mesh.volume() < 0) {// Some source mesh parts may be incorrectly oriented. Correct them.
             temp_triangle_mesh.flip_triangles();
         }
         out.emplace_back(temp_triangle_mesh);
+    }
+    return out;
+}
+
+std::vector<TriangleMesh> TriangleMesh::split_and_save_relationship(std::vector<std::unordered_map<int, int>> &result, float scale_det) const
+{
+    auto   itss_and_ships = its_split_and_save_relationship<>(this->its);
+    std::vector<TriangleMesh>         out;
+    out.reserve(itss_and_ships.itses.size());
+    result.reserve(itss_and_ships.itses.size());
+    unsigned int index = 0;
+    for (indexed_triangle_set &m : itss_and_ships.itses) {
+        // The TriangleMesh constructor shall fill in the mesh statistics including volume.
+        TriangleMesh temp_triangle_mesh(std::move(m));
+        if (abs(temp_triangle_mesh.volume() * scale_det) < MIN_MESH_VOLUME) {
+            index++;
+            continue;
+        }
+        if (temp_triangle_mesh.volume() < 0) { // Some source mesh parts may be incorrectly oriented. Correct them.
+            temp_triangle_mesh.flip_triangles();
+        }
+        out.emplace_back(temp_triangle_mesh);
+        result.emplace_back(itss_and_ships.ships[index]);
+        index++;
     }
     return out;
 }
@@ -1696,7 +1723,6 @@ float its_volume(const indexed_triangle_set &its)
         float height = normal.dot(triangle[0] - p0);
         volume += (area * height) / 3.0f;
     }
-
     return volume;
 }
 

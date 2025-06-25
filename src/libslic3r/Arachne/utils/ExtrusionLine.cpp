@@ -147,7 +147,7 @@ void ExtrusionLine::simplify(const int64_t smallest_line_segment_squared, const 
                 else
                 {
                     // New point seems like a valid one.
-                    const ExtrusionJunction new_to_add = ExtrusionJunction(intersection_point, current.w, current.perimeter_index);
+                    const ExtrusionJunction new_to_add = ExtrusionJunction(intersection_point, current.w, current.perimeter_index, current.hole_compensation_flag);
                     // If there was a previous point added, remove it.
                     if(!new_junctions.empty())
                     {
@@ -232,6 +232,20 @@ int64_t ExtrusionLine::calculateExtrusionAreaDeviationError(ExtrusionJunction A,
     }
 }
 
+bool ExtrusionLine::shouldApplyHoleCompensation(const double threshold) const
+{
+    int64_t total_length = 0;
+    int64_t marked_length = 0;
+    for (size_t idx = 1; idx < junctions.size(); ++idx) {
+        int64_t length = (junctions[idx].p - junctions[idx - 1].p).cast<int64_t>().norm();
+        total_length += length;
+        int marked_rate = (int)(junctions[idx].hole_compensation_flag) + (int)(junctions[idx - 1].hole_compensation_flag);
+        marked_length += length * marked_rate / 2;
+    }
+    double rate = (double)(marked_length) / (double)(total_length);
+    return rate > threshold;
+}
+
 bool ExtrusionLine::is_contour() const
 {
     if (!this->is_closed)
@@ -264,7 +278,17 @@ double ExtrusionLine::area() const
 } // namespace Slic3r::Arachne
 
 namespace Slic3r {
-void extrusion_paths_append(ExtrusionPaths &dst, const ClipperLib_Z::Paths &extrusion_paths, const ExtrusionRole role, const Flow &flow, int overhang)
+
+void extrusion_paths_append(std::list<ExtrusionPath> &dst, const ClipperLib_Z::Paths &extrusion_paths, const ExtrusionRole role, const Flow &flow, double overhang)
+{
+    for (const ClipperLib_Z::Path &extrusion_path : extrusion_paths) {
+        ThickPolyline thick_polyline = Arachne::to_thick_polyline(extrusion_path);
+        ExtrusionPaths path = thick_polyline_to_multi_path(thick_polyline, role, flow, scaled<float>(0.05), float(SCALED_EPSILON), overhang).paths;
+        dst.insert(dst.end(), std::make_move_iterator(path.begin()), std::make_move_iterator(path.end()));
+    }
+}
+
+void extrusion_paths_append(ExtrusionPaths &dst, const ClipperLib_Z::Paths &extrusion_paths, const ExtrusionRole role, const Flow &flow, double overhang)
 {
     for (const ClipperLib_Z::Path &extrusion_path : extrusion_paths) {
         ThickPolyline thick_polyline = Arachne::to_thick_polyline(extrusion_path);
@@ -272,13 +296,13 @@ void extrusion_paths_append(ExtrusionPaths &dst, const ClipperLib_Z::Paths &extr
     }
 }
 
-void extrusion_paths_append(ExtrusionPaths &dst, const Arachne::ExtrusionLine &extrusion, const ExtrusionRole role, const Flow &flow, int overhang)
+void extrusion_paths_append(ExtrusionPaths &dst, const Arachne::ExtrusionLine &extrusion, const ExtrusionRole role, const Flow &flow, double overhang)
 {
     ThickPolyline thick_polyline = Arachne::to_thick_polyline(extrusion);
     Slic3r::append(dst, thick_polyline_to_multi_path(thick_polyline, role, flow, scaled<float>(0.05), float(SCALED_EPSILON), overhang).paths);
 }
 
-void extrusion_path_append(ExtrusionPaths &dst, const ThickPolyline &thick_polyline, const ExtrusionRole role, const Flow &flow, int overhang)
+void extrusion_path_append(ExtrusionPaths &dst, const ThickPolyline &thick_polyline, const ExtrusionRole role, const Flow &flow, double overhang)
 {
     Slic3r::append(dst, thick_polyline_to_multi_path(thick_polyline, role, flow, scaled<float>(0.05), float(SCALED_EPSILON), overhang).paths);
 }

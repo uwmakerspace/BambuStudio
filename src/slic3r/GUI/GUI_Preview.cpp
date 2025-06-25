@@ -38,9 +38,35 @@
 namespace Slic3r {
 namespace GUI {
 
-View3D::View3D(wxWindow* parent, Bed3D& bed, Model* model, DynamicPrintConfig* config, BackgroundSlicingProcess* process)
-    : m_canvas_widget(nullptr)
+BaseView::BaseView()
+    : wxPanel()
+    , m_canvas_widget(nullptr)
     , m_canvas(nullptr)
+{
+}
+
+BaseView::~BaseView()
+{
+}
+
+bool BaseView::Show(bool show)
+{
+    const bool rt = wxPanel::Show(show);
+    if (show && rt) {
+        if (m_canvas) {
+            m_canvas->mark_context_dirty();
+        }
+    }
+    return rt;
+}
+
+const std::shared_ptr<Camera>& BaseView::get_override_camera() const
+{
+    return m_p_override_camera;
+}
+
+View3D::View3D(wxWindow* parent, Bed3D& bed, Model* model, DynamicPrintConfig* config, BackgroundSlicingProcess* process)
+    : BaseView()
 {
     init(parent, bed, model, config, process);
 }
@@ -56,7 +82,12 @@ bool View3D::init(wxWindow* parent, Bed3D& bed, Model* model, DynamicPrintConfig
     if (!Create(parent, wxID_ANY, wxDefaultPosition, wxDefaultSize, 0 /* disable wxTAB_TRAVERSAL */))
         return false;
 
-    m_canvas_widget = OpenGLManager::create_wxglcanvas(*this);
+    const auto& p_ogl_manager = wxGetApp().get_opengl_manager();
+    if (!p_ogl_manager) {
+        return false;
+    }
+    const GUI::EMSAAType msaa_type = p_ogl_manager->is_fxaa_enabled() ? GUI::EMSAAType::Disabled : p_ogl_manager->get_msaa_type();
+    m_canvas_widget = OpenGLManager::create_wxglcanvas(*this, msaa_type);
     if (m_canvas_widget == nullptr)
         return false;
 
@@ -220,7 +251,8 @@ void View3D::render()
 Preview::Preview(
     wxWindow* parent, Bed3D& bed, Model* model, DynamicPrintConfig* config,
     BackgroundSlicingProcess* process, GCodeProcessorResult* gcode_result, std::function<void()> schedule_background_process_func)
-    : m_config(config)
+    : BaseView()
+    , m_config(config)
     , m_process(process)
     , m_gcode_result(gcode_result)
     , m_schedule_background_process(schedule_background_process_func)
@@ -248,7 +280,13 @@ bool Preview::init(wxWindow* parent, Bed3D& bed, Model* model)
     SetBackgroundColour(GetParent()->GetBackgroundColour());
 #endif // _WIN32
 
-    m_canvas_widget = OpenGLManager::create_wxglcanvas(*this);
+    const auto& p_ogl_manager = wxGetApp().get_opengl_manager();
+    if (!p_ogl_manager) {
+        return false;
+    }
+    const auto& ogl_manager = wxGetApp().get_opengl_manager();
+    const GUI::EMSAAType msaa_type = p_ogl_manager->is_fxaa_enabled() ? GUI::EMSAAType::Disabled : p_ogl_manager->get_msaa_type();
+    m_canvas_widget = OpenGLManager::create_wxglcanvas(*this, msaa_type);
     if (m_canvas_widget == nullptr)
         return false;
 
@@ -260,7 +298,7 @@ bool Preview::init(wxWindow* parent, Bed3D& bed, Model* model)
     m_canvas->set_process(m_process);
     m_canvas->set_type(GLCanvas3D::ECanvasType::CanvasPreview);
     m_canvas->enable_legend_texture(true);
-    m_canvas->enable_dynamic_background(true);
+
     //BBS: GUI refactor: GLToolbar
     if (wxGetApp().is_editor()) {
         m_canvas->enable_select_plate_toolbar(true);
@@ -775,16 +813,18 @@ void Preview::load_print_as_fff(bool keep_z_range, bool only_gcode)
 }
 
 AssembleView::AssembleView(wxWindow* parent, Bed3D& bed, Model* model, DynamicPrintConfig* config, BackgroundSlicingProcess* process)
-    : m_canvas_widget(nullptr)
-    , m_canvas(nullptr)
+    : BaseView()
 {
     init(parent, bed, model, config, process);
+    m_p_override_camera = std::make_shared<Camera>();
+    m_p_override_camera->enable_update_config_on_type_change(false);
 }
 
 AssembleView::~AssembleView()
 {
     delete m_canvas;
     delete m_canvas_widget;
+    m_p_override_camera = nullptr;
 }
 
 bool AssembleView::init(wxWindow* parent, Bed3D& bed, Model* model, DynamicPrintConfig* config, BackgroundSlicingProcess* process)
@@ -792,7 +832,12 @@ bool AssembleView::init(wxWindow* parent, Bed3D& bed, Model* model, DynamicPrint
     if (!Create(parent, wxID_ANY, wxDefaultPosition, wxDefaultSize, 0 /* disable wxTAB_TRAVERSAL */))
         return false;
 
-    m_canvas_widget = OpenGLManager::create_wxglcanvas(*this);
+    const auto& p_ogl_manager = wxGetApp().get_opengl_manager();
+    if (!p_ogl_manager) {
+        return false;
+    }
+    const GUI::EMSAAType msaa_type = p_ogl_manager->is_fxaa_enabled() ? GUI::EMSAAType::Disabled : p_ogl_manager->get_msaa_type();
+    m_canvas_widget = OpenGLManager::create_wxglcanvas(*this, msaa_type);
     if (m_canvas_widget == nullptr)
         return false;
 
@@ -864,7 +909,6 @@ void AssembleView::select_view(const std::string& direction)
     if (m_canvas != nullptr)
         m_canvas->select_view(direction);
 }
-
 
 } // namespace GUI
 } // namespace Slic3r

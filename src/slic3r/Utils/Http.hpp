@@ -29,6 +29,7 @@ enum HttpErrorCode
 	HttpErrorTimeout			= 13,
 	HttpErrorResourcesExhaust   = 14,
 	HttpErrorVersionLimited		= 15,
+	HttpErrorCertRevoked		= 101,
 };
 
 /// Represetns a Http request
@@ -88,6 +89,7 @@ public:
 
 	//BBS set global header for each http request
 	static void set_extra_headers(std::map<std::string, std::string> headers);
+	static std::map<std::string, std::string> get_extra_headers();
 
 	~Http();
 

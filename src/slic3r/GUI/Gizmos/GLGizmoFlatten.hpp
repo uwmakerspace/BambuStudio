@@ -3,15 +3,11 @@
 
 #include "GLGizmoBase.hpp"
 #include "slic3r/GUI/3DScene.hpp"
-
+#include "libslic3r/Model.hpp"
 
 namespace Slic3r {
-
 enum class ModelVolumeType : int;
-
-
 namespace GUI {
-
 
 class GLGizmoFlatten : public GLGizmoBase
 {
@@ -42,11 +38,17 @@ private:
     void update_planes();
     bool is_plane_update_necessary() const;
 
+    enum FlattenType {
+        Default,
+        Triangle,
+    };
+    FlattenType m_faltten_type{FlattenType::Default};
+
 public:
     GLGizmoFlatten(GLCanvas3D& parent, const std::string& icon_filename, unsigned int sprite_id);
 
-    void set_flattening_data(const ModelObject* model_object);
     Vec3d get_flattening_normal() const;
+    void  data_changed(bool is_serializing) override;
 
 protected:
     virtual bool on_init() override;
@@ -61,6 +63,15 @@ protected:
     virtual void               on_render_input_window(float x, float y, float bottom_limit) override;
 private:
     bool  m_show_warning{false};
+    mutable RaycastResult m_rr;
+    mutable int           m_hit_facet;
+    mutable int           m_last_hit_facet;
+    mutable GLModel  m_one_tri_model;
+    Vec3f                 m_hit_object_normal;
+    int                   m_old_instance_id{-1};
+
+private:
+    bool update_raycast_cache(const Vec2d &mouse_position, const Camera &camera, const std::vector<Transform3d> &trafo_matrices, int &facet);
 };
 
 } // namespace GUI

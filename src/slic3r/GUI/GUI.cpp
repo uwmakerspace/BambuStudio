@@ -108,7 +108,7 @@ void change_opt_value(DynamicPrintConfig& config, const t_config_option_key& opt
 	try{
 
         if (config.def()->get(opt_key)->type == coBools && config.def()->get(opt_key)->nullable) {
-            auto vec_new = std::make_unique<ConfigOptionBoolsNullable>(1, boost::any_cast<unsigned char>(value) );
+            auto vec_new = std::make_unique<ConfigOptionBoolsNullable>(std::vector<unsigned char>{boost::any_cast<unsigned char>(value)});
             config.option<ConfigOptionBoolsNullable>(opt_key)->set_at(vec_new.get(), opt_index, 0);
             return;
         }
@@ -322,6 +322,14 @@ static void add_config_substitutions(const ConfigSubstitutions& conf_substitutio
 			}
 			else
 				new_val = wxString("\"") + values[val] + "\"" + " (" + from_u8(_utf8(labels[val])) + ")";
+			break;
+		}
+		case coEnums:
+		{
+			const std::vector<std::string>& labels = def->enum_labels;
+			const std::vector<std::string>& values = def->enum_values;
+			std::string val = conf_substitution.new_value->serialize();
+			new_val = wxString("\"") + from_u8(_utf8(val)) + "\"";
 			break;
 		}
 		case coBool:

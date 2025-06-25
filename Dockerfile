@@ -13,7 +13,6 @@ RUN apt-get update && apt-get install  -y \
     build-essential \
     cmake \
     curl \
-    bc \
     xvfb \
     eglexternalplatform-dev \
     extra-cmake-modules \
@@ -48,7 +47,7 @@ RUN apt-get update && apt-get install  -y \
     pkgconf \
     sudo \
     wayland-protocols \
-    bash \
+    libwebkit2gtk-4.1-dev \
     wget 
 
 #temp fix for 24.10 dependency
@@ -65,14 +64,55 @@ RUN locale-gen $LC_ALL
 # the CA cert path on every startup
 ENV SSL_CERT_FILE=/etc/ssl/certs/ca-certificates.crt
 
-COPY ./ BambuStudio
+COPY ./ /BambuStudio
 
-WORKDIR BambuStudio
+RUN chmod +x /BambuStudio/DockerEntrypoint.sh
 
-# These can run together, but we run them seperate for podman caching
-# Update System dependencies
+WORKDIR /BambuStudio
+
+# Ubuntu 24 Docker Image now come with default standard user "ubuntu"
+# It might conflict with your mapped user, remove if user ubuntu exist
+RUN if id "ubuntu" >/dev/null 2>&1; then userdel -r ubuntu; fi
+
+# It's easier to run Bambu Studio as the same username,
+# UID and GID as your workstation.  Since we bind mount
+# your home directory into the container, it's handy
+# to keep permissions the same.  Just in case, defaults
+# are root.
+
+# Set ARG values
+# If user was passed from build it will create a user same
+# as your workstation. Else it will use /root
+
+# Setting ARG at build time is convienient for testing purposes
+# otherwise the same commands will be executed at runtime
+
+ARG USER=root
+ARG UID=0
+ARG GID=0
+RUN if [ "$UID" != "0" ]; then \
+      groupadd -g $GID $USER && \
+      useradd -u $UID -g $GID -m -d /home/$USER $USER && \
+      mkdir -p /home/$USER && \
+      chown -R $UID:$GID /BambuStudio && \
+      usermod -aG sudo $USER && \
+      passwd -d "$USER"; \
+    else \
+      mkdir -p /root/.config; \
+    fi
+
+# Allow password-less sudo for ALL users
+RUN echo "ALL ALL=(ALL) NOPASSWD:ALL" > /etc/sudoers.d/999-passwordless
+RUN chmod 440 /etc/sudoers.d/999-passwordless
+
+# Update System dependencies(Run before user switch)
 RUN ./BuildLinux.sh -u
 
+# Run as the mapped user (or root by default)
+USER $USER
+
+
+# These can run together, but we run them seperate for podman caching
 # Build dependencies in ./deps
 RUN ./BuildLinux.sh -d
 
@@ -80,31 +120,20 @@ RUN ./BuildLinux.sh -d
 RUN ./BuildLinux.sh -s
 
 # Build AppImage
-ENV container podman
+ENV container=podman
 RUN ./BuildLinux.sh -i
 
-# It's easier to run Bambu Studio as the same username,
-# UID and GID as your workstation.  Since we bind mount
-# your home directory into the container, it's handy
-# to keep permissions the same.  Just in case, defaults
-# are root.
+
 # Use bash as the shell
 SHELL ["/bin/bash", "-l", "-c"]
 
-# Set ARG values
-ARG USER=root
-ARG UID=0
-ARG GID=0
-
-# Run the commands with proper bash syntax
-RUN if [ "$UID" != "0" ]; then \
-      groupadd -f -g $GID $USER && \
-      useradd -u $UID -g $GID $USER; \
-    fi
-
-#RUN chmod +x entrypoint.sh
+# Point FFMPEG Library search to the binary built upon BambuStudio build time
+ENV LD_LIBRARY_PATH=/BambuStudio/build/package/bin
 
 # Using an entrypoint instead of CMD because the binary
 # accepts several command line arguments.
-ENTRYPOINT ["/BambuStudio/build/package/bin/bambu-studio"]
-#ENTRYPOINT ["entrypoint.sh"]
+# entrypoint script will pass all arguments to bambu-studio
+# after the script finishes
+
+#ENTRYPOINT ["/BambuStudio/build/package/bin/bambu-studio"]
+ENTRYPOINT ["/BambuStudio/DockerEntrypoint.sh"]

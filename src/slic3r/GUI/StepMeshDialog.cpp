@@ -19,6 +19,7 @@ static int _scale(const int val) { return val * Slic3r::GUI::wxGetApp().em_unit(
 static int _ITEM_WIDTH() { return _scale(30); }
 #define MIN_DIALOG_WIDTH        FromDIP(400)
 #define SLIDER_WIDTH            FromDIP(200)
+#define SLIDER_HEIGHT           FromDIP(25)
 #define TEXT_CTRL_WIDTH         FromDIP(70)
 #define BUTTON_SIZE             wxSize(FromDIP(58), FromDIP(24))
 #define BUTTON_BORDER           FromDIP(int(400 - 58 * 2) / 8)
@@ -27,6 +28,7 @@ static int _ITEM_WIDTH() { return _scale(30); }
 #define SLIDER_SCALE_10(val)    ((val) / 0.01)
 #define SLIDER_UNSCALE_10(val)  ((val) * 0.01)
 #define LEFT_RIGHT_PADING       FromDIP(20)
+#define FONT_COLOR              wxColour("#6B6B6B")
 
 wxDEFINE_EVENT(wxEVT_THREAD_DONE, wxCommandEvent);
 
@@ -66,7 +68,7 @@ bool StepMeshDialog:: validate_number_range(const wxString& value, double min, d
     return (num >= min && num <= max);
 }
 
-StepMeshDialog::StepMeshDialog(wxWindow* parent, Slic3r::Step& file)
+StepMeshDialog::StepMeshDialog(wxWindow* parent, Slic3r::Step& file, double linear_init, double angle_init)
     : DPIDialog(parent ? parent : static_cast<wxWindow *>(wxGetApp().mainframe),
                 wxID_ANY,
                 _(L("Step file import parameters")),
@@ -74,6 +76,9 @@ StepMeshDialog::StepMeshDialog(wxWindow* parent, Slic3r::Step& file)
                 wxDefaultSize,
                 wxDEFAULT_DIALOG_STYLE /* | wxRESIZE_BORDER*/), m_file(file)
 {
+    m_linear_last = wxString::Format("%.3f", linear_init);
+    m_angle_last = wxString::Format("%.2f", angle_init);
+
     Bind(wxEVT_THREAD_DONE, &StepMeshDialog::on_task_done, this);
 
     std::string icon_path = (boost::format("%1%/images/BambuStudioTitle.ico")
@@ -85,44 +90,60 @@ StepMeshDialog::StepMeshDialog(wxWindow* parent, Slic3r::Step& file)
     wxBoxSizer* bSizer = new wxBoxSizer(wxVERTICAL);
     bSizer->SetMinSize(wxSize(MIN_DIALOG_WIDTH, -1));
 
-    auto  image_bitmap = create_scaled_bitmap("step_mesh_info", this, FromDIP(120), false, std::string(), false, false, true);
-    int image_width = image_bitmap.GetWidth();
-    int image_height = image_bitmap.GetHeight();
-    wxPanel* overlay_panel = new wxPanel(this, wxID_ANY, wxDefaultPosition, image_bitmap.GetSize(), wxTAB_TRAVERSAL);
-    overlay_panel->SetBackgroundStyle(wxBG_STYLE_PAINT);
-    wxStaticBitmap *image = new wxStaticBitmap(overlay_panel, wxID_ANY, image_bitmap, wxDefaultPosition, wxDefaultSize, 0);
+    auto  image_bitmap = create_scaled_bitmap("step_mesh_info", this, FromDIP(120));
 
-    CenteredStaticText* text_1 = new CenteredStaticText (overlay_panel, wxID_ANY, _L("Rough"),
-                                                          wxPoint(overlay_panel->GetSize().GetWidth() / 6,
-                                                                  overlay_panel->GetSize().GetHeight() / 2));
-    CenteredStaticText* text_2 = new CenteredStaticText(overlay_panel, wxID_ANY, _L("Smooth"),
-                                                         wxPoint(overlay_panel->GetSize().GetWidth() * 5 / 6,
-                                                                 overlay_panel->GetSize().GetHeight() / 2));
-    CenteredStaticText* text_3 = new CenteredStaticText(overlay_panel, wxID_ANY, _L("Reduce Linear"),
-                                                        wxPoint(overlay_panel->GetSize().GetWidth() / 2,
-                                                                overlay_panel->GetSize().GetHeight() * 1.3 / 3));
-    CenteredStaticText* text_4 = new CenteredStaticText(overlay_panel, wxID_ANY, _L("Reduce Angle"),
-                                                        wxPoint(overlay_panel->GetSize().GetWidth() / 2,
-                                                                overlay_panel->GetSize().GetHeight() * 2 / 3));
-    CenteredStaticText* text_5 = new CenteredStaticText(overlay_panel, wxID_ANY, _L("Fewer faces"),
-                                                        wxPoint(overlay_panel->GetSize().GetWidth() / 6,
-                                                                overlay_panel->GetSize().GetHeight() * 2.8 / 3));
-    CenteredStaticText* text_6 = new CenteredStaticText(overlay_panel, wxID_ANY, _L("More faces"),
-                                                        wxPoint(overlay_panel->GetSize().GetWidth() * 5 / 6,
-                                                                overlay_panel->GetSize().GetHeight() * 2.8 / 3));
+    // wxPanel* overlay_panel = new wxPanel(this, wxID_ANY, wxDefaultPosition, image_bitmap.GetSize(), wxTAB_TRAVERSAL);
+    // overlay_panel->SetBackgroundStyle(wxBG_STYLE_PAINT);
+    // wxStaticBitmap *image = new wxStaticBitmap(overlay_panel, wxID_ANY, image_bitmap, wxDefaultPosition, overlay_panel->GetSize(), 0);
 
-    bSizer->Add(overlay_panel, 0, wxALIGN_CENTER | wxALL, 10);
+    // CenteredStaticText* text_1 = new CenteredStaticText (overlay_panel, wxID_ANY, _L("Smooth"),
+    //                                                       wxPoint(overlay_panel->GetSize().GetWidth() / 6,
+    //                                                               overlay_panel->GetSize().GetHeight() / 2));
+    // CenteredStaticText* text_2 = new CenteredStaticText(overlay_panel, wxID_ANY, _L("Rough"),
+    //                                                      wxPoint(overlay_panel->GetSize().GetWidth() * 5 / 6,
+    //                                                              overlay_panel->GetSize().GetHeight() / 2));
+    // CenteredStaticText* text_3 = new CenteredStaticText(overlay_panel, wxID_ANY, _L("Reduce Linear"),
+    //                                                     wxPoint(overlay_panel->GetSize().GetWidth() / 2,
+    //                                                             overlay_panel->GetSize().GetHeight() * 1.3 / 3));
+    // CenteredStaticText* text_4 = new CenteredStaticText(overlay_panel, wxID_ANY, _L("Reduce Angle"),
+    //                                                     wxPoint(overlay_panel->GetSize().GetWidth() / 2,
+    //                                                             overlay_panel->GetSize().GetHeight() * 2 / 3));
+    // CenteredStaticText* text_5 = new CenteredStaticText(overlay_panel, wxID_ANY, _L("More faces"),
+    //                                                     wxPoint(overlay_panel->GetSize().GetWidth() / 6,
+    //                                                             overlay_panel->GetSize().GetHeight() * 2.8 / 3));
+    // CenteredStaticText* text_6 = new CenteredStaticText(overlay_panel, wxID_ANY, _L("Fewer faces"),
+    //                                                     wxPoint(overlay_panel->GetSize().GetWidth() * 5 / 6,
+    //                                                             overlay_panel->GetSize().GetHeight() * 2.8 / 3));
+
+    // bSizer->Add(overlay_panel, 0, wxALIGN_CENTER | wxALL, 10);
+
+    wxBoxSizer* tips_sizer = new wxBoxSizer(wxVERTICAL);
+    wxStaticText* info = new wxStaticText(this, wxID_ANY, _L("Smaller linear and angular deflections result in higher-quality transformations but increase the processing time."));
+    info->SetForegroundColour(StateColor::darkModeColorFor(FONT_COLOR));
+    wxStaticText *tips = new wxStaticText(this, wxID_ANY, _L("View Wiki for more information"));
+    wxFont font(10, wxFONTFAMILY_DEFAULT, wxFONTSTYLE_NORMAL, wxFONTWEIGHT_NORMAL, false);
+    font.SetUnderlined(true);
+    tips->SetForegroundColour(StateColor::darkModeColorFor(wxColour(0, 174, 66)));
+    tips->SetFont(font);
+    tips->Bind(wxEVT_LEFT_DOWN, [this](wxMouseEvent& e) {
+        wxLaunchDefaultBrowser("https://wiki.bambulab.com/en/software/bambu-studio/step");
+    });
+    info->Wrap(FromDIP(400));
+    tips_sizer->Add(info, 0, wxALIGN_LEFT);
+    tips_sizer->Add(tips, 0, wxALIGN_LEFT);
+    bSizer->Add(tips_sizer, 0, wxEXPAND | wxLEFT | wxRIGHT | wxTOP, LEFT_RIGHT_PADING);
 
     wxBoxSizer* linear_sizer = new wxBoxSizer(wxHORIZONTAL);
     //linear_sizer->SetMinSize(wxSize(MIN_DIALOG_WIDTH, -1));
     wxStaticText* linear_title = new wxStaticText(this,
                                                   wxID_ANY, _L("Linear Deflection") + ": ");
+    linear_title->SetForegroundColour(StateColor::darkModeColorFor(FONT_COLOR));
     linear_sizer->Add(linear_title, 0, wxALIGN_LEFT);
     linear_sizer->AddStretchSpacer(1);
     wxSlider* linear_slider = new wxSlider(this, wxID_ANY,
                                            SLIDER_SCALE(get_linear_defletion()),
                                            1, 100, wxDefaultPosition,
-                                           wxSize(SLIDER_WIDTH, -1),
+                                           wxSize(SLIDER_WIDTH, SLIDER_HEIGHT),
                                            wxSL_HORIZONTAL);
     linear_sizer->Add(linear_slider, 0, wxALIGN_RIGHT | wxLEFT, FromDIP(5));
 
@@ -169,12 +190,13 @@ StepMeshDialog::StepMeshDialog(wxWindow* parent, Slic3r::Step& file)
     wxBoxSizer* angle_sizer = new wxBoxSizer(wxHORIZONTAL);
     wxStaticText* angle_title = new wxStaticText(this,
                                                   wxID_ANY, _L("Angle Deflection") + ": ");
+    angle_title->SetForegroundColour(StateColor::darkModeColorFor(FONT_COLOR));
     angle_sizer->Add(angle_title, 0, wxALIGN_LEFT);
     angle_sizer->AddStretchSpacer(1);
     wxSlider* angle_slider = new wxSlider(this, wxID_ANY,
                                            SLIDER_SCALE_10(get_angle_defletion()),
                                            1, 100, wxDefaultPosition,
-                                           wxSize(SLIDER_WIDTH, -1),
+                                           wxSize(SLIDER_WIDTH, SLIDER_HEIGHT),
                                            wxSL_HORIZONTAL);
     angle_sizer->Add(angle_slider, 0, wxALIGN_RIGHT | wxLEFT, FromDIP(5));
 
@@ -219,9 +241,18 @@ StepMeshDialog::StepMeshDialog(wxWindow* parent, Slic3r::Step& file)
 
     bSizer->Add(angle_sizer, 1, wxEXPAND | wxLEFT | wxRIGHT, LEFT_RIGHT_PADING);
 
+    wxBoxSizer* check_sizer = new wxBoxSizer(wxHORIZONTAL);
+    m_split_compound_checkbox = new wxCheckBox(this, wxID_ANY, _L("Split compound and compsolid into multiple objects"), wxDefaultPosition, wxDefaultSize, 0);
+    m_split_compound_checkbox->SetForegroundColour(StateColor::darkModeColorFor(FONT_COLOR));
+    m_split_compound_checkbox->SetValue(wxGetApp().app_config->get_bool("is_split_compound"));
+    check_sizer->Add(m_split_compound_checkbox, 0, wxALIGN_LEFT);
+    bSizer->Add(check_sizer, 1, wxEXPAND | wxLEFT | wxRIGHT, LEFT_RIGHT_PADING);
+
     wxBoxSizer* mesh_face_number_sizer = new wxBoxSizer(wxHORIZONTAL);
     wxStaticText *mesh_face_number_title = new wxStaticText(this, wxID_ANY, _L("Number of triangular facets") + ": ");
+    mesh_face_number_title->SetForegroundColour(StateColor::darkModeColorFor(FONT_COLOR));
     mesh_face_number_text = new wxStaticText(this, wxID_ANY, _L("0"));
+    mesh_face_number_text->SetForegroundColour(StateColor::darkModeColorFor(FONT_COLOR));
     mesh_face_number_text->SetMinSize(wxSize(FromDIP(150), -1));
     mesh_face_number_sizer->Add(mesh_face_number_title, 0, wxALIGN_LEFT);
     mesh_face_number_sizer->Add(mesh_face_number_text, 0, wxALIGN_LEFT);
@@ -229,7 +260,10 @@ StepMeshDialog::StepMeshDialog(wxWindow* parent, Slic3r::Step& file)
 
     wxBoxSizer* bSizer_button = new wxBoxSizer(wxHORIZONTAL);
     bSizer_button->SetMinSize(wxSize(FromDIP(100), -1));
-
+    m_checkbox = new wxCheckBox(this, wxID_ANY, _L("Don't show again"), wxDefaultPosition, wxDefaultSize, 0);
+    m_checkbox->SetForegroundColour(StateColor::darkModeColorFor(FONT_COLOR));
+    bSizer_button->Add(m_checkbox, 0, wxALIGN_LEFT);
+    bSizer_button->AddStretchSpacer(1);
     StateColor btn_bg_green(std::pair<wxColour, int>(wxColour(27, 136, 68), StateColor::Pressed), std::pair<wxColour, int>(wxColour(61, 203, 115), StateColor::Hovered),
                             std::pair<wxColour, int>(AMS_CONTROL_BRAND_COLOUR, StateColor::Normal));
     m_button_ok = new Button(this, _L("OK"));
@@ -246,6 +280,13 @@ StepMeshDialog::StepMeshDialog(wxWindow* parent, Slic3r::Step& file)
         stop_task();
         if (validate_number_range(angle_input->GetTextCtrl()->GetValue(), 0.01, 1) &&
             validate_number_range(linear_input->GetTextCtrl()->GetValue(), 0.001, 0.1)) {
+            if (m_checkbox->IsChecked()) {
+                wxGetApp().app_config->set_bool("enable_step_mesh_setting", false);
+            }
+            wxGetApp().app_config->set_bool("is_split_compound", m_split_compound_checkbox->GetValue());
+            wxGetApp().app_config->set("linear_defletion", float_to_string_decimal_point(get_linear_defletion(), 3));
+            wxGetApp().app_config->set("angle_defletion", float_to_string_decimal_point(get_angle_defletion(), 2));
+
             EndModal(wxID_OK);
         }
         SetFocusIgnoringChildren();
@@ -268,7 +309,7 @@ StepMeshDialog::StepMeshDialog(wxWindow* parent, Slic3r::Step& file)
         EndModal(wxID_CANCEL);
     });
 
-    bSizer->Add(bSizer_button, 0, wxALIGN_RIGHT | wxRIGHT| wxBOTTOM, LEFT_RIGHT_PADING);
+    bSizer->Add(bSizer_button, 1, wxEXPAND | wxALL, LEFT_RIGHT_PADING);
 
     this->SetSizer(bSizer);
     update_mesh_number_text();
@@ -290,44 +331,56 @@ StepMeshDialog::StepMeshDialog(wxWindow* parent, Slic3r::Step& file)
     wxGetApp().UpdateDlgDarkUI(this);
 }
 
+StepMeshDialog::~StepMeshDialog()
+{
+    stop_task();
+}
+
 void StepMeshDialog::on_task_done(wxCommandEvent& event)
 {
     wxString text = event.GetString();
     mesh_face_number_text->SetLabel(text);
-    if (task.valid()) {
-        task.get();
+    if(m_task) {
+        if (m_task->joinable()) {
+            m_task->join();
+            delete m_task;
+            m_task = nullptr;
+        }
     }
 }
 
 void StepMeshDialog::stop_task()
 {
-    if (task.valid()) {
+    if(m_task) {
         m_file.m_stop_mesh.store(true);
-        unsigned int test = task.get();
+        if (m_task->joinable()) {
+            m_task->join();
+            delete m_task;
+            m_task = nullptr;
+        }
         m_file.m_stop_mesh.store(false);
-        std::cout << test << std::endl;
     }
 
 }
 
 void StepMeshDialog::update_mesh_number_text()
 {
-    if (m_last_linear == get_linear_defletion() && m_last_angle == get_angle_defletion())
+    if ((m_last_linear == get_linear_defletion()) && (m_last_angle == get_angle_defletion()) && (m_mesh_number != 0))
         return;
     wxString newText = wxString::Format(_L("Calculating, please wait..."));
     mesh_face_number_text->SetLabel(newText);
-
     stop_task();
-    task = std::async(std::launch::async, [&] {
-        unsigned int number = m_file.get_triangle_num(get_linear_defletion(), get_angle_defletion());
-        if (number != 0) {
-            wxString number_text = wxString::Format("%d", number);
-            wxCommandEvent event(wxEVT_THREAD_DONE);
-            event.SetString(number_text);
-            wxPostEvent(this, event);
-            m_last_linear = get_linear_defletion();
-            m_last_angle  = get_angle_defletion();
-        }
-        return number;
-    });
+    if (!m_task) {
+        m_task = new boost::thread(Slic3r::create_thread([this]() -> void {
+            m_mesh_number = m_file.get_triangle_num(get_linear_defletion(), get_angle_defletion());
+            if (m_mesh_number != 0) {
+                wxString number_text = wxString::Format("%d", m_mesh_number);
+                wxCommandEvent event(wxEVT_THREAD_DONE);
+                event.SetString(number_text);
+                wxPostEvent(this, event);
+                m_last_linear = get_linear_defletion();
+                m_last_angle  = get_angle_defletion();
+            }
+        }));
+    }
 }

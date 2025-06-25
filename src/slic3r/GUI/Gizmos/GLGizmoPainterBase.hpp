@@ -71,8 +71,7 @@ public:
 
     // Render current selection. Transformation matrices are supposed
     // to be already set.
-    virtual void render(ImGuiWrapper *imgui);
-    void         render() { this->render(nullptr); }
+    virtual void render(ImGuiWrapper *imgui, const Transform3d& matrix);
     void         set_wireframe_needed(bool need_wireframe) { m_need_wireframe = need_wireframe; }
     bool         get_wireframe_needed() { return m_need_wireframe; }
 
@@ -94,6 +93,10 @@ public:
 #endif
 
 protected:
+    void update_paint_contour();
+    void render_paint_contour(const Transform3d& matrix);
+
+protected:
     bool m_update_render_data = false;
     // BBS
     bool m_paint_changed = true;
@@ -103,13 +106,13 @@ protected:
 private:
     void update_render_data();
 
-    GLIndexedVertexArray                m_iva_enforcers;
-    GLIndexedVertexArray                m_iva_blockers;
-    std::array<GLIndexedVertexArray, 3> m_iva_seed_fills;
-    std::array<GLIndexedVertexArray, 3> m_varrays;
+    GLModel                m_iva_enforcers;
+    GLModel                m_iva_blockers;
+    std::array<GLModel, 3> m_iva_seed_fills;
+    std::array<GLModel, 3> m_varrays;
 
 protected:
-    GLPaintContour                      m_paint_contour;
+    GLModel                             m_paint_contour;
     bool                                m_need_wireframe {false};
 };
 
@@ -134,7 +137,7 @@ public:
 
     // Render current selection. Transformation matrices are supposed
     // to be already set.
-    void render(ImGuiWrapper* imgui) override;
+    void render(ImGuiWrapper* imgui, const Transform3d& matrix) override;
     // TriangleSelector.m_triangles => m_gizmo_scene.triangle_patches
     void update_triangles_per_type();
     // m_gizmo_scene.triangle_patches => TriangleSelector.m_triangles
@@ -150,6 +153,7 @@ public:
 
     // BBS: fix me
     static float gap_area;
+    static bool exist_gap_area;
 
 protected:
     // Release the geometry data, release OpenGL VBOs.
@@ -201,7 +205,7 @@ protected:
 
 private:
     void update_render_data();
-    void render(int buffer_idx, int position_id = -1, bool show_wireframe=false);
+    void render(int buffer_idx);
 };
 
 
@@ -218,7 +222,6 @@ private:
 public:
     GLGizmoPainterBase(GLCanvas3D& parent, const std::string& icon_filename, unsigned int sprite_id);
     ~GLGizmoPainterBase() override = default;
-    virtual void set_painter_gizmo_data(const Selection& selection);
     virtual bool gizmo_event(SLAGizmoEventType action, const Vec2d& mouse_position, bool shift_down, bool alt_down, bool control_down);
 
     // Following function renders the triangles and cursor. Having this separated
@@ -238,6 +241,7 @@ public:
     void update_front_view_radian();
 
 protected:
+    virtual void set_painter_gizmo_data(const Selection &selection);
     virtual void render_triangles(const Selection& selection) const;
     void render_cursor() const;
     void render_cursor_circle() const;
@@ -373,6 +377,7 @@ protected:
         ObjectID object_id;
         int instance_idx{ -1 };
     };
+    mutable GLModel m_circle;
     mutable std::vector<CutContours> m_cut_contours;
     mutable int                      m_volumes_index = 0;
     mutable float       m_cursor_z{0};

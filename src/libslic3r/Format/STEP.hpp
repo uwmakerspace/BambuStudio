@@ -41,6 +41,7 @@ extern bool load_step(const char *path, Model *model,
                       bool& is_cancel,
                       double linear_defletion = 0.003,
                       double angle_defletion = 0.5,
+                      bool isSplitCompound = false,
                       ImportStepProgressFn proFn = nullptr,
                       StepIsUtf8Fn isUtf8Fn = nullptr,
                       long& mesh_face_num = *(new long(-1)));
@@ -62,8 +63,8 @@ class StepPreProcessor {
 public:
     bool preprocess(const char* path, std::string &output_path);
     static bool isUtf8File(const char* path);
-private:
     static bool isUtf8(const std::string str);
+private:
     static bool isGBK(const std::string str);
     static int preNum(const unsigned char byte);
     //BBS: default is UTF8 for most step file.
@@ -87,14 +88,28 @@ private:
 class Step
 {
 public:
+    enum class Step_Status {
+        LOAD_SUCCESS,
+        LOAD_ERROR,
+        CANCEL,
+        MESH_SUCCESS,
+        MESH_ERROR
+    };
     Step(fs::path path, ImportStepProgressFn stepFn = nullptr, StepIsUtf8Fn isUtf8Fn = nullptr);
     Step(std::string path, ImportStepProgressFn stepFn = nullptr, StepIsUtf8Fn isUtf8Fn = nullptr);
-    bool load();
+    ~Step();
+    Step_Status load();
     unsigned int get_triangle_num(double linear_defletion, double angle_defletion);
     unsigned int get_triangle_num_tbb(double linear_defletion, double angle_defletion);
     void clean_mesh_data();
+    Step_Status mesh(Model* model,
+                     bool& is_cancel,
+                     bool isSplitCompound,
+                     double linear_defletion = 0.003,
+                     double angle_defletion = 0.5);
 
     std::atomic<bool> m_stop_mesh;
+    void update_process(int load_stage, int current, int total, bool& cancel);
 private:
     std::string m_path;
     ImportStepProgressFn m_stepFn;

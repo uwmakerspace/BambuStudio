@@ -102,7 +102,6 @@ public:
     void input_min_finish();
     void input_max_finish();
     void update();
-    void enable_confirm_button(bool en);
     bool Show(bool show) override;
     void Popup(wxString filament = wxEmptyString, wxString sn = wxEmptyString,
                wxString temp_min = wxEmptyString, wxString temp_max = wxEmptyString,
@@ -118,7 +117,7 @@ public:
     void on_picker_color(wxCommandEvent& color);
     MachineObject* obj{ nullptr };
     int            ams_id { 0 };        /* 0 ~ 3 */
-    int            tray_id { 0 };       /* 0 ~ 3 */
+    int            slot_id { 0 };        /* 0 ~ 3 */
 
     std::string    ams_filament_id;
     std::string    ams_setting_id;
@@ -146,6 +145,8 @@ protected:
     bool is_virtual_tray();
     void update_widgets();
 
+    void update_filament_editing(bool is_printing);
+
 protected:
     StateColor          m_btn_bg_green;
     StateColor          m_btn_bg_gray;
@@ -171,6 +172,7 @@ protected:
 
     wxPanel *           m_panel_kn;
     wxStaticText*       m_ratio_text;
+    wxHyperlinkCtrl *   m_wiki_ctrl;
     wxStaticText*       m_k_param;
     TextInput*          m_input_k_val;
     wxStaticText*       m_n_param;

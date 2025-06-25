@@ -73,14 +73,15 @@ public:
     bool IsFirstUse();
 
     //Model - Machine - Filaments
-    int LoadProfile();
+    int LoadProfileData();
+    int SaveProfileData();
     int LoadProfileFamily(std::string strVendor, std::string strFilePath);
     int SaveProfile();
     int GetFilamentInfo( std::string VendorDirectory,json & pFilaList, std::string filepath, std::string &sVendor, std::string &sType);
 
 
     bool apply_config(AppConfig *app_config, PresetBundle *preset_bundle, const PresetUpdater *updater, bool& apply_keeped_changes);
-    bool run();
+    bool run(bool& config_applied);
 
     void        StrReplace(std::string &strBase, std::string strSrc, std::string strDes);
     std::string w2s(wxString sSrc);
@@ -107,8 +108,14 @@ private:
     boost::filesystem::path vendor_dir;
     boost::filesystem::path rsrc_vendor_dir;
 
+    //First Load
+    bool bFirstComplete{false};
+    bool m_destroy{false};
+    boost::thread* m_load_task{ nullptr };
+
     // User Config
-    bool PrivacyUse;
+    bool m_GuideFinish;
+    std::string m_PrivacyUse;
     std::string m_Region;
 
     bool InstallNetplugin;
